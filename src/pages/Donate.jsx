@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, CustomImageList } from '../components'
-import DonateComponent from '../../src/components/Donate/DonateComponent'
+
 
 
 function Projects() {

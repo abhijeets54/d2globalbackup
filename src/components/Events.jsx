@@ -5,36 +5,36 @@ const testimonials = [
   {
     id: 1,
     videoUrl: 'https://www.youtube.com/embed/sample_video_1', // Replace with actual YouTube video URL
-    name: 'John Doe',
+    name: 'Event 1',
     text: 'The team at D2 Global helped me with every step of the process. They guided me with my student visa, and now I am successfully studying in Canada. Couldn’t have done it without them!',
   },
   {
     id: 2,
     videoUrl: 'https://www.youtube.com/embed/sample_video_2',
-    name: 'Jane Smith',
+    name: 'Event 2',
     text: 'My journey to study abroad was seamless with D2 Global. They assisted me with IELTS coaching and visa application, making the entire process stress-free.',
   },
   {
     id: 3,
     videoUrl: 'https://www.youtube.com/embed/sample_video_3',
-    name: 'Michael Brown',
+    name: 'Event 3',
     text: 'Thanks to D2 Global, I successfully obtained my work permit in Australia. Their staff was supportive and knowledgeable throughout the entire process.',
   },
   {
     id: 4,
     videoUrl: 'https://www.youtube.com/embed/sample_video_4',
-    name: 'Emily Johnson',
+    name: 'Event 4',
     text: 'Tourist visa application can be confusing, but D2 Global made it easy for me to explore New Zealand. They handled all the paperwork and explained everything clearly.',
   },
   {
     id: 5,
     videoUrl: 'https://www.youtube.com/embed/sample_video_5',
-    name: 'David Lee',
+    name: 'Event 5',
     text: 'I got my student visa to study in the UK through D2 Global. Their expertise made everything simple and straightforward. I highly recommend their services.',
   },
 ];
 
-const WhatPeopleAreSaying = () => {
+const Events = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Auto-slide using useEffect
@@ -60,7 +60,7 @@ const WhatPeopleAreSaying = () => {
   return (
     <div className="py-8 flex flex-col justify-center items-center bg-gray-100">
       <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
-        STUDENT TESTIMONIALS - OUR SUCCESS STORIES
+            OFFICE EVENTS
       </h2>
 
       <div className="relative w-full max-w-5xl mx-auto p-6 bg-white rounded-lg shadow-lg overflow-hidden">
@@ -120,4 +120,4 @@ const WhatPeopleAreSaying = () => {
   );
 };
 
-export default WhatPeopleAreSaying;
+export default Events;

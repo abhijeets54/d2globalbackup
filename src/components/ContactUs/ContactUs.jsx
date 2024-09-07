@@ -31,41 +31,41 @@ const ContactUsFooter = () => {
         <div className="flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 mt-4">
           {/* Left Column */}
           <div className="flex font-semibold flex-col space-y-4 items-start">
-            <a href="https://www.facebook.com/initiatorsofchange/" className="text-gray-400 hover:text-gray-100" target='_blank' rel='noreferrer'>
-              <i className="fab fa-facebook-f"></i> Initiators of Change
+            <a href="https://www.facebook.com/D2GlobalEducation/" className="text-gray-400 hover:text-gray-100" target='_blank' rel='noreferrer'>
+              <i className="fab fa-facebook-f"></i> D2 Global
             </a> 
-            <a href="https://www.youtube.com/@initiatorsofchange5173" className="text-gray-400 hover:text-gray-100" target='_blank' rel='noreferrer'>
-              <i className="fab fa-youtube"></i> Initiators of Change
+            <a href="https://youtube.com/@d2global?si=DcM0IJaeJbDmfpa2" className="text-gray-400 hover:text-gray-100" target='_blank' rel='noreferrer'>
+              <i className="fab fa-youtube"></i> D2 Global
             </a> 
-            <a href="https://www.instagram.com/initiatorsofchange_/" className="text-gray-400 hover:text-gray-100" target='_blank' rel='noreferrer'>
-              <i className="fab fa-instagram"></i> initiatorsofchange_
+            <a href="https://www.instagram.com/d2globalinfo/" className="text-gray-400 hover:text-gray-100" target='_blank' rel='noreferrer'>
+              <i className="fab fa-instagram"></i> d2globalinfo
             </a>
           </div>
         </div>
 
         {/* Middle Column */}
         <div className="w-full md:w-1/3">
-          <p className="font-semibold">Initiators of Change</p>
-          <p>1st Floor, Food tree building</p>
-          <p>Flower Enclave, Dugri</p>
-          <p>Near Goyal Hospital, Ludhiana-14013, Punjab</p>
-          <p className="mt-1"><i className="fas fa-phone mr-2"></i>+91 87259-01502</p>
+          <p className="font-semibold">D2 Global</p>
+          <p>3744/5, MAKS Shopping Complex, First Floor,</p>
+          <p>Dugri Rd, Sant Fateh Singh Nagar, Model Town Extension</p>
+          <p>Ludhiana, Punjab 141002</p>
+          <p className="mt-1"><i className="fas fa-phone mr-2"></i>+91 123456789</p>
         </div>
         
         {/* Right Column */}
         <div className="w-full md:w-1/3">
-          <p>For all enquiries regarding volunteering, fundraising, and arranging local events, please contact:</p>
+          <p>For all enquiries, contact</p>
           <p className="mt-1">
             <i className="fas fa-envelope mr-2"></i>
             <a href="mailto:info@intitiatorsofchange@gmail.com" className="text-gray-400 hover:text-gray-100">
-              info@intitiatorsofchange@gmail.com
+              info@d2global@gmail.com
             </a>
           </p>
         </div>
       </div>
       
       <div className="text-center mt-8">
-        <p>All rights reserved © Initiators of Change.</p>
+        <p>All rights reserved © D2 Global.</p>
       </div>
     </footer>
   );

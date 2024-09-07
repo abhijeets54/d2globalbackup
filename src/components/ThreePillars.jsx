@@ -10,7 +10,7 @@ function ThreePillars() {
   return (
     <div className="mx-auto bg-slate-100 p-6 shadow">
       <h4 className="text-center text-orange-500 mt-3 text-xl"></h4>
-      <h2 className="text-center text-4xl mt-3 font-bold mb-16">Three Pillars of IOC</h2>
+      <h2 className="text-center text-4xl mt-3 font-bold mb-16">What we Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/*First card */}
         <div className="col cursor-pointer transform transition-transform hover:scale-105">

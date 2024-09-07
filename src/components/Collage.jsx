@@ -1,18 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa'; // Importing icons
+import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
 
 function Collage() {
   const navigate = useNavigate();
 
   const handleDonateClick = (e) => {
-    e.stopPropagation(); // Prevent event propagation
-    navigate('/Donate'); // Make sure this path matches your routing setup
-  };
-
-  const handleJoinUsClick = (e) => {
-    e.stopPropagation(); // Prevent event propagation
-    navigate('/JoinUs'); // Make sure this path matches your routing setup
+    e.stopPropagation();
+    navigate('/');
   };
 
   const handleSocialClick = (url) => {
@@ -21,7 +16,12 @@ function Collage() {
 
   return (
     <div className="relative">
-      <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div
+        id="carouselExampleCaptions"
+        className="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="4000"
+      >
         <div className="carousel-indicators">
           <button
             type="button"
@@ -43,64 +43,158 @@ function Collage() {
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
-        </div>      
-        <div className="carousel-inner" style={{ height: '100vh' }}>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+
+        <div className="carousel-inner">
+          {/* Slide 1 */}
           <div className="carousel-item active">
-            <img
-              src="../../IOC Website pictures/ioc website content/three pillars/Awareness/Collage1.JPG"
-              className="d-block w-100 h-screen object-cover"
-              alt="First slide"
-            />
+            <div className="relative h-screen">
+              <img
+                src="/student.jpg"
+                className="d-block w-full h-full object-cover"
+                alt="Study Visa"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+                <div className="text-center text-white px-4 animate-slide-in">
+                  <h5 className="text-3xl md:text-4xl font-bold mb-4">Study Visa</h5>
+                  <p className="mb-6">Sample text describing Study Visa.</p>
+                  <button
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-3xl text-lg md:text-xl"
+                    onClick={handleDonateClick}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* Slide 2 */}
           <div className="carousel-item">
-            <img
-              src="/Education cover.jpg"
-              className="d-block w-100 h-screen object-cover"
-              alt="Second slide"
-            />
+            <div className="relative h-screen">
+              <img
+                src="/tourist.jpeg"
+                className="d-block w-full h-full object-cover"
+                alt="Visitor Visa"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+                <div className="text-center text-white px-4 animate-slide-in">
+                  <h5 className="text-3xl md:text-4xl font-bold mb-4">Visitor Visa</h5>
+                  <p className="mb-6">Sample text describing Visitor Visa.</p>
+                  <button
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-3xl text-lg md:text-xl"
+                    onClick={handleDonateClick}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* Slide 3 */}
           <div className="carousel-item">
-            <img
-              src="../../IOC Website pictures/ioc website content/home page/Fatimawithstudents.JPG"
-              className="d-block w-100 h-screen object-cover"
-              alt="Third slide"
-            />
-          </div>          
+            <div className="relative h-screen">
+              <img
+                src="/ielts.jpeg"
+                className="d-block w-full h-full object-cover"
+                alt="IELTS"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+                <div className="text-center text-white px-4 animate-slide-in">
+                  <h5 className="text-3xl md:text-4xl font-bold mb-4">IELTS</h5>
+                  <p className="mb-6">Sample text describing IELTS.</p>
+                  <button
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-3xl text-lg md:text-xl"
+                    onClick={handleDonateClick}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 4 */}
+          <div className="carousel-item">
+            <div className="relative h-screen">
+              <img
+                src="/work.jpeg"
+                className="d-block w-full h-full object-cover"
+                alt="Work Permit"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+                <div className="text-center text-white px-4 animate-slide-in">
+                  <h5 className="text-3xl md:text-4xl font-bold mb-4">Work Permit</h5>
+                  <p className="mb-6">Sample text describing Work Permit.</p>
+                  <button
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-3xl text-lg md:text-xl"
+                    onClick={handleDonateClick}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 5 */}
+          <div className="carousel-item">
+            <div className="relative h-screen">
+              <img
+                src="/spouse.jpg"
+                className="d-block w-full h-full object-cover"
+                alt="Spouse Visa"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+                <div className="text-center text-white px-4 animate-slide-in">
+                  <h5 className="text-3xl md:text-4xl font-bold mb-4">Spouse Visa</h5>
+                  <p className="mb-6">Sample text describing Spouse Visa.</p>
+                  <button
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-3xl text-lg md:text-xl"
+                    onClick={handleDonateClick}
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="absolute inset-0 flex items-center bg-black bg-opacity-50">
-        <div className="flex flex-col items-start ml-10 text-white">
-          <h4 className="text-5xl mt-1 font-medium text-left ">Creating Leaders,
-            <br /> Transforming Lives</h4>
-          
-          <div className="buttons flex flex-row mt-1 ">
-            <button className="m-2 px-4 py-2 rounded-3xl bg-orange-500 text-white" onClick={handleDonateClick}>Donate now</button>
-            <button className="m-2 px-4 py-2 rounded-3xl border-2 border-white bg-transparent text-white" onClick={handleJoinUsClick}>Join us</button>
-          </div>
-        </div>
-
-        {/* Social Media Buttons */}
-        <div className="fixed right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
-          <button
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-500 hover:bg-gray-600 text-white"
-            onClick={() => handleSocialClick('https://www.instagram.com/initiatorsofchange_')}
-          >
-            <FaInstagram />
-          </button>
-          <button
-            className="w-10 h-10 flex items-center justify-center rounded-full  bg-orange-500 hover:bg-gray-600 text-white"
-            onClick={() => handleSocialClick('https://www.facebook.com/initiatorsofchange')}
-          >
-            <FaFacebookF />
-          </button>
-          <button
-            className="w-10 h-10 flex items-center justify-center rounded-full  bg-orange-500 hover:bg-gray-600 text-white"
-            onClick={() => handleSocialClick('https://www.youtube.com/@initiatorsofchange5173')}
-          >
-            <FaYoutube />
-          </button>
-        </div>
+      {/* Social Media Buttons */}
+      <div className="fixed right-4 md:right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
+        <button
+          className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-gray-600 text-white"
+          onClick={() => handleSocialClick('https://www.instagram.com/initiatorsofchange_')}
+        >
+          <FaInstagram className="text-lg md:text-2xl" />
+        </button>
+        <button
+          className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-gray-600 text-white"
+          onClick={() => handleSocialClick('https://www.facebook.com/initiatorsofchange')}
+        >
+          <FaFacebookF className="text-lg md:text-2xl" />
+        </button>
+        <button
+          className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-gray-600 text-white"
+          onClick={() => handleSocialClick('https://www.youtube.com/@initiatorsofchange5173')}
+        >
+          <FaYoutube className="text-lg md:text-2xl" />
+        </button>
       </div>
     </div>
   );

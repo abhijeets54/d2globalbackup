@@ -55,7 +55,7 @@ const About = () => {
           {/* Read More Button */}
           <button 
             onClick={handleReadMore}
-            className="mt-4 inline-block bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+            className="mt-4 inline-block bg-blue-950 text-yellow-400 px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
           >
             Read More
           </button>

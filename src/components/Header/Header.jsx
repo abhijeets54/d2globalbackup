@@ -17,7 +17,7 @@ const customStyles = `
     left: 0;
     width: 0;
     height: 2px;
-    background-color: blue;
+    background-color: yellow;
     transition: width 0.3s ease;
   }
 
@@ -73,7 +73,6 @@ function Header() {
         { name: 'Study in UK', slug: '/StudyUK' },
         { name: 'Study in Canada', slug: '/StudyCan' },
         { name: 'Study in Australia', slug: '/StudyAus' },
-        // { name: 'Study in New Zealand', slug: '/StudyNz' },
         { name: 'Study in USA', slug: '/StudyUSA' },
         { name: 'Study in Europe', slug: '/StudyEurope' },
         { name: 'Study in Dubai', slug: '/StudyDubai' },
@@ -115,7 +114,7 @@ function Header() {
       <style>{customStyles}</style>
 
       {/* Contact Information Section */}
-      <div className="bg-blue-950 py-2 text-white text-sm">
+      <div className="bg-blue-950 py-2 text-yellow-400 text-sm">
         <Container>
           <div className="flex flex-col lg:flex-row justify-between items-center px-16 lg:px-16">
             <div className="flex items-center text-md mb-2 lg:mb-1 space-x-4">
@@ -145,9 +144,9 @@ function Header() {
       </div>
 
       {/* Navigation Header */}
-      <header className="shadow bg-stone-50 top-12 left-0 w-full z-50">
+      <header className="shadow bg-blue-950 text-yellow-400 top-12 left-0 w-full z-50">
         <Container>
-          <nav className="py-3 flex justify-between items-center">
+          <nav className="py-3 flex justify-between  items-center">
             <div className="mr-3 ml-5 w-18 h-18">
               <button onClick={() => navigate('/')} className="focus:outline-none">
                 <Logo className="w-full h-full object-contain" />
@@ -155,8 +154,8 @@ function Header() {
             </div>
 
             {/* Hamburger Menu */}
-            <div className="lg:hidden mr-5">
-              <button onClick={toggleMenu} className="text-black focus:outline-none">
+            <div className="lg:hidden  mr-5">
+              <button onClick={toggleMenu} className="text-yellow-400 focus:outline-none">
                 {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
               </button>
             </div>
@@ -170,19 +169,19 @@ function Header() {
                       item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                     }
                     className={`underline-slide inline-block px-6 py-2 duration-200 ${
-                      location.pathname === item.slug ? 'active-page' : 'text-gray-800'
+                      location.pathname === item.slug ? 'active-page' : 'text-yellow-400'
                     }`}
                   >
                     {item.name}
                   </button>
 
                   {item.dropdown && activeDropdown === index && (
-                    <ul className="absolute left-0 mt-1 w-40 bg-white shadow-lg z-50">
+                    <ul className="absolute left-0 mt-1 w-40 bg-blue-950 shadow-lg z-50 text-yellow-400">
                       {item.dropdown.map((subItem) => (
                         <li key={subItem.name}>
                           <button
                             onClick={() => handleNavigation(subItem.slug)}
-                            className={`block px-4 py-2 hover:underline hover:text-blue-500 text-gray-800 w-full text-left ${
+                            className={`block px-4 py-2 hover:underline hover:text-yellow-400 w-full text-left ${
                               location.pathname === subItem.slug ? 'font-bold' : ''
                             }`}
                           >
@@ -198,7 +197,7 @@ function Header() {
 
             {/* Mobile Menu */}
             {menuOpen && (
-              <div className="lg:hidden absolute top-16 left-0 w-full bg-stone-50 shadow-md z-40">
+              <div className="lg:hidden absolute top-16 left-0 w-full bg-blue-950 shadow-md z-40 text-yellow-400">
                 <ul className="flex flex-col items-center space-y-4 py-6">
                   {navItems.map((item, index) => (
                     <li key={item.name}>
@@ -207,7 +206,7 @@ function Header() {
                           item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                         }
                         className={`underline-slide inline-block px-6 py-2 duration-200 ${
-                          location.pathname === item.slug ? 'active-page' : 'text-gray-800'
+                          location.pathname === item.slug ? 'active-page' : 'text-yellow-400'
                         }`}
                       >
                         {item.name}
@@ -215,12 +214,12 @@ function Header() {
 
                       {item.dropdown && activeDropdown === index && (
                         <>
-                          <ul className="bg-white shadow-lg z-50 w-full">
+                          <ul className="bg-blue-950 shadow-lg z-50 w-full text-yellow-400">
                             {item.dropdown.map((subItem) => (
                               <li key={subItem.name}>
                                 <button
                                   onClick={() => handleNavigation(subItem.slug)}
-                                  className={`block px-4 py-2 hover:underline hover:text-blue-500 text-gray-800 w-full text-left ${
+                                  className={`block px-4 py-2 hover:underline hover:text-yellow-400 w-full text-left ${
                                     location.pathname === subItem.slug ? 'font-bold' : ''
                                   }`}
                                 >
@@ -231,7 +230,7 @@ function Header() {
                           </ul>
                           <button
                             onClick={() => toggleDropdown(index)}
-                            className="text-gray-600 px-4 py-2 text-sm"
+                            className="text-yellow-400 px-4 py-2 text-sm"
                           >
                             Close
                           </button>
@@ -242,7 +241,7 @@ function Header() {
                 </ul>
 
                 {/* Cross (X) button for mobile menu close */}
-                <button onClick={toggleMenu} className="text-gray-600 px-4 py-2 mt-4">
+                <button onClick={toggleMenu} className="text-yellow-400 px-4 py-2 mt-4">
                   <FaTimes size={24} />
                 </button>
               </div>

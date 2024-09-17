@@ -94,7 +94,7 @@ function Header() {
       name: 'Training',
       slug: '/Training',
     },
-    { name: 'Contact Us', slug: '/Contactpage' },
+    { name: 'Contact Us', slug: '/Contact' },
   ];
 
   const toggleMenu = () => setMenuOpen(!menuOpen);

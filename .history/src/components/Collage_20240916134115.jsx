@@ -91,7 +91,7 @@ function Collage() {
                   <p className="mb-6 text-base md:text-lg">Your Gateway to Global Education.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick={() => navigate('/StudyAbroad')}
+                    onClick={handleDonateClick}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />
@@ -115,7 +115,7 @@ function Collage() {
                   <p className="mb-6 text-base md:text-lg">Your Ticket to Global Adventures.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick= {() => navigate('/VisitorVisa')}
+                    onClick= {navigate('/Training')}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />
@@ -139,7 +139,7 @@ function Collage() {
                   <p className="mb-6 text-base md:text-lg">Master English, Unlock the World.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick={() => navigate('/Training')}
+                    onClick={handleDonateClick}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />
@@ -150,7 +150,7 @@ function Collage() {
           </div>
 
           {/* Slide 5 */}
-          <div className="carousel-item">
+          {/* <div className="carousel-item">
             <div className="relative h-screen">
               <img
                 src="/spouse.webp"
@@ -159,11 +159,11 @@ function Collage() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
                 <div className="text-center text-white px-4 animate-slide-in">
-                  <h5 className="text-3xl md:text-5xl font-bold mb-4">Canada Visa</h5>
-                  <p className="mb-6 text-base md:text-lg">Study in Canada</p>
+                  <h5 className="text-3xl md:text-5xl font-bold mb-4">Spouse Visa</h5>
+                  <p className="mb-6 text-base md:text-lg">Streamlined Visa Services for Families.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick={() => navigate('/StudyCan')}
+                    onClick={handleDonateClick}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />
@@ -171,7 +171,7 @@ function Collage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

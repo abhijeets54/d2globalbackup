@@ -73,7 +73,7 @@ function Header() {
         { name: 'Study in UK', slug: '/StudyUK' },
         { name: 'Study in Canada', slug: '/StudyCan' },
         { name: 'Study in Australia', slug: '/StudyAus' },
-        // { name: 'Study in New Zealand', slug: '/StudyNz' },
+        { name: 'Study in New Zealand', slug: '/StudyNz' },
         { name: 'Study in USA', slug: '/StudyUSA' },
         { name: 'Study in Europe', slug: '/StudyEurope' },
         { name: 'Study in Dubai', slug: '/StudyDubai' },
@@ -94,7 +94,7 @@ function Header() {
       name: 'Training',
       slug: '/Training',
     },
-    { name: 'Contact Us', slug: '/Contactpage' },
+    { name: 'Contact Us', slug: '/Contact' },
   ];
 
   const toggleMenu = () => setMenuOpen(!menuOpen);

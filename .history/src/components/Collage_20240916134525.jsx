@@ -91,7 +91,7 @@ function Collage() {
                   <p className="mb-6 text-base md:text-lg">Your Gateway to Global Education.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick={() => navigate('/StudyAbroad')}
+                    onClick={handleDonateClick}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />
@@ -115,7 +115,7 @@ function Collage() {
                   <p className="mb-6 text-base md:text-lg">Your Ticket to Global Adventures.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick= {() => navigate('/VisitorVisa')}
+                    onClick= {navigate('/Training')}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />
@@ -139,7 +139,7 @@ function Collage() {
                   <p className="mb-6 text-base md:text-lg">Master English, Unlock the World.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick={() => navigate('/Training')}
+                    onClick={() => navigate('/StudyCan')}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />

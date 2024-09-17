@@ -73,7 +73,7 @@ function Header() {
         { name: 'Study in UK', slug: '/StudyUK' },
         { name: 'Study in Canada', slug: '/StudyCan' },
         { name: 'Study in Australia', slug: '/StudyAus' },
-        // { name: 'Study in New Zealand', slug: '/StudyNz' },
+        { name: 'Study in New Zealand', slug: '/StudyNz' },
         { name: 'Study in USA', slug: '/StudyUSA' },
         { name: 'Study in Europe', slug: '/StudyEurope' },
         { name: 'Study in Dubai', slug: '/StudyDubai' },
@@ -85,7 +85,7 @@ function Header() {
       dropdown: [
         { name: 'Study Visa', slug: '/StudyAbroad' },
         { name: 'Work Visa', slug: '/WorkVisa' },
-        { name: 'Visitor Visa', slug: '/VisitorVisa' },
+        { name: 'Visitor Visa', slug: '/Visitorisa' },
         { name: 'Tourist Visa', slug: '/TouristVisa' },
         { name: 'Permanent Residency', slug: '/PR' },
       ],
@@ -94,7 +94,7 @@ function Header() {
       name: 'Training',
       slug: '/Training',
     },
-    { name: 'Contact Us', slug: '/Contactpage' },
+    { name: 'Contact Us', slug: '/Contact' },
   ];
 
   const toggleMenu = () => setMenuOpen(!menuOpen);

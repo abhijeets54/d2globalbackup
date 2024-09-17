@@ -59,7 +59,7 @@ const router = createBrowserRouter([
           { path: '/StudyAbroad', element: <StudyAbroad /> },
           { path: '/Training', element: <Training /> },
           { path: '/StudyUSA', element: <StudyUSA /> },
-          { path: '/Contactpage', element: <Contactpage /> },
+          { path: '/StudyUSA', element: <StudyUSA /> },
           { path: '/WorkVisa', element: <WorkVisa /> },
           { path: '/StudyEurope', element: <StudyEurope /> },
           { path: '/StudyDubai', element: <StudyDubai /> },

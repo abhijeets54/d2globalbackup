@@ -39,8 +39,6 @@ import StudyAbroad from './pages/StudyAbroad.jsx';
 import Training from './pages/Training.jsx';
 import TouristVisa from './pages/TouristVisa.jsx';
 import WorkVisa from './pages/WorkVisa.jsx';
-import VisitorVisa from './pages/VisitorVisa.jsx';
-import Contactpage from './pages/Contactpage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -59,12 +57,10 @@ const router = createBrowserRouter([
           { path: '/StudyAbroad', element: <StudyAbroad /> },
           { path: '/Training', element: <Training /> },
           { path: '/StudyUSA', element: <StudyUSA /> },
-          { path: '/Contactpage', element: <Contactpage /> },
-          { path: '/WorkVisa', element: <WorkVisa /> },
+          { path: '/Work', element: <StudyUSA /> },
           { path: '/StudyEurope', element: <StudyEurope /> },
           { path: '/StudyDubai', element: <StudyDubai /> },
           { path: '/TouristVisa', element: <TouristVisa /> },
-          { path: '/VisitorVisa', element: <VisitorVisa /> },
           { path: '/StudyCan', element: <StudyCan /> },
           { path: '/StudyNz', element: <StudyNz /> },
           { path: '/Projects', element: <Projects /> },

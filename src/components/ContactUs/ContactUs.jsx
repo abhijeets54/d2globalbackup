@@ -45,12 +45,12 @@ const ContactUs = () => {
         {/* Quick Links Column */}
         <div className="space-y-4">
           <p className="font-semibold">Quick Links</p>
-          <a href="/about" className="text-gray-400 hover:text-yellow-400">About</a> <br />
-          <a href="/study-abroad" className="text-gray-400 hover:text-yellow-400">Study Abroad <br /></a>
-          <a href="/tourist-visa" className="text-gray-400 hover:text-yellow-400">Tourist Visa</a> <br />
-          <a href="/contact" className="text-gray-400 hover:text-yellow-400">Contact Us</a> <br />
-          <a href="/permanent-residency" className="text-gray-400 hover:text-yellow-400">Permanent Residency</a> <br />
-          <a href="/training" className="text-gray-400 hover:text-yellow-400">Training</a>
+          <a href="/AboutUs" className="text-gray-400 hover:text-yellow-400">About</a> <br />
+          <a href="/StudyAbroad" className="text-gray-400 hover:text-yellow-400">Study Abroad <br /></a>
+          <a href="/TouristVisa" className="text-gray-400 hover:text-yellow-400">Tourist Visa</a> <br />
+          <a href="/ContactUs" className="text-gray-400 hover:text-yellow-400">Contact Us</a> <br />
+          <a href="/PR" className="text-gray-400 hover:text-yellow-400">Permanent Residency</a> <br />
+          <a href="/Training" className="text-gray-400 hover:text-yellow-400">Training</a>
         </div>
 
         {/* Address Column */}

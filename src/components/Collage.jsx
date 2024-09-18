@@ -111,11 +111,11 @@ function Collage() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
                 <div className="text-center text-white px-4 animate-slide-in">
-                  <h5 className="text-3xl md:text-5xl font-bold mb-4">Visitor Visa</h5>
+                  <h5 className="text-3xl md:text-5xl font-bold mb-4">Tourist Visa</h5>
                   <p className="mb-6 text-base md:text-lg">Your Ticket to Global Adventures.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center"
-                    onClick= {() => navigate('/VisitorVisa')}
+                    onClick= {() => navigate('/TouristVisa')}
                   >
                     Learn More
                     <FaArrowRight className="ml-2 text-yellow-400" />
@@ -153,7 +153,7 @@ function Collage() {
           <div className="carousel-item">
             <div className="relative h-screen">
               <img
-                src="/spouse.webp"
+                src="/canadaa.webp"
                 className="d-block w-full h-full object-cover"
                 alt="Spouse Visa"
               />
@@ -178,19 +178,19 @@ function Collage() {
       {/* Social Media Buttons */}
       <div className="fixed right-4 md:right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
         <button
-          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-yellow-600 text-white"
+          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-white text-yellow-400"
           onClick={() => handleSocialClick('https://www.instagram.com/d2globalinfo?igsh=M244eHMycGdvZDhm')}
         >
           <FaInstagram className="text-base md:text-2xl" />
         </button>
         <button
-          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-yellow-600 text-white"
+          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-white text-yellow-400"
           onClick={() => handleSocialClick('https://www.facebook.com/profile.php?id=100013114175614&mibextid=LQQJ4d')}
         >
           <FaFacebookF className="text-base md:text-2xl" />
         </button>
         <button
-          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-yellow-600 text-white"
+          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-white text-yellow-400"
           onClick={() => handleSocialClick('http://www.youtube.com/@D2Global')}
         >
           <FaYoutube className="text-base md:text-2xl" />

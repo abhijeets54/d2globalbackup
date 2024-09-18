@@ -26,44 +26,54 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <footer className="bg-blue-950 text-white py-8">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 w-full">
-        <div className="flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 mt-4">
-          {/* Left Column */}
-          <div className="flex font-semibold flex-col space-y-4 items-start">
-            <a href="https://www.facebook.com/D2GlobalEducation/" className="text-gray-400 hover:text-white" target='_blank' rel='noreferrer'>
-              <i className="fab fa-facebook-f"></i> D2 Global
-            </a> 
-            <a href="https://youtube.com/@d2global?si=DcM0IJaeJbDmfpa2" className="text-gray-400 hover:text-white" target='_blank' rel='noreferrer'>
-              <i className="fab fa-youtube"></i> D2 Global
-            </a> 
-            <a href="https://www.instagram.com/d2globalinfo/" className="text-gray-400 hover:text-white" target='_blank' rel='noreferrer'>
-              <i className="fab fa-instagram"></i> d2globalinfo
-            </a>
-          </div>
+    <footer className="bg-blue-950 text-yellow-400 py-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+        {/* Social Links Column */}
+        <div className="space-y-4">
+          <p className="font-semibold">Follow Us</p>
+          <a href="https://www.facebook.com/D2GlobalEducation/" className="text-gray-400 hover:text-yellow-400" target="_blank" rel="noreferrer">
+            <i className="fab fa-facebook-f"></i> D2 Global
+          </a> <br />
+          <a href="https://youtube.com/@d2global?si=DcM0IJaeJbDmfpa2" className="text-gray-400 hover:text-yellow-400" target="_blank" rel="noreferrer"> 
+            <i className="fab fa-youtube"></i> D2 Global
+          </a> <br />
+          <a href="https://www.instagram.com/d2globalinfo/" className="text-gray-400 hover:text-yellow-400" target="_blank" rel="noreferrer">
+            <i className="fab fa-instagram"></i> d2globalinfo
+          </a>
         </div>
 
-        {/* Middle Column */}
-        <div className="w-full md:w-1/3">
-          <p className="font-semibold">D2 Global</p>
-          <p>Maks Shopping Plaza, Dugri Road, Model Town , Ludhiana </p>
-          
-          <p className="mt-1"><i className="fas fa-phone mr-2"></i>+91 98789 90455</p>
+        {/* Quick Links Column */}
+        <div className="space-y-4">
+          <p className="font-semibold">Quick Links</p>
+          <a href="/about" className="text-gray-400 hover:text-yellow-400">About</a> <br />
+          <a href="/study-abroad" className="text-gray-400 hover:text-yellow-400">Study Abroad <br /></a>
+          <a href="/tourist-visa" className="text-gray-400 hover:text-yellow-400">Tourist Visa</a> <br />
+          <a href="/contact" className="text-gray-400 hover:text-yellow-400">Contact Us</a> <br />
+          <a href="/permanent-residency" className="text-gray-400 hover:text-yellow-400">Permanent Residency</a> <br />
+          <a href="/training" className="text-gray-400 hover:text-yellow-400">Training</a>
         </div>
-        
-        {/* Right Column */}
-        <div className="w-full md:w-1/3">
+
+        {/* Address Column */}
+        <div className="space-y-2">
+          <p className="font-semibold">D2 Global</p>
+          <p>Maks Shopping Plaza, Dugri Road, Model Town, Ludhiana</p>
+          <p><i className="fas fa-phone mr-2"></i>+91 98789 90455</p>
+        </div>
+
+        {/* Contact Info Column */}
+        <div className="space-y-2">
           <p>For all enquiries, contact</p>
-          <p className="mt-1">
+          <p>
             <i className="fas fa-envelope mr-2"></i>
-            <a href="mailto:info@intitiatorsofchange@gmail.com" className="text-gray-400 hover:text-white">
-              info@d2global@gmail.com
+            <a href="mailto:info@d2global.com" className="text-gray-400 hover:text-yellow-400">
+              info@d2global.com
             </a>
           </p>
         </div>
       </div>
-      
-      <div className="text-center text-white mt-8">
+
+      {/* Footer Bottom */}
+      <div className="text-center text-yellow-400 mt-8">
         <p>All rights reserved © D2 Global.</p>
       </div>
     </footer>

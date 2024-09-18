@@ -5,7 +5,7 @@ import 'tailwindcss/tailwind.css';
 function Countries() {
   const canadaImageUrl = '/canada.webp'; // Update with actual image URL
   const australiaImageUrl = '/aus.webp'; // Update with actual image URL
-  const usaImageUrl = '/usa.webp'; // Update with actual image URL
+  const usaImageUrl = '/usa2.webp'; // Update with actual image URL
   const ukImageUrl = '/uk.webp'; // Update with actual image URL
   const europeImageUrl = '/eur.webp'; // Update with actual image URL
   const dubaiImageUrl = '/dub.webp'; // Update with actual image URL
@@ -18,7 +18,7 @@ function Countries() {
 
   return (
     <div className="mx-auto bg-blue-950 p-6 md:p-10 shadow">
-      <h2 className="text-center text-white text-3xl sm:text-4xl mt-3 font-bold mb-10 md:mb-16">Choose your Favourite Country</h2>
+      <h2 className="text-center text-yellow-400 text-3xl sm:text-4xl mt-3 font-bold mb-10 md:mb-16">Choose your Favourite Country</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {/* Country Card: Canada */}

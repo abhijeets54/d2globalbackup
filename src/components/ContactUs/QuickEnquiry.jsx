@@ -4,18 +4,22 @@ import emailjs from '@emailjs/browser';
 const QuickEnquiry = () => {
   const form = useRef(null);
   
-  // State variables
+  // State variables for form fields
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [country, setCountry] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
 
+  // State variables for success message and form visibility
+  const [isOpen, setIsOpen] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  
   // Toggle form visibility
   const toggleForm = () => {
     setIsOpen(!isOpen);
+    setSuccessMessage(''); // Clear any previous success message
   };
 
   // Form submission handler
@@ -26,7 +30,16 @@ const QuickEnquiry = () => {
       .sendForm('service_3x7bjfj', 'template_530xg64', form.current, 'I7UB0PZBIaKgzxane')
       .then(
         () => {
-          console.log('SUCCESS!');
+          // Clear form fields after successful submission
+          setName('');
+          setEmail('');
+          setSubject('');
+          setPhone('');
+          setMessage('');
+          setCountry('');
+          
+          // Display success message
+          setSuccessMessage('Your message was sent successfully! We will get back to you very soon.');
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -38,7 +51,7 @@ const QuickEnquiry = () => {
     <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-50">
       {/* Quick Enquiry Button */}
       <div
-        className="bg-blue-950 hover:bg-blue-800 text-white p-5 sm:p-4 md:p-6 lg:p-12 rounded-r-lg cursor-pointer flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16"
+        className="bg-blue-950 hover:bg-blue-800 text-yellow-400 p-5 sm:p-4 md:p-6 lg:p-12 rounded-r-lg cursor-pointer flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16"
         onClick={toggleForm}
       >
         <span className="transform -rotate-90 text-xs sm:text-sm md:text-lg">Quick Enquiry</span>
@@ -52,6 +65,7 @@ const QuickEnquiry = () => {
       >
         <div className="p-4 sm:p-6 md:p-8">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 text-center">Contact Us</h2>
+
           <form onSubmit={handleSubmit} ref={form}>
             {/* Name Field */}
             <div className="mb-4">
@@ -159,10 +173,17 @@ const QuickEnquiry = () => {
             </div>
 
             <div className="text-center">
-              <button className="bg-blue-950 text-white py-2 px-4 rounded" type="submit">
+              <button className="bg-blue-950 text-yellow-400 py-2 px-4 rounded" type="submit">
                 Send Message
               </button>
             </div>
+
+            {/* Success Message Below Button */}
+            {successMessage && (
+              <div className="mt-4 text-center text-green-500">
+                {successMessage}
+              </div>
+            )}
           </form>
         </div>
 

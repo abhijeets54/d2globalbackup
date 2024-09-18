@@ -4,14 +4,14 @@ import 'tailwindcss/tailwind.css';
 
 function Offer() {
   const studyAbroadImageUrl = '/student.webp'; // Update with actual image URL
-  const ieltsPteImageUrl = '/ielts.webp'; // Update with actual image URL
+  const ieltsPteImageUrl = '/ielts3.webp'; // Update with actual image URL
   const touristVisaImageUrl = '/tourist.webp'; // Update with actual image URL
 
   return (
     <div className="mx-auto bg-blue-950
     0 p-6 md:p-10 shadow">
       <h4 className="text-center text-blue-950 mt-3 text-xl"></h4>
-      <h2 className="text-center text-3xl text-white sm:text-4xl mt-3 font-bold mb-10 md:mb-16">What We Offer</h2>
+      <h2 className="text-center text-3xl text-yellow-400 sm:text-4xl mt-3 font-bold mb-10 md:mb-16">What We Offer</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {/* First card: Study Abroad */}

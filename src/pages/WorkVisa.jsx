@@ -157,7 +157,7 @@ const WorkVisa = () => {
         </section>
 
         {/* Get in Touch Section */}
-        <section className="bg-blue-950 text-white py-12 px-6 text-left">
+        <section className="bg-blue-950 text-yellow-400  py-12 px-6 text-left">
           <motion.h2
             className="text-3xl font-bold mb-6"
             initial={{ opacity: 0 }}

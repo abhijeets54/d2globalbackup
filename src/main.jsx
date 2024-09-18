@@ -41,6 +41,7 @@ import TouristVisa from './pages/TouristVisa.jsx';
 import WorkVisa from './pages/WorkVisa.jsx';
 import VisitorVisa from './pages/VisitorVisa.jsx';
 import Contactpage from './pages/Contactpage.jsx';
+import PR from './pages/PR.jsx'; 
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,7 @@ const router = createBrowserRouter([
           { path: '/Training', element: <Training /> },
           { path: '/StudyUSA', element: <StudyUSA /> },
           { path: '/Contactpage', element: <Contactpage /> },
+          { path: '/PR', element: <PR /> },
           { path: '/WorkVisa', element: <WorkVisa /> },
           { path: '/StudyEurope', element: <StudyEurope /> },
           { path: '/StudyDubai', element: <StudyDubai /> },

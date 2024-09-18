@@ -80,8 +80,8 @@ const StudyUK = () => {
                 variants={fadeInVariants}
                 whileHover={{ scale: 1.05 }}
               >
-                <h4 className="text-base md:text-lg text-white font-semibold mb-2">{point.title}</h4>
-                <p className="text-gray-300 text-sm md:text-base">{point.description}</p>
+                <h4 className="text-base md:text-lg text-yellow-400 font-semibold mb-2">{point.title}</h4>
+                <p className="text-white text-sm md:text-base">{point.description}</p>
               </motion.div>
             ))}
           </motion.div>

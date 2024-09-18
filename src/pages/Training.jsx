@@ -31,7 +31,7 @@ const Training = () => {
               Master language proficiency and overcome communication barriers with our expert training programs.
             </p>
           </div>
-          <img src="/ielts.webp" alt="Training Banner" className="w-full md:w-1/3 h-auto" />
+          <img src="/ielts2.webp" alt="Training Banner" className="w-full md:w-1/3 h-auto" />
         </div>
       </motion.div>
 
@@ -106,7 +106,7 @@ const Training = () => {
 
       {/* Why Choose Us Section */}
       <motion.div
-        className="bg-blue-950 text-white p-4 sm:p-8"
+        className="bg-blue-950 text-yellow-400 p-4 sm:p-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

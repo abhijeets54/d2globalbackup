@@ -60,7 +60,7 @@ const StudyUSA = () => {
       </div>
 
       {/* Why study in USA */}
-      <div className="bg-blue-950 text-white p-6 lg:p-10 text-left">
+      <div className="bg-blue-950 text-yellow-400 p-6 lg:p-10 text-left">
         <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">Why Study in USA</h2>
         <h3 className="text-xl lg:text-2xl font-semibold mb-6 lg:mb-10">The ultimate destination for all academic, technical, and professional developments.</h3>
 
@@ -79,7 +79,7 @@ const StudyUSA = () => {
               whileHover={{ scale: 1.05 }}
             >
               <h4 className="text-lg font-semibold mb-2">{point.title}</h4>
-              <p className="text-gray-400">{point.description}</p>
+              <p className="text-white">{point.description}</p>
             </motion.div>
           ))}
         </motion.div>

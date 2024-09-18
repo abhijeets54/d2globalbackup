@@ -22,22 +22,32 @@ const PopupForm = () => {
     return () => clearInterval(popupInterval);
   }, []);
 
+  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Using EmailJS to send form
+    // Using EmailJS to send form data
     emailjs
       .sendForm('service_3x7bjfj', 'template_530xg64', form.current, {
         publicKey: 'I7UB0PZBIaKgzxane',
       })
       .then(
         () => {
-          setResponseMessage('Form submitted successfully!');
+          setResponseMessage(' Your message was sent successfully, We will get back to you very soon!');
           setShowPopup(false);
+          // Reset form fields after submission
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: '',
+          });
         },
         (error) => {
           setResponseMessage('Error submitting form. Please try again.');
@@ -60,6 +70,7 @@ const PopupForm = () => {
         </button>
 
         <h2 className="text-xl mb-6 text-center font-semibold text-gray-700">Contact Us</h2>
+        {/* Display response message at the top */}
         {responseMessage && <p className="text-center text-green-500 mb-4">{responseMessage}</p>}
         <form ref={form} onSubmit={handleSubmit}>
           <div className="space-y-4">
@@ -110,11 +121,17 @@ const PopupForm = () => {
           </div>
           <button
             type="submit"
-            className="mt-6 bg-blue-500 text-white py-3 px-6 rounded w-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-6 bg-blue-950 text-yellow-400 py-3 px-6 rounded w-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Submit
           </button>
         </form>
+        {/* Display response message at the bottom */}
+        {responseMessage && (
+          <p className="mt-4 text-center text-green-500">
+            {responseMessage}
+          </p>
+        )}
       </div>
     </div>
   );

@@ -60,7 +60,7 @@ const StudyAus = () => {
       </div>
 
       {/* Why study in Australia */}
-      <div className="bg-blue-950 text-white p-4 md:p-8 lg:p-10">
+      <div className="bg-blue-950 text-yellow-400 p-4 md:p-8 lg:p-10">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Study in Australia</h2>
         <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-10">The land of leading academic institutions & pioneering innovations</h3>
 
@@ -79,7 +79,7 @@ const StudyAus = () => {
               whileHover={{ scale: 1.05 }}
             >
               <h4 className="text-base md:text-lg font-semibold mb-2">{point.title}</h4>
-              <p className="text-gray-400 text-sm md:text-base">{point.description}</p>
+              <p className="text-white text-sm md:text-base">{point.description}</p>
             </motion.div>
           ))}
         </motion.div>

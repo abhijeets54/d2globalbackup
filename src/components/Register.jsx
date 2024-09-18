@@ -11,31 +11,28 @@ const Register = () => {
   const [responseMessage, setResponseMessage] = useState('');
   const form = useRef();
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   const response = await fetch('http://localhost:5000/api/contact', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ name, email, subject, phone, country, message }),
-    //   });
-    //   const data = await response.json();
-    //   setResponseMessage(data.message);
-    // } catch (error) {
-    //   setResponseMessage('Error submitting form. Please try again.');
-    // }
+
     emailjs
       .sendForm('service_3x7bjfj', 'template_530xg64', form.current, {
         publicKey: 'I7UB0PZBIaKgzxane',
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          setResponseMessage(' Your message was sent successfully, We will get back to you very soon!');
+          // Reset form fields after successful submission
+          setName('');
+          setEmail('');
+          setSubject('');
+          setPhone('');
+          setCountry('');
+          setMessage('');
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          setResponseMessage('Error submitting form. Please try again.');
+          console.log('Failed...', error.text);
+        }
       );
   };
 
@@ -59,7 +56,7 @@ const Register = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
-                name='name'
+                name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -106,6 +103,7 @@ const Register = () => {
               <select
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="country"
+                name="country"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
                 required
@@ -147,25 +145,29 @@ const Register = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
                 rows="4"
-                value={message}
                 name="message"
+                value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
               ></textarea>
             </div>
 
             <div className="text-center">
-              <button className="bg-blue-950 text-white py-2 px-4 rounded" type="submit">
+              <button className="bg-blue-950 text-yellow-400 py-2 px-4 rounded" type="submit">
                 Send Message
               </button>
             </div>
           </form>
+          {/* Display response message at the bottom */}
+          {responseMessage && (
+            <p className="mt-4 text-center text-green-500">{responseMessage}</p>
+          )}
         </div>
 
         {/* Image Section */}
         <div className="md:w-1/2 w-full p-4">
           <img
-            src="/student.webp"
+            src="/contactt.webp"
             alt="Contact"
             className="w-full h-auto object-cover rounded shadow-lg"
           />

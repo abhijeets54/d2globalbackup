@@ -66,7 +66,7 @@ const ContactUs = () => {
           <p>
             <i className="fas fa-envelope mr-2"></i>
             <a href="mailto:info@d2global.com" className="text-gray-400 hover:text-yellow-400">
-              info@d2global.com
+              Info@d2global.in
             </a>
           </p>
         </div>

@@ -122,7 +122,7 @@ function Header() {
                 <i className="fas fa-map-marker-alt"></i> Maks Shopping Plaza, Dugri Road, Model Town , Ludhiana 
               </span>
               <span>
-                <i className="fas fa-envelope"></i> info@d2global.com
+                <i className="fas fa-envelope"></i> Info@d2global.in 
               </span>
             </div>
             <div className="flex space-x-4 items-center text-xl">

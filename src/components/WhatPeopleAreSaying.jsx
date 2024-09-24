@@ -4,35 +4,24 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const testimonials = [
   {
     id: 1,
-    videoUrl: 'https://www.youtube.com/embed/sample_video_1',
-    name: 'John Doe',
-    text: 'The team at D2 Global helped me with every step of the process. They guided me with my student visa, and now I am successfully studying in Canada. Couldn’t have done it without them!',
+    videoUrl: 'https://www.youtube.com/embed/acCR96OwoUo',
+    name: 'Prabhdeep Singh',
+    text: 'Prabhdeep Singh achieved an outstanding score of 7 bands in the IELTS exam after preparing with the expert guidance of D2 Global. The personalized coaching, dedicated support, and focused approach helped Prabhdeep excel in all modules of the test, paving the way for his successful journey toward studying abroad.',
   },
   {
     id: 2,
-    videoUrl: 'https://www.youtube.com/embed/sample_video_2',
-    name: 'Jane Smith',
-    text: 'My journey to study abroad was seamless with D2 Global. They assisted me with IELTS coaching and visa application, making the entire process stress-free.',
+    videoUrl: 'https://www.youtube.com/embed/7VVtLwesd54',
+    name: 'Navjot Singh',
+    text: '"I am incredibly thankful to D2 Global for their unwavering support throughout my visa process. After facing a refusal, I was disheartened, but the team at D2 Global guided me step by step, ensuring that my documents were perfectly aligned for a successful application. With their expertise, I received my UK study visa within just one month! I can now pursue my dreams of studying abroad, all thanks to D2 Globals dedication and professionalism."',
   },
   {
     id: 3,
-    videoUrl: 'https://www.youtube.com/embed/sample_video_3',
-    name: 'Michael Brown',
-    text: 'Thanks to D2 Global, I successfully obtained my work permit in Australia. Their staff was supportive and knowledgeable throughout the entire process.',
-  },
-  {
-    id: 4,
-    videoUrl: 'https://www.youtube.com/embed/sample_video_4',
-    name: 'Emily Johnson',
-    text: 'Tourist visa application can be confusing, but D2 Global made it easy for me to explore New Zealand. They handled all the paperwork and explained everything clearly.',
-  },
-  {
-    id: 5,
-    videoUrl: 'https://www.youtube.com/embed/sample_video_5',
-    name: 'David Lee',
-    text: 'I got my student visa to study in the UK through D2 Global. Their expertise made everything simple and straightforward. I highly recommend their services.',
+    videoUrl: 'https://www.youtube.com/embed/BELRwg10mlU',
+    name: 'Harmanjeet Singh',
+    text: 'Harmanjeet Singh successfully obtained his UK work permit with the dedicated support of D2 Global. The teams expertise in navigating the visa process and their tailored guidance made it a smooth and stress-free experience, helping Harmanjeet secure his future in the UK',
   },
 ];
+
 
 const WhatPeopleAreSaying = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

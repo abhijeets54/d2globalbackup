@@ -42,7 +42,7 @@ function Collage() {
                 <div className="text-center text-white px-4">
                   <h4 className="text-3xl md:text-5xl font-bold mb-2 animate-fade-in">Where Your Future Finds Its Home</h4>
                   <p className="mb-4 animate-slide-in text-lg">Unlock endless opportunities with global education.</p>
-                  <p className="text-customYellow text-lg animate-bounce-in">Let us guide you to your dream destination.</p>
+                  <p className="text-yellow-400 text-lg animate-bounce-in">Let us guide you to your dream destination.</p>
                 </div>
               </div>
             </div>
@@ -61,11 +61,11 @@ function Collage() {
                   <h5 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">Student Visa</h5>
                   <p className="mb-6 text-base md:text-lg animate-slide-in">Your Gateway to Global Education.</p>
                   <button
-                    className="px-4 py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
                     onClick={() => navigate('/StudyAbroad')}
                   >
                     Learn More
-                    <FaArrowRight className="ml-2 text-customYellow animate-bounce" />
+                    <FaArrowRight className="ml-2 text-yellow-400 animate-bounce" />
                   </button>
                 </div>
               </div>
@@ -85,11 +85,11 @@ function Collage() {
                   <h5 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">Tourist Visa</h5>
                   <p className="mb-6 text-base md:text-lg animate-slide-in">Your Ticket to Global Adventures.</p>
                   <button
-                    className="px-4 py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
                     onClick={() => navigate('/TouristVisa')}
                   >
                     Learn More
-                    <FaArrowRight className="ml-2 text-customYellow animate-bounce" />
+                    <FaArrowRight className="ml-2 text-yellow-400 animate-bounce" />
                   </button>
                 </div>
               </div>
@@ -109,11 +109,11 @@ function Collage() {
                   <h5 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">Training</h5>
                   <p className="mb-6 text-base md:text-lg animate-slide-in">Master English, Unlock the World.</p>
                   <button
-                    className="px-4 py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
+                    className="px-4 py-2 md:px-6 md:py-3 bg-blue-950 text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
                     onClick={() => navigate('/Training')}
                   >
                     Learn More
-                    <FaArrowRight className="ml-2 text-customYellow animate-bounce" />
+                    <FaArrowRight className="ml-2 text-yellow-400 animate-bounce" />
                   </button>
                 </div>
               </div>
@@ -125,19 +125,19 @@ function Collage() {
       {/* Social Media Buttons */}
       <div className="fixed right-4 md:right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
         <button
-          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-customBlue hover:bg-white text-customYellow"
+          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-white text-yellow-400"
           onClick={() => window.open('https://www.instagram.com/d2globalinfo', '_blank')}
         >
           <FaInstagram className="text-base md:text-2xl" />
         </button>
         <button
-          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-customBlue hover:bg-white text-customYellow"
+          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-white text-yellow-400"
           onClick={() => window.open('https://www.facebook.com', '_blank')}
         >
           <FaFacebookF className="text-base md:text-2xl" />
         </button>
         <button
-          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-customBlue hover:bg-white text-customYellow"
+          className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-blue-950 hover:bg-white text-yellow-400"
           onClick={() => window.open('http://www.youtube.com/@D2Global', '_blank')}
         >
           <FaYoutube className="text-base md:text-2xl" />

@@ -29,8 +29,8 @@ function Home() {
   };
 
   return (
-    <>
-      <PopupForm />
+    // <>
+    //   {/* <PopupForm /> */}
       <QuickEnquiry />
       <Collage />
       

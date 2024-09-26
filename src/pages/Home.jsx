@@ -4,9 +4,9 @@ import Collage from '../components/Collage';
 import OurAssociates from '../components/OurAssociates';
 import QuickNumbers from '../components/QuickNumbers';
 import WhatPeopleAreSaying from '../components/WhatPeopleAreSaying';
-import DonateComponent from '../components/Donate/DonateComponent';
+
 import Register from '../components/Register';
-import Timeline from '../components/Timeline';
+
 import About from '../components/About';
 import Offer from '../components/Offer';
 import Countries from '../components/Countries';
@@ -30,12 +30,12 @@ function Home() {
 
   return (
     <>
-      <PopupForm />
+      {/* <PopupForm /> */}
       <QuickEnquiry />
       <Collage />
       
         <About />
-        <People/>
+        {/* <People/> */}
         <QuickNumbers />
         <Choose/>
         <Offer />
@@ -45,13 +45,13 @@ function Home() {
        
          
             <Countries />
-            {/* <ChairmanAddress /> */}
-            {/* <ThreePillars /> */}
+           
+          
             <OurAssociates />
           
           <WhatPeopleAreSaying />
           {/* <Events /> */}
-          {/* <DonateComponent /> */}
+          
           <Register />
         
 

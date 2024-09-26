@@ -8,10 +8,10 @@ function Offer() {
   const touristVisaImageUrl = '/tourist.webp'; // Update with actual image URL
 
   return (
-    <div className="mx-auto bg-blue-950
+    <div className="mx-auto bg-customBlue
     0 p-6 md:p-10 shadow">
-      <h4 className="text-center text-blue-950 mt-3 text-xl"></h4>
-      <h2 className="text-center text-3xl text-yellow-400 sm:text-4xl mt-3 font-bold mb-10 md:mb-16">What We Offer</h2>
+      <h4 className="text-center text-customBlue mt-3 text-xl"></h4>
+      <h2 className="text-center text-3xl text-customYellow sm:text-4xl mt-3 font-bold mb-10 md:mb-16">What We Offer</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {/* First card: Study Abroad */}
@@ -40,7 +40,7 @@ function Offer() {
                 alt="IELTS/PTE" 
               />
               <div className="p-4">
-                <h5 className="text-center text-lg sm:text-xl font-bold">Training</h5>
+                <h5 className="text-center text-lg sm:text-xl font-bold">Language Coaching</h5>
               </div>
             </div>
           </Link>

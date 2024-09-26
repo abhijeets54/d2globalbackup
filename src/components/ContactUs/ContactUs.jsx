@@ -26,18 +26,18 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <footer className="bg-blue-950 text-yellow-400 py-8">
+    <footer className="bg-customBlue text-customYellow py-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
         {/* Social Links Column */}
         <div className="space-y-4">
           <p className="font-semibold">Follow Us</p>
-          <a href="https://www.facebook.com/D2GlobalEducation/" className="text-gray-400 hover:text-yellow-400" target="_blank" rel="noreferrer">
+          <a href="https://www.facebook.com/D2GlobalEducation/" className="text-gray-400 hover:text-customYellow" target="_blank" rel="noreferrer">
             <i className="fab fa-facebook-f"></i> D2 Global
           </a> <br />
-          <a href="https://youtube.com/@d2global?si=DcM0IJaeJbDmfpa2" className="text-gray-400 hover:text-yellow-400" target="_blank" rel="noreferrer"> 
+          <a href="https://youtube.com/@d2global?si=DcM0IJaeJbDmfpa2" className="text-gray-400 hover:text-customYellow" target="_blank" rel="noreferrer"> 
             <i className="fab fa-youtube"></i> D2 Global
           </a> <br />
-          <a href="https://www.instagram.com/d2globalinfo/" className="text-gray-400 hover:text-yellow-400" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/d2globalinfo/" className="text-gray-400 hover:text-customYellow" target="_blank" rel="noreferrer">
             <i className="fab fa-instagram"></i> d2globalinfo
           </a>
         </div>
@@ -45,12 +45,12 @@ const ContactUs = () => {
         {/* Quick Links Column */}
         <div className="space-y-4">
           <p className="font-semibold">Quick Links</p>
-          <a href="/AboutUs" className="text-gray-400 hover:text-yellow-400">About</a> <br />
-          <a href="/StudyAbroad" className="text-gray-400 hover:text-yellow-400">Study Abroad <br /></a>
-          <a href="/TouristVisa" className="text-gray-400 hover:text-yellow-400">Tourist Visa</a> <br />
-          <a href="/ContactUs" className="text-gray-400 hover:text-yellow-400">Contact Us</a> <br />
-          <a href="/PR" className="text-gray-400 hover:text-yellow-400">Permanent Residency</a> <br />
-          <a href="/Training" className="text-gray-400 hover:text-yellow-400">Training</a>
+          <a href="/AboutUs" className="text-gray-400 hover:text-customYellow">About</a> <br />
+          <a href="/StudyAbroad" className="text-gray-400 hover:text-customYellow">Study Abroad <br /></a>
+          <a href="/TouristVisa" className="text-gray-400 hover:text-customYellow">Tourist Visa</a> <br />
+          <a href="/ContactUs" className="text-gray-400 hover:text-customYellow">Contact Us</a> <br />
+          <a href="/PR" className="text-gray-400 hover:text-customYellow">Permanent Residency</a> <br />
+          <a href="/Training" className="text-gray-400 hover:text-customYellow">Training</a>
         </div>
 
         {/* Address Column */}
@@ -65,7 +65,7 @@ const ContactUs = () => {
           <p>For all enquiries, contact</p>
           <p>
             <i className="fas fa-envelope mr-2"></i>
-            <a href="mailto:info@d2global.com" className="text-gray-400 hover:text-yellow-400">
+            <a href="mailto:info@d2global.com" className="text-gray-400 hover:text-customYellow">
               Info@d2global.in
             </a>
           </p>
@@ -73,7 +73,7 @@ const ContactUs = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center text-yellow-400 mt-8">
+      <div className="text-center text-customYellow mt-8">
         <p>All rights reserved © D2 Global.</p>
       </div>
     </footer>

@@ -26,7 +26,7 @@ const Training = () => {
       >
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex-1 mr-0 md:mr-8 mb-8 md:mb-0">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">IELTS, PTE & Spoken English Training</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">IELTS, PTE & Spoken English Coaching</h1>
             <p className="text-lg sm:text-xl">
               Master language proficiency and overcome communication barriers with our expert training programs.
             </p>
@@ -45,7 +45,7 @@ const Training = () => {
         animate={{ opacity: loaded ? 1 : 0, x: loaded ? 0 : -100 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">IELTS Training</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">IELTS Coaching</h2>
         <p className="text-base sm:text-lg mb-4">
           IELTS (International English Language Testing System) is essential for students, professionals, and migrants seeking to go to English-speaking countries.
           We provide tailored training for both the <strong>Academic</strong> and <strong>General Training</strong> modules, focusing on all four sections of the exam.
@@ -68,7 +68,7 @@ const Training = () => {
         animate={{ opacity: loaded ? 1 : 0, x: loaded ? 0 : 100 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">PTE Training</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">PTE Coaching</h2>
         <p className="text-base sm:text-lg mb-4">
           The <strong>Pearson Test of English (PTE)</strong> is a computer-based test assessing writing, speaking, reading, and listening skills.
         </p>
@@ -89,7 +89,7 @@ const Training = () => {
         animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 100 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Spoken English Training</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Spoken English Coaching</h2>
         <p className="text-base sm:text-lg mb-4">
           <strong>Spoken English</strong> is a critical skill in today's interconnected world. Our course focuses on enhancing fluency, pronunciation, and communication skills.
         </p>

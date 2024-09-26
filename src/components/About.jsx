@@ -47,7 +47,7 @@ const About = () => {
         >
           <h2 className="text-3xl md:text-4xl  font-bold mb-4 text-gray-900">Welcome to D2 Global</h2>
           <p className="text-base md:text-lg text-gray-700">
-          "With years of experience in the immigration sector, I founded D2 Global to simplify the immigration journey for individuals aspiring to study, work, or live abroad. My leadership has guided thousands of clients through complex visa, work permit, and residency processes, ensuring clear and reliable support every step of the way."
+          "With years of experience in the immigration sector, I founded D2 Global to simplify the immigration journey for individuals aspiring to study, work, or live abroad. My leadership has guided thousands of clients through complex visa, work permit, and residency process, ensuring clear and reliable support every step in the course."
 
 — Amardeep Singh, Managing Director
           </p>
@@ -55,7 +55,7 @@ const About = () => {
           {/* Read More Button */}
           <button 
             onClick={handleReadMore}
-            className="mt-4 inline-block bg-blue-950 text-yellow-400 px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+            className="mt-4 inline-block bg-customBlue text-customYellow px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
           >
             Read More
           </button>

@@ -90,7 +90,7 @@ function Header() {
       ],
     },
     {
-      name: 'Training',
+      name: 'Language Coaching',
       slug: '/Training',
     },
     { name: 'Contact Us', slug: '/Contactpage' },
@@ -114,28 +114,25 @@ function Header() {
       <style>{customStyles}</style>
 
       {/* Contact Information Section */}
-      <div className="bg-blue-950 py-2 text-yellow-400 text-sm">
+      <div className="bg-customBlue py-2 text-customYellow text-sm">
         <Container>
-          <div className="flex flex-col lg:flex-row justify-between items-center px-16 lg:px-16">
-            <div className="flex items-center text-md mb-2 lg:mb-1 space-x-4">
+          <div className="flex flex-col lg:flex-row justify-between items-center px-6 lg:px-12">
+            <div className="flex items-center text-lg space-x-4 mb-2 lg:mb-1">
               <span>
-                <i className="fas fa-map-marker-alt"></i> Maks Shopping Plaza, Dugri Road, Model Town , Ludhiana 
-              </span>
-              <span>
-                <i className="fas fa-envelope"></i> Info@d2global.in 
+                <i className="fas fa-envelope"></i> Info@d2global.in
               </span>
             </div>
-            <div className="flex space-x-4 items-center text-xl">
-              <a href="https://www.facebook.com/profile.php?id=100013114175614&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" className="text-blue-600 ">
+            <div className="flex space-x-4 items-center text-2xl lg:text-3xl">
+              <a href="https://www.facebook.com/profile.php?id=100013114175614&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" className="text-blue-600">
                 <FaFacebookF />
               </a>
               <a href="https://www.instagram.com/d2globalinfo?igsh=M244eHMycGdvZDhm" target="_blank" rel="noopener noreferrer" className="text-pink-600">
                 <FaInstagram />
               </a>
-              <a href="https://snapchat.com/t/oAdKBVHs" target="_blank" rel="noopener noreferrer" className="text-red-600">
+              <a href="https://snapchat.com/t/oAdKBVHs" target="_blank" rel="noopener noreferrer" className="text-yellow-600">
                 <FaSnapchat />
               </a>
-              <a href="http://www.youtube.com/@D2Global" target="_blank" rel="noopener noreferrer" className="text-blue-800">
+              <a href="http://www.youtube.com/@D2Global" target="_blank" rel="noopener noreferrer" className="text-red-600">
                 <FaYoutube />
               </a>
             </div>
@@ -144,19 +141,25 @@ function Header() {
       </div>
 
       {/* Navigation Header */}
-      <header className="shadow bg-blue-950 text-yellow-400 top-12 left-0 w-full z-50">
+      <header className="shadow bg-customBlue text-customYellow top-12 left-0 w-full z-50">
         <Container>
-          <nav className="py-3 flex justify-between  items-center">
-            <div className="mr-3 ml-5 w-18 h-18">
+          <nav className="py-3 flex justify-between items-center">
+            <div className="flex items-center mr-3 ml-5 w-18 h-18">
               <button onClick={() => navigate('/')} className="focus:outline-none">
                 <Logo className="w-full h-full object-contain" />
               </button>
+
+              {/* Add the company name and tagline here */}
+              <div className="ml-3 text-customYellow text-left">
+                <p className="text-2xl lg:text-4xl font-semibold">D2 Global</p>
+                <p className="text-lg lg:text-lg">Immigration and Services</p>
+              </div>
             </div>
 
             {/* Hamburger Menu */}
-            <div className="lg:hidden  mr-5">
-              <button onClick={toggleMenu} className="text-yellow-400 focus:outline-none">
-                {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            <div className="lg:hidden mr-5">
+              <button onClick={toggleMenu} className="text-customYellow focus:outline-none">
+                {menuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
               </button>
             </div>
 
@@ -168,22 +171,18 @@ function Header() {
                     onClick={() =>
                       item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                     }
-                    className={`underline-slide inline-block px-6 py-2 duration-200 ${
-                      location.pathname === item.slug ? 'active-page' : 'text-yellow-400'
-                    }`}
+                    className={`underline-slide inline-block px-6 py-3 lg:py-4 text-lg lg:text-xl duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
                   >
                     {item.name}
                   </button>
 
                   {item.dropdown && activeDropdown === index && (
-                    <ul className="absolute left-0 mt-1 w-40 bg-blue-950 shadow-lg z-50 text-yellow-400">
+                    <ul className="absolute left-0 mt-1 w-48 bg-customBlue shadow-lg z-50 text-customYellow">
                       {item.dropdown.map((subItem) => (
                         <li key={subItem.name}>
                           <button
                             onClick={() => handleNavigation(subItem.slug)}
-                            className={`block px-4 py-2 hover:underline hover:text-yellow-400 w-full text-left ${
-                              location.pathname === subItem.slug ? 'font-bold' : ''
-                            }`}
+                            className={`block px-4 py-2 hover:underline hover:text-customYellow w-full text-left text-lg lg:text-xl ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
                           >
                             {subItem.name}
                           </button>
@@ -197,7 +196,7 @@ function Header() {
 
             {/* Mobile Menu */}
             {menuOpen && (
-              <div className="lg:hidden absolute top-16 left-0 w-full bg-blue-950 shadow-md z-40 text-yellow-400">
+              <div className="lg:hidden absolute top-16 left-0 w-full bg-customBlue shadow-md z-40 text-customYellow">
                 <ul className="flex flex-col items-center space-y-4 py-6">
                   {navItems.map((item, index) => (
                     <li key={item.name}>
@@ -205,23 +204,19 @@ function Header() {
                         onClick={() =>
                           item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                         }
-                        className={`underline-slide inline-block px-6 py-2 duration-200 ${
-                          location.pathname === item.slug ? 'active-page' : 'text-yellow-400'
-                        }`}
+                        className={`underline-slide inline-block px-6 py-2 duration-200 text-lg ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
                       >
                         {item.name}
                       </button>
 
                       {item.dropdown && activeDropdown === index && (
                         <>
-                          <ul className="bg-blue-950 shadow-lg z-50 w-full text-yellow-400">
+                          <ul className="bg-customBlue shadow-lg z-50 w-full text-customYellow">
                             {item.dropdown.map((subItem) => (
                               <li key={subItem.name}>
                                 <button
                                   onClick={() => handleNavigation(subItem.slug)}
-                                  className={`block px-4 py-2 hover:underline hover:text-yellow-400 w-full text-left ${
-                                    location.pathname === subItem.slug ? 'font-bold' : ''
-                                  }`}
+                                  className={`block px-4 py-2 hover:underline hover:text-customYellow w-full text-left text-lg ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
                                 >
                                   {subItem.name}
                                 </button>
@@ -230,7 +225,7 @@ function Header() {
                           </ul>
                           <button
                             onClick={() => toggleDropdown(index)}
-                            className="text-yellow-400 px-4 py-2 text-sm"
+                            className="text-customYellow px-4 py-2 text-sm"
                           >
                             Close
                           </button>
@@ -241,8 +236,8 @@ function Header() {
                 </ul>
 
                 {/* Cross (X) button for mobile menu close */}
-                <button onClick={toggleMenu} className="text-yellow-400 px-4 py-2 mt-4">
-                  <FaTimes size={24} />
+                <button onClick={toggleMenu} className="text-customYellow px-4 py-2 mt-4">
+                  <FaTimes size={28} />
                 </button>
               </div>
             )}

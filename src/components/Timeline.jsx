@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
+// Timeline data
 const timelineData = [
   { year: '2015', event: 'Company Founded', description: 'D2 Global Education and Immigration was founded, driven by a mission to provide students with clear guidance for studying abroad.' },
   { year: '2016', event: 'International Partnerships', description: 'Established partnerships with top educational institutions in the UK, Canada, and Europe, enhancing opportunities for students.' },
@@ -8,63 +10,75 @@ const timelineData = [
   { year: '2024', event: '8th Anniversary', description: 'Celebrated our 8th anniversary, reinforcing our commitment to excellence in visa services and client support.' },
 ];
 
-const Timeline = () => {
-  const [activeIndex, setActiveIndex] = useState(-1);
-  const timelineRefs = useRef([]);
+const HorizontalTimeline = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
+  // Function to increment to the next event
+  const nextEvent = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % timelineData.length);
+  };
+
+  const prevEvent = () => {
+    if (activeIndex > 0) {
+      setActiveIndex(activeIndex - 1);
+    }
+  };
+
+  // Automatically move to the next event every 3 seconds
   useEffect(() => {
-    const handleScroll = () => {
-      timelineRefs.current.forEach((ref, index) => {
-        const rect = ref.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          setActiveIndex(index);
-        }
-      });
-    };
+    const interval = setInterval(() => {
+      nextEvent();
+    }, 5000); // Change slide every 3 seconds
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Cleanup interval on unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full flex flex-col items-center py-10 bg-white">
-      {/* Timeline container */}
-      <div className="relative w-full max-w-5xl px-4">
-        {/* Timeline line */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-yellow-500 h-full"></div>
+    <div className="w-full flex flex-col items-center py-10 bg-customBlue">
+      <div className="relative w-full max-w-4xl px-4 flex flex-col items-center">
+        {/* Animated Progress Bar */}
+        <motion.div
+          className="absolute top-0 left-0 h-2 bg-customYellow rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${(activeIndex + 1) * (100 / timelineData.length)}%` }}
+          transition={{ duration: 0.5 }}
+        />
 
-        {timelineData.map((item, index) => (
-          <div
-            key={index}
-            ref={(el) => (timelineRefs.current[index] = el)}
-            className="relative flex flex-col items-center mt-40 mb-60 w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto"
+        {/* Timeline Cards */}
+        <div className="flex items-center justify-between w-full mt-20">
+          <button
+            onClick={prevEvent}
+            disabled={activeIndex === 0}
+            className="p-2 bg-customYellow text-white rounded-lg"
           >
-            {/* Dot */}
-            <div
-              className={`w-5 h-5 rounded-full transition-colors duration-300 ${
-                activeIndex >= index ? 'bg-yellow-500' : 'bg-gray-300'
-              }`}
-            ></div>
+            Previous
+          </button>
 
-            {/* Stay in place once it comes into view */}
-            <div
-              className={`absolute p-4 bg-white border border-yellow-500 rounded-lg shadow-lg w-64 md:w-72 lg:w-80 transform transition-opacity duration-500 ${
-                activeIndex >= index ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{
-                position: 'absolute',
-                top: '50%',
-                transform: 'translateY(-50%)',
-              }}
-            >
-              <h4 className="text-lg font-semibold mb-2">{item.event}</h4>
-              <p className="text-gray-700">{item.description}</p>
-            </div>
-          </div>
-        ))}
+          <motion.div
+            key={activeIndex}
+            className="relative w-3/5 p-6 bg-white rounded-lg shadow-lg"
+            initial={{ opacity: 0, x: 200 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -200 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h4 className="text-3xl font-bold mb-2">{timelineData[activeIndex].year}</h4>
+            <h5 className="text-xl mb-2">{timelineData[activeIndex].event}</h5>
+            <p>{timelineData[activeIndex].description}</p>
+          </motion.div>
+
+          <button
+            onClick={nextEvent}
+            disabled={activeIndex === timelineData.length - 1}
+            className="p-2 bg-customYellow text-white rounded-lg"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Timeline;
+export default HorizontalTimeline;

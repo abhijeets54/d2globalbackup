@@ -199,4 +199,4 @@ function Collage() {
     </div>
   );
 }
-export default Collage
+export default coll

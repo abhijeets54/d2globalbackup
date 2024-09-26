@@ -45,7 +45,7 @@ function AboutUs() {
       <Timeline/>
 
      
-      <People />
+      {/* <People /> */}
       <Choose />
       <QuickNumbers />
       <OurAssociates/>

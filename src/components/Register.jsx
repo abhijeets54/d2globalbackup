@@ -153,7 +153,7 @@ const Register = () => {
             </div>
 
             <div className="text-center">
-              <button className="bg-blue-950 text-yellow-400 py-2 px-4 rounded" type="submit">
+              <button className="bg-customBlue text-customYellow py-2 px-4 rounded" type="submit">
                 Send Message
               </button>
             </div>
@@ -165,13 +165,13 @@ const Register = () => {
         </div>
 
         {/* Image Section */}
-        <div className="md:w-1/2 w-full p-4">
+        {/* <div className="md:w-1/2 w-full p-4">
           <img
             src="/contactt.webp"
             alt="Contact"
             className="w-full h-auto object-cover rounded shadow-lg"
           />
-        </div>
+        </div> */}
 
       </div>
     </div>

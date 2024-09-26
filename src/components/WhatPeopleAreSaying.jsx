@@ -46,8 +46,8 @@ const WhatPeopleAreSaying = () => {
   };
 
   return (
-    <div className="py-8 flex flex-col justify-center items-center bg-blue-950">
-      <h2 className="text-center text-2xl text-yellow-400 font-sans sm:text-3xl lg:text-4xl font-bold mb-6">
+    <div className="py-8 flex flex-col justify-center items-center bg-customBlue">
+      <h2 className="text-center text-2xl text-customYellow font-sans sm:text-3xl lg:text-4xl font-bold mb-6">
         STUDENT TESTIMONIALS - OUR SUCCESS STORIES
       </h2>
 

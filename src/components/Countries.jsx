@@ -17,8 +17,8 @@ function Countries() {
   const dubaiFlagUrl = '/dflag.svg'; // Update with actual flag URL
 
   return (
-    <div className="mx-auto bg-blue-950 p-6 md:p-10 shadow">
-      <h2 className="text-center text-yellow-400 text-3xl sm:text-4xl mt-3 font-bold mb-10 md:mb-16">Choose your Favourite Country</h2>
+    <div className="mx-auto bg-customBlue p-6 md:p-10 shadow">
+      <h2 className="text-center text-customYellow text-3xl sm:text-4xl mt-3 font-bold mb-10 md:mb-16">Choose your Favourite Country</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {/* Country Card: Canada */}

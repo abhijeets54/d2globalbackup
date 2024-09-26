@@ -51,7 +51,7 @@ const QuickEnquiry = () => {
     <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-50">
       {/* Quick Enquiry Button */}
       <div
-        className="bg-blue-950 hover:bg-blue-800 text-yellow-400 p-5 sm:p-4 md:p-6 lg:p-12 rounded-r-lg cursor-pointer flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16"
+        className="bg-customBlue hover:bg-blue-800 text-customYellow p-5 sm:p-4 md:p-6 lg:p-12 rounded-r-lg cursor-pointer flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16"
         onClick={toggleForm}
       >
         <span className="transform -rotate-90 text-xs sm:text-sm md:text-lg">Quick Enquiry</span>

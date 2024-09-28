@@ -155,7 +155,7 @@ function Collage() {
                 alt="IELTS"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                <div className="text-left font-serif text-white px-4">
+                <div className="text-center font-serif text-white px-4">
                   <h5 className="text-4xl md:text-6xl font-bold mb-4">Language Coaching</h5>
                   <p className="mb-6 text-xl md:text-2xl">Master English, Unlock the World.</p>
                   <button

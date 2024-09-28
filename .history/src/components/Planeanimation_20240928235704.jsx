@@ -35,7 +35,7 @@ const PlaneAnimation = () => {
       <div className="absolute inset-0 bg-cover bg-center" />
 
       {/* Animated Plane - Adjusted slightly lower */}
-      <div className="plane absolute w-160 z-50 h-180 top-[18%] left-0 transform"> {/* Slightly lower with top-[22%] */}
+      <div className="plane absolute w-1 z-50 h-160 top-[18%] left-0 transform"> {/* Slightly lower with top-[22%] */}
         <img src="/plane2.png" alt="Plane" className="w-full" />
       </div>
 

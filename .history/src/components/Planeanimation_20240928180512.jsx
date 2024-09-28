@@ -18,10 +18,10 @@ const PlaneAnimation = () => {
         onComplete: () => {
           // Pause for 2 seconds when the plane is over the text
           gsap.to(plane, {
-            delay: 0, // Pause for 2 seconds before continuing
+            delay: 1, // Pause for 2 seconds before continuing
             x: window.innerWidth + 300, // Move out to the right of the screen
             scale: 1, // Slight zoom out for a smooth exit
-            duration: 2, // Duration for the plane to leave the screen
+            duration: 3, // Duration for the plane to leave the screen
             ease: 'power3.inOut',
           });
         },
@@ -35,7 +35,7 @@ const PlaneAnimation = () => {
       <div className="absolute inset-0 bg-cover bg-center" />
 
       {/* Animated Plane - Adjusted slightly lower */}
-      <div className="plane absolute w-160 z-50 h-180 top-[18%] left-0 transform"> {/* Slightly lower with top-[22%] */}
+      <div className="plane absolute w-120 z-50 h-160 top-[18%] left-0 transform"> {/* Slightly lower with top-[22%] */}
         <img src="/plane2.png" alt="Plane" className="w-full" />
       </div>
 
@@ -52,7 +52,7 @@ const PlaneAnimation = () => {
         </p>
 
         {/* Call to Action Button */}
-        <button onClick={() => Navigate('/StudyAbroad')} className="mt-6 px-8 py-3 bg-yellow-500 rounded-full text-white hover:bg-yellow-400 transition duration-300">
+        <button onClick={Navigate} className="mt-6 px-8 py-3 bg-yellow-500 rounded-full text-white hover:bg-yellow-400 transition duration-300">
           Explore Our Services
         </button>
       </div>

@@ -7,7 +7,7 @@ import animationData from '/src/wm.json'; // Your Lottie animation file
 
 function Collage() {
   const navigate = useNavigate();
-  const carouselRef = useRef(null); // Use ref to access the carousel
+  const carouselRef = useRef(null);
 
   const defaultOptions = {
     loop: true,
@@ -20,8 +20,6 @@ function Collage() {
 
   useEffect(() => {
     const plane = document.querySelector('.plane');
-
-    // Animate the plane
     gsap.fromTo(
       plane,
       { x: '-300px', scale: 0.8 },
@@ -38,12 +36,10 @@ function Collage() {
             duration: 2,
             ease: 'power3.inOut',
             onComplete: () => {
-              // Ensure carousel reference exists
               if (carouselRef.current) {
-                // Move to the next slide after plane animation completes
                 const carouselElement = carouselRef.current;
                 const bsCarousel = new window.bootstrap.Carousel(carouselElement);
-                bsCarousel.next(); // Move to the next slide
+                bsCarousel.next();
               }
             },
           });
@@ -59,7 +55,7 @@ function Collage() {
         className="carousel slide carousel-fade"
         data-bs-ride="carousel"
         data-bs-interval="10000"
-        ref={carouselRef} // Attach ref to the carousel
+        ref={carouselRef}
       >
         {/* Carousel Indicators */}
         <div className="carousel-indicators">
@@ -75,19 +71,19 @@ function Collage() {
             <div className="relative h-screen bg-gradient-to-r from-customBlue to-customYellow">
               <div className="absolute inset-0 flex flex-col justify-center items-center">
                 {/* Plane Animation */}
-                <div className="plane absolute w-160 h-180 top-[18%] left-0 z-50 transform">
+                <div className="plane absolute w-40 h-44 top-[18%] left-0 z-50 transform lg:w-160 lg:h-180">
                   <img src="/plane2.png" alt="Plane" className="w-full" />
                 </div>
 
                 {/* Text Content */}
                 <div className="text-center text-white px-4 z-20">
-                  <h4 className="text-3xl md:text-5xl font-serif font-bold mb-2">Where Your Global Dreams Take Flight</h4>
-                  <p className="mb-4 font-semibold text-2xl">Unlock endless opportunities with global education.</p>
-                  <p className="text-customYellow font-bold text-2xl">D2 Global Immigration—your partner in worldwide success.</p>
+                  <h4 className="text-2xl md:text-4xl lg:text-5xl font-serif font-bold mb-2">Where Your Global Dreams Take Flight</h4>
+                  <p className="mb-2 md:mb-4 font-semibold text-xl md:text-2xl">Unlock endless opportunities with global education.</p>
+                  <p className="text-customYellow font-bold text-xl md:text-2xl">D2 Global Immigration—your partner in worldwide success.</p>
 
                   {/* Contact Us Button */}
                   <button
-                    className="mt-6 px-4 mx-auto py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
+                    className="mt-4 px-4 mx-auto py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
                     onClick={() => navigate('/Contactpage')}
                   >
                     Contact Us
@@ -107,9 +103,9 @@ function Collage() {
                 alt="Student Visa"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                <div className="text-left font-serif text-white px-4">
-                  <h5 className="text-4xl md:text-6xl font-bold mb-4">Student Visa</h5>
-                  <p className="mb-6 text-xl md:text-2xl">Your Gateway to Global Education.</p>
+                <div className="text-center text-white px-4">
+                  <h5 className="text-3xl md:text-5xl font-bold mb-4">Student Visa</h5>
+                  <p className="mb-4 md:mb-6 text-base md:text-lg">Your Gateway to Global Education.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
                     onClick={() => navigate('/StudyAbroad')}
@@ -131,9 +127,9 @@ function Collage() {
                 alt="Tourist Visa"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                <div className="text-left font-serif text-white px-4">
-                  <h5 className="text-4xl md:text-6xl font-bold mb-4">Tourist Visa</h5>
-                  <p className="mb-6 text-xl md:text-2xl">Your Ticket to Global Adventures.</p>
+                <div className="text-center text-white px-4">
+                  <h5 className="text-3xl md:text-5xl font-bold mb-4">Tourist Visa</h5>
+                  <p className="mb-4 md:mb-6 text-base md:text-lg">Your Ticket to Global Adventures.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
                     onClick={() => navigate('/TouristVisa')}
@@ -150,14 +146,14 @@ function Collage() {
           <div className="carousel-item">
             <div className="relative h-screen">
               <img
-                src="/ielts5.webp"
+                src="/ielts.webp"
                 className="d-block w-full h-full object-cover"
                 alt="IELTS"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                <div className="text-left font-serif text-white px-4">
-                  <h5 className="text-4xl md:text-6xl font-bold mb-4">Language Coaching</h5>
-                  <p className="mb-6 text-xl md:text-2xl">Master English, Unlock the World.</p>
+                <div className="text-center text-white px-4">
+                  <h5 className="text-3xl md:text-5xl font-bold mb-4">Language Coaching</h5>
+                  <p className="mb-4 md:mb-6 text-base md:text-lg">Master English, Unlock the World.</p>
                   <button
                     className="px-4 py-2 md:px-6 md:py-3 bg-customBlue text-white rounded-3xl text-sm md:text-lg flex items-center justify-center hover:shadow-lg transition-transform transform hover:scale-105"
                     onClick={() => navigate('/Training')}
@@ -192,11 +188,6 @@ function Collage() {
         >
           <FaYoutube className="text-base md:text-2xl" />
         </button>
-      </div>
-
-      {/* Lottie Animation */}
-      <div className="absolute top-10 left-10 w-1/3 md:w-1/4 z-10">
-        <Lottie options={defaultOptions} />
       </div>
     </div>
   );

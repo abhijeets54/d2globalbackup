@@ -135,7 +135,7 @@ const QuickEnquiry = () => {
                 <option value="USA">USA</option>
                 <option value="Australia">Australia</option>
                 <option value="UK">UK</option>
-                <option value="Dubai">Dubai</option>
+                <option value="Dubai"><Dubai></Dubai></option>
                 <option value="Europe">Europe</option>
               </select>
             </div>

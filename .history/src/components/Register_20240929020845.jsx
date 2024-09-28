@@ -1,71 +1,51 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-const QuickEnquiry = () => {
-  const form = useRef(null);
-  
-  // State variables for form fields
+const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [country, setCountry] = useState('');
+  const [responseMessage, setResponseMessage] = useState('');
+  const form = useRef();
 
-  // State variables for success message and form visibility
-  const [isOpen, setIsOpen] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
-  
-  // Toggle form visibility
-  const toggleForm = () => {
-    setIsOpen(!isOpen);
-    setSuccessMessage(''); // Clear any previous success message
-  };
-
-  // Form submission handler
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_3x7bjfj', 'template_530xg64', form.current, 'I7UB0PZBIaKgzxane')
+      .sendForm('service_3x7bjfj', 'template_530xg64', form.current, {
+        publicKey: 'I7UB0PZBIaKgzxane',
+      })
       .then(
         () => {
-          // Clear form fields after successful submission
+          setResponseMessage(' Your message was sent successfully, We will get back to you very soon!');
+          // Reset form fields after successful submission
           setName('');
           setEmail('');
           setSubject('');
           setPhone('');
-          setMessage('');
           setCountry('');
-          
-          // Display success message
-          setSuccessMessage('Your message was sent successfully! We will get back to you very soon.');
+          setMessage('');
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          setResponseMessage('Error submitting form. Please try again.');
+          console.log('Failed...', error.text);
+        }
       );
   };
 
   return (
-    <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-50">
-      {/* Quick Enquiry Button */}
-      <div
-        className="bg-customBlue hover:bg-blue-800 text-customYellow p-5 sm:p-4 md:p-6 lg:p-12 rounded-r-lg cursor-pointer flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16"
-        onClick={toggleForm}
-      >
-        <span className="transform -rotate-90 text-xs sm:text-sm md:text-lg">Quick Enquiry</span>
-      </div>
-
-      {/* Contact Form */}
-      <div
-        className={`fixed left-0 top-1/2 transform -translate-y-1/2 z-50 bg-white shadow-lg w-full sm:w-80 md:w-96 lg:w-96 transition-transform duration-500 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="p-4 sm:p-6 md:p-8">
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 text-center">Contact Us</h2>
-
+    <div className="w-full min-h-screen flex items-center justify-center bg-gray-100 p-4">
+      <div className="flex flex-col md:flex-row items-center justify-center p-8 bg-white shadow-md rounded-lg md:max-w-6xl w-full">
+        
+        {/* Form Section */}
+        <div className="md:w-1/2 w-full p-4">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-6">Feel Free to Contact Us</h2>
+          {responseMessage && (
+            <p className="text-center text-green-500 mb-4">{responseMessage}</p>
+          )}
           <form onSubmit={handleSubmit} ref={form}>
             {/* Name Field */}
             <div className="mb-4">
@@ -135,7 +115,7 @@ const QuickEnquiry = () => {
                 <option value="USA">USA</option>
                 <option value="Australia">Australia</option>
                 <option value="UK">UK</option>
-                <option value="Dubai">Dubai</option>
+                <option value="Dubai">New Zealand</option>
                 <option value="Europe">Europe</option>
               </select>
             </div>
@@ -164,8 +144,8 @@ const QuickEnquiry = () => {
               <textarea
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
-                name="message"
                 rows="4"
+                name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
@@ -173,30 +153,29 @@ const QuickEnquiry = () => {
             </div>
 
             <div className="text-center">
-              <button className="bg-blue-950 text-yellow-400 py-2 px-4 rounded" type="submit">
+              <button className="bg-customBlue text-customYellow py-2 px-4 rounded" type="submit">
                 Send Message
               </button>
             </div>
-
-            {/* Success Message Below Button */}
-            {successMessage && (
-              <div className="mt-4 text-center text-green-500">
-                {successMessage}
-              </div>
-            )}
           </form>
+          {/* Display response message at the bottom */}
+          {responseMessage && (
+            <p className="mt-4 text-center text-green-500">{responseMessage}</p>
+          )}
         </div>
 
-        {/* Close Button */}
-        <div
-          className="absolute top-0 right-0 mt-4 mr-4 cursor-pointer text-gray-500"
-          onClick={toggleForm}
-        >
-          &#x2715;
-        </div>
+        {/* Image Section */}
+        {/* <div className="md:w-1/2 w-full p-4">
+          <img
+            src="/contactt.webp"
+            alt="Contact"
+            className="w-full h-auto object-cover rounded shadow-lg"
+          />
+        </div> */}
+
       </div>
     </div>
   );
 };
 
-export default QuickEnquiry;
+export default Register;

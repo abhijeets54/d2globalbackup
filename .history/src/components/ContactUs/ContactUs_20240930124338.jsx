@@ -53,13 +53,16 @@ const ContactUs = () => {
           <a href="/Training" className="text-gray-400 hover:text-customYellow">Training</a>
         </div>
 
-        {/* Address Column with Second Branch */}
+        {/* Address Column */}
         <div className="space-y-2 text-center md:text-left">
           <p className="font-bold text-xl">D2 Global</p>
           <p>Maks Shopping Plaza, Dugri Road, Model Town, Ludhiana</p>
           <p><i className="fas fa-phone mr-2"></i>+91 98789 90455</p>
-          <p className="font-bold text-xl mt-4">Second Branch:</p>
-          <p>Rattan Bazar Adda, Near Hungry Point Restaurant, Jodhan, Ludhiana</p>
+        </div>
+        <div className="space-y-2 text-center md:text-left">
+          <p className="font-bold text-xl">Second Branch:</p>
+          <p>Rattan Bazar Adda, Near Hungry Point Restaurant, Jodhan,Ludhiana </p>
+          <p><i className="fas fa-phone mr-2"></i>+91 98789 90455</p>
         </div>
 
         {/* Contact Info Column */}

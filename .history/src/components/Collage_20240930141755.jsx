@@ -27,15 +27,13 @@ function Collage() {
       duration: 3, // Adjust duration for smooth movement
       ease: 'none', // No easing for continuous movement
       onComplete: () => {
-        // Wait for 2 seconds before moving to the next slide
-        gsap.delayedCall(2, () => {
-          // Ensure carousel reference exists
-          if (carouselRef.current) {
-            const carouselElement = carouselRef.current;
-            const bsCarousel = new window.bootstrap.Carousel(carouselElement);
-            bsCarousel.next(); // Move to the next slide
-          }
-        });
+        // Ensure carousel reference exists
+        if (carouselRef.current) {
+          // Move to the next slide after plane animation completes
+          const carouselElement = carouselRef.current;
+          const bsCarousel = new window.bootstrap.Carousel(carouselElement);
+          bsCarousel.next(); // Move to the next slide
+        }
       },
     });
   }, []);

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaInstagram, FaFacebookF, FaYoutube, FaArrowRight } from 'react-icons/fa';
 import Lottie from 'lottie-react';
 import animationData from '/src/wm.json'; // Your Lottie animation file
+import { delay } from '@reduxjs/toolkit/dist/utils';
 
 function Collage() {
   const navigate = useNavigate();
@@ -27,15 +28,14 @@ function Collage() {
       duration: 3, // Adjust duration for smooth movement
       ease: 'none', // No easing for continuous movement
       onComplete: () => {
-        // Wait for 2 seconds before moving to the next slide
-        gsap.delayedCall(2, () => {
-          // Ensure carousel reference exists
-          if (carouselRef.current) {
-            const carouselElement = carouselRef.current;
-            const bsCarousel = new window.bootstrap.Carousel(carouselElement);
-            bsCarousel.next(); // Move to the next slide
-          }
-        });
+        // Ensure carousel reference exists
+        if (carouselRef.current) {
+          // Move to the next slide after plane animation completes
+          const carouselElement = carouselRef.current;
+          const bsCarousel = new window.bootstrap.Carousel(carouselElement);
+          delay(2);
+          bsCarousel.next(); // Move to the next slide
+        }
       },
     });
   }, []);

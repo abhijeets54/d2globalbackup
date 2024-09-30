@@ -11,7 +11,7 @@ const PlaneAnimation = () => {
     // Animate the plane from left to right continuously, without stopping or scaling
     gsap.to(plane, {
       x: window.innerWidth + 300, // Move the plane out to the right of the screen
-      duration: 6, // Adjust duration for smooth movement
+      duration: 2, // Adjust duration for smooth movement
       ease: 'none', // Linear movement (no easing)
       repeat: -1, // Infinite repeat to keep the plane moving continuously
       delay: 0, // Start immediately

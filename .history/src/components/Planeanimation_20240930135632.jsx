@@ -1,20 +1,26 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
-import { useNavigate } from 'react-router-dom'; // Use `useNavigate` hook instead of `Navigate` component
+import { useNavigate } from 'react-router-dom';
 
 const PlaneAnimation = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
   useEffect(() => {
     const plane = document.querySelector('.plane');
 
-    // Animate the plane from left to right continuously, without stopping or scaling
+    // Animate the plane from left to right, moving out of the right side of the screen
     gsap.to(plane, {
       x: window.innerWidth + 300, // Move the plane out to the right of the screen
-      duration: 6, // Adjust duration for smooth movement
-      ease: 'none', // Linear movement (no easing)
-      repeat: -1, // Infinite repeat to keep the plane moving continuously
-      delay: 0, // Start immediately
+      scale: 1, // Maintain normal size
+      duration: 6, // Duration of the animation
+      ease: 'power3.inOut',
+      repeat: -1, // Repeat indefinitely
+      modifiers: {
+        x: (x) => {
+          // Reset position when it moves out of view to create a loop
+          return parseFloat(x) < -300 ? '-300px' : x;
+        }
+      },
     });
   }, []);
 
@@ -39,7 +45,7 @@ const PlaneAnimation = () => {
 
         {/* Call to Action Button */}
         <button
-          onClick={() => navigate('/StudyAbroad')} // Use navigate to route
+          onClick={() => navigate('/StudyAbroad')}
           className="mt-6 px-8 py-3 bg-yellow-500 rounded-full text-white hover:bg-yellow-400 transition duration-300"
         >
           Explore Our Services

@@ -8,14 +8,17 @@ const PlaneAnimation = () => {
   useEffect(() => {
     const plane = document.querySelector('.plane');
 
-    // Animate the plane from left to right continuously, without stopping or scaling
-    gsap.to(plane, {
-      x: window.innerWidth + 300, // Move the plane out to the right of the screen
-      duration: 6, // Adjust duration for smooth movement
-      ease: 'none', // Linear movement (no easing)
-      repeat: -1, // Infinite repeat to keep the plane moving continuously
-      delay: 0, // Start immediately
-    });
+    // Animate the plane from left to right, continuously moving without stopping
+    gsap.fromTo(
+      plane,
+      { x: '-300px', scale: 0.8 }, // Start the plane from the left with smaller size
+      {
+        x: window.innerWidth + 300, // Move the plane out to the right of the screen
+        scale: 1, // Smooth size transition
+        duration: 6, // Adjust duration for smooth movement
+        ease: 'power3.inOut',
+      }
+    );
   }, []);
 
   return (

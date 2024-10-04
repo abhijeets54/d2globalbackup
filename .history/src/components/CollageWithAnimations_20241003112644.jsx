@@ -1,0 +1,62 @@
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
+const CollageWithAnimations = () => {
+  const [textIndex, setTextIndex] = useState(0);
+  const texts = ['Student Path', 'Work Path', 'PR Path', 'Tourist Path'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 3000); // Change text every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-full h-screen flex items-center justify-between px-6 md:px-12">
+      <div>
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
+          Immigration Pathways
+        </h1>
+        <h2 className="text-3xl md:text-5xl font-semibold mt-4">
+          <span className="text-red-500">
+            {texts[textIndex].split(' ')[0]}
+          </span>{' '}
+          <span className="text-gray-500">
+            {texts[textIndex].split(' ')[1]}
+          </span>
+        </h2>
+        <button className="mt-6 bg-black text-white px-6 py-2 rounded-full flex items-center">
+          <span className="mr-2">📞</span> Get Callback
+        </button>
+      </div>
+
+      {/* Animated Boxes */}
+      <motion.div
+        className="absolute right-12 bottom-1/3 p-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-lg text-white"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 1, repeat: Infinity }}
+      >
+        Immigrate & Settle ➔
+      </motion.div>
+      <motion.div
+        className="absolute right-32 bottom-24 p-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg text-white"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 1, repeat: Infinity, delay: 0.5 }}
+      >
+        Foreign Immigration Lawyers
+      </motion.div>
+
+      <motion.img
+        src="/student1." // replace with the actual image path
+        alt="Woman with suitcase"
+        className="h-72 md:h-96"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      />
+    </div>
+  );
+};
+
+export default CollageWithAnimations;

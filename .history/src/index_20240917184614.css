@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  /* Animation for sliding content */
+.slide-enter {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .slide-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .slide-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .slide-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  /* Custom CSS to hide the scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  @layer utilities {
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    .animate-slide-in {
+      animation: slideIn 0.7s ease-out forwards;
+    }
+  }
+  /* Optional: Add custom animations */
+@keyframes move-plane {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(500px); /* Adjust this value based on the desired movement */
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+}
+@media (max-width: 768px) {
+  .left-slide, .right-slide {
+    left: -80px; /* Adjust for smaller screens */
+    transform: translateX(-5px); /* Adjust for spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .left-slide, .right-slide {
+    left: -60px; /* Adjust for mobile screens */
+    transform: translateX(-3px); /* Adjust for spacing */
+  }
+
+  .w-56 {
+    width: 90% !important; /* Full width on mobile */
+  }
+
+  .w-64 {
+    width: 90% !important; /* Full width on mobile */
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 0.5s ease-in-out;
+}
+
+.animate-slide-right {
+  animation: slide-right 0.5s ease-in-out;
+}

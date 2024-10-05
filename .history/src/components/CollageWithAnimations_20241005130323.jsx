@@ -3,10 +3,6 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaGlobeAmericas, FaPassport, FaPlane, FaGraduationCap, FaHouseUser,FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-const handleSocialClick = (url) => {
-  window.open(url, '_blank');
-};
-
 const CollageWithAnimations = () => {
   const navigate = useNavigate();
   const [displayedText, setDisplayedText] = useState('');
@@ -127,22 +123,22 @@ const CollageWithAnimations = () => {
         </motion.div>
       </div>
       <div className="fixed right-4 md:right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
-      {[
-        { icon: FaInstagram, url: 'https://www.instagram.com/d2globalinfo?igsh=M244eHMycGdvZDhm', color: '#E1306C' }, // Instagram color
-        { icon: FaFacebookF, url: 'https://www.facebook.com/profile.php?id=100013114175614&mibextid=LQQJ4d', color: '#1877F2' }, // Facebook color
-        { icon: FaYoutube, url: 'http://www.youtube.com/@D2Global', color: '#FF0000' } // YouTube color
-      ].map((social, index) => (
-        <motion.button
-          key={index}
-          className="w-14 h-14 flex items-center justify-center rounded-full bg-customBlue/80 hover:bg-customYellow transition-all duration-300 shadow-md hover:shadow-lg"
-          onClick={() => handleSocialClick(social.url)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <social.icon className="text-2xl" style={{ color: social.color }} />
-        </motion.button>
-      ))}
-    </div>
+        {[
+          { icon: FaInstagram, url: 'https://www.instagram.com/d2globalinfo?igsh=M244eHMycGdvZDhm' },
+          { icon: FaFacebookF, url: 'https://www.facebook.com/profile.php?id=100013114175614&mibextid=LQQJ4d' },
+          { icon: FaYoutube, url: 'http://www.youtube.com/@D2Global' }
+        ].map((social, index) => (
+          <motion.button
+            key={index}
+            className="w-14 h-14 flex items-center justify-center rounded-full bg-customBlue/80 hover:bg-customYellow text-white hover:text-customBlue transition-all duration-300 shadow-md hover:shadow-lg"
+            onClick={() => handleSocialClick(social.url)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <social.icon className="text-2xl" />
+          </motion.button>
+        ))}
+      </div>
     </div>
   );
 };

@@ -135,7 +135,7 @@ const Register = () => {
             alt="Contact Us" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-customBlue bg-opacity-70 flex items-center justify-center">
+          <div className="absolute inset-0 bg-customBlue bg-opacity-60 flex items-center justify-center">
             <div className="text-center text-white p-8">
               <h3 className="text-4xl font-bold mb-4">Let's Connect</h3>
               <p className="text-xl">We're here to help you achieve your global aspirations.</p>

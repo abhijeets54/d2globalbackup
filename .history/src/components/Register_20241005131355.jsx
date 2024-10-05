@@ -118,7 +118,7 @@ const Register = () => {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-customBlue text-white py-3 px-6 rounded-full font-semibold flex items-center justify-center mx-auto transition duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="bg-blue-600 text-white py-3 px-6 rounded-full font-semibold flex items-center justify-center mx-auto transition duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 type="submit"
               >
                 <FaPaperPlane className="mr-2" />
@@ -135,7 +135,7 @@ const Register = () => {
             alt="Contact Us" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-customBlue bg-opacity-70 flex items-center justify-center">
+          <div className="absolute inset-0 bg bg-opacity-40 flex items-center justify-center">
             <div className="text-center text-white p-8">
               <h3 className="text-4xl font-bold mb-4">Let's Connect</h3>
               <p className="text-xl">We're here to help you achieve your global aspirations.</p>

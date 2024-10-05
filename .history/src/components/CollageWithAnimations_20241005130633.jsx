@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 const handleSocialClick = (url) => {
   window.open(url, '_blank');
 };
-
 const CollageWithAnimations = () => {
   const navigate = useNavigate();
   const [displayedText, setDisplayedText] = useState('');

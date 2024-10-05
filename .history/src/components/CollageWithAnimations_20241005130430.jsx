@@ -3,10 +3,6 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaGlobeAmericas, FaPassport, FaPlane, FaGraduationCap, FaHouseUser,FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-const handleSocialClick = (url) => {
-  window.open(url, '_blank');
-};
-
 const CollageWithAnimations = () => {
   const navigate = useNavigate();
   const [displayedText, setDisplayedText] = useState('');

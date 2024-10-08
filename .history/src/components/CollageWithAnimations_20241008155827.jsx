@@ -62,11 +62,16 @@ const CollageWithAnimations = () => {
             D2 Global
           </motion.h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-customYellow mb-6">
-            is one of the best Immigration Center in Ludhiana
+            D2 Globa
           </h2>
-         
+          <p className="text-lg md:text-xl text-white mb-4">
+            Your Trusted Partner for Global Opportunities
+          </p>
+          <p className="text-lg md:text-xl text-white mb-8">
+            Providing Expert Guidance for Your Immigration Journey
+          </p>
           <motion.h3
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-8"
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-customYellow mb-8"
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -50, opacity: 0 }}

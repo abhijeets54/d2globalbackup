@@ -36,12 +36,12 @@ const testimonials = [
   {
     id: 7,
     name: 'Jaskaran kaur',
-    text: 'Here i would like to share my journey in this institution. My experience was very good and i really learn very good things from this institution. I got overall 8 bands from such well honoured institute. Teachers are very experienced, skillful and helpful.',
+    text: 'Here i would like to share my journey in this institution. My experience was very good and i really learn very good things from this institution. I got overall 8 bands from such well honoured institute. Teachers are very experienced, skillful and helpful. They are also very supportive and very determined with their work. I have applied my visa from here. My overall experience was very good.',
   },
   {
     id: 8,
     name: 'Jasleen kaur',
-    text: 'It was amazing time to spend with D2 global. I have got to know certain new things from the teachers. The teachers are outstanding behaviour wise and they do their best for students to get good bands. I highly recommend this Institute',
+    text: 'It was amazing time to spend with D2 global. I have got to know certain new things from the teachers. The teachers are outstanding behaviour wise and they do their best for students to get good bands. I highly recommend this Institute for IELTS and Visa Process',
   },
   {
     id: 9,
@@ -63,7 +63,7 @@ const FloatingIcon = ({ Icon, left, top }) => (
       repeatType: "reverse",
     }}
   >
-    <Icon size={48} />
+    <Icon size={32} />
   </motion.div>
 );
 
@@ -107,7 +107,7 @@ const FloatingTestimonials = () => {
               transition={{ duration: 0.8, ease: 'easeInOut' }} // Smooth transition
             >
               <motion.div
-                className="bg-white text-customBlue p-8 rounded-full w-96 h-96 border-3 border-customBlue flex flex-col justify-center items-center text-center shadow-xl"
+                className="bg-white text-customBlue p-8 rounded-full w-96 h-96 flex flex-col justify-center items-center text-center shadow-xl"
                 animate={{
                   y: [0, -20, 0],
                 }}

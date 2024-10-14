@@ -51,7 +51,7 @@ function Home() {
            
           
             <OurAssociates />
-            <ResultsSlideshow/>
+          
           <WhatPeopleAreSaying />
          
           {/* <Events /> */}

@@ -63,7 +63,7 @@ const FloatingIcon = ({ Icon, left, top }) => (
       repeatType: "reverse",
     }}
   >
-    <Icon size={48} />
+    <Icon size={40} />
   </motion.div>
 );
 

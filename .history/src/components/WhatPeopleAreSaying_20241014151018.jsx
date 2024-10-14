@@ -63,7 +63,7 @@ const FloatingIcon = ({ Icon, left, top }) => (
       repeatType: "reverse",
     }}
   >
-    <Icon size={48} />
+    <Icon size={32} />
   </motion.div>
 );
 
@@ -107,7 +107,7 @@ const FloatingTestimonials = () => {
               transition={{ duration: 0.8, ease: 'easeInOut' }} // Smooth transition
             >
               <motion.div
-                className="bg-white text-customBlue p-8 rounded-full w-96 h-96 border-3 border-customBlue flex flex-col justify-center items-center text-center shadow-xl"
+                className="bg-white text-customBlue p-8 rounded-full w-96 h-96 border-4 border-customBlue flex flex-col justify-center items-center text-center shadow-xl"
                 animate={{
                   y: [0, -20, 0],
                 }}

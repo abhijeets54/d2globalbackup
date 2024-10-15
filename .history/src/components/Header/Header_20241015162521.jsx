@@ -166,7 +166,7 @@ function Header() {
       {/* Navigation Header */}
       <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50 ">
         <Container>
-          <div className="py-1 flex justify-between items-center"> {/* Reduced padding here */}
+          <div className="py-0.5 flex justify-between items-center"> {/* Reduced padding here */}
             {/* Hamburger Menu */}
             <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-customYellow focus:outline-none">
@@ -175,7 +175,7 @@ function Header() {
             </div>
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex ml-auto -mt-3"> {/* Added negative margin to move items up */}
+            <ul className="hidden lg:flex ml-auto -mt-2"> {/* Added negative margin to move items up */}
               {navItems.map((item, index) => (
                 <li key={item.name} className="relative">
                   <button

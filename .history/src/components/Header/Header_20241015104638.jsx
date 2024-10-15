@@ -124,35 +124,33 @@ function Header() {
       <style>{customStyles}</style>
 
       {/* Combined Header Section */}
-      <header className="bg-customBlue text-customYellow">
+      <header className="bg-customBlue text-customYellow py-2"> {/* Reduced padding */}
         <Container>
           <div className="flex justify-between items-center">
             {/* Logo and Company Name */}
             <div className="flex items-center flex-shrink-0 ml-8">
               <button onClick={() => navigate('/')} className="focus:outline-none">
-                <Logo className="w-20 h-20 object-contain" /> {/* Increased size */}
+                <Logo className="w-16 h-16 object-contain" /> {/* Reduced size */}
               </button>
               <div className="ml-2 text-customYellow text-left">
-                <p className="text-2xl lg:text-4xl font-semibold">D2 Global</p> {/* Increased font size */}
-                <p className="text-lg lg:text-xl">Education and Immigration</p> {/* Increased font size */}
+                <p className="text-xl lg:text-3xl font-semibold">D2 Global</p> {/* Reduced font size */}
+                <p className="text-base lg:text-lg">Education and Immigration</p> {/* Reduced font size */}
               </div>
             </div>
 
             {/* Contact Info and Social Media */}
             <div className="flex items-center space-x-6 mr-80">
               <div className="flex flex-col items-center">
-                <p className="text-sm">Email Us</p>
-                <p className="flex items-center space-x-2 text-lg">
-                  <FaEnvelope className="inline-block text-2xl" />
+                <p className="flex items-center space-x-2 text-base"> {/* Reduced text size */}
+                  <FaEnvelope className="inline-block text-xl" /> {/* Reduced icon size */}
                   <a href="mailto:info@d2global.com" className="">
                     info@d2global.com
                   </a>
                 </p>
               </div>
               <div className="flex flex-col items-center">
-                <p className="text-sm">Call Us</p>
-                <p className="flex items-center space-x-2 text-lg">
-                  <FaPhone className="inline-block text-2xl rotate-90" />
+                <p className="flex items-center space-x-2 text-base"> {/* Reduced text size */}
+                  <FaPhone className="inline-block text-xl rotate-90" /> {/* Reduced icon size */}
                   <a href="tel:+919878990455" className="">
                     +91 98789 90455
                   </a>
@@ -164,9 +162,9 @@ function Header() {
       </header>
 
       {/* Navigation Header */}
-      <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50 ">
+      <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50 py-1"> {/* Added small padding */}
         <Container>
-          <div className="py-1 flex justify-between items-center"> {/* Reduced padding here */}
+          <div className="flex justify-between items-center">
             {/* Hamburger Menu */}
             <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-customYellow focus:outline-none">
@@ -175,14 +173,14 @@ function Header() {
             </div>
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex ml-auto -mt-3"> {/* Added negative margin to move items up */}
+            <ul className="hidden lg:flex ml-auto">
               {navItems.map((item, index) => (
                 <li key={item.name} className="relative">
                   <button
                     onClick={() =>
                       item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                     }
-                    className={`underline-slide inline-block px-6 py-1 lg:py-2 text-lg lg:text-xl duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
+                    className={`underline-slide inline-block px-6 py-1 lg:py-2 text-lg lg:text-xl duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`} {/* Reduced vertical padding */}
                   >
                     {item.name}
                   </button>

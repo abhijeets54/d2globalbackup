@@ -166,7 +166,7 @@ function Header() {
       {/* Navigation Header */}
       <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50 ">
         <Container>
-          <div className="py-1 flex justify-between items-center"> {/* Reduced padding here */}
+          <div className="py-2 flex justify-between items-center"> {/* Reduced padding here */}
             {/* Hamburger Menu */}
             <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-customYellow focus:outline-none">

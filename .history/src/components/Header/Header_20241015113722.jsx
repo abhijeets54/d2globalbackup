@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Logo } from '../index';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaEnvelope, FaPhone, FaFacebookF, FaYoutube, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaBars, FaTimes, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const customStyles = `
   .underline-slide {
@@ -124,35 +124,35 @@ function Header() {
       <style>{customStyles}</style>
 
       {/* Combined Header Section */}
-      <header className="bg-customBlue text-customYellow">
+      <header className="bg-customBlue text-customYellow py-2"> {/* Reduced padding */}
         <Container>
           <div className="flex justify-between items-center">
             {/* Logo and Company Name */}
-            <div className="flex items-center flex-shrink-0 ml-8">
+            <div className="flex items-center flex-shrink-0 ml-2"> {/* Reduced margin */}
               <button onClick={() => navigate('/')} className="focus:outline-none">
-                <Logo className="w-20 h-20 object-contain" /> {/* Increased size */}
+                <Logo className="w-16 h-16 object-contain" /> {/* Slightly reduced size */}
               </button>
-              <div className="ml-2 text-customYellow text-left">
-                <p className="text-2xl lg:text-4xl font-semibold">D2 Global</p> {/* Increased font size */}
-                <p className="text-lg lg:text-xl">Education and Immigration</p> {/* Increased font size */}
+              <div className="ml-1 text-customYellow text-left"> {/* Reduced margin */}
+                <p className="text-xl lg:text-2xl font-semibold">D2 Global</p> {/* Adjusted font size */}
+                <p className="text-sm lg:text-lg">Education and Immigration</p> {/* Adjusted font size */}
               </div>
             </div>
 
             {/* Contact Info and Social Media */}
-            <div className="flex items-center space-x-6 mr-80">
+            <div className="flex items-center space-x-4 mr-40"> {/* Reduced margin and spacing */}
               <div className="flex flex-col items-center">
-                <p className="text-sm">Email Us</p>
-                <p className="flex items-center space-x-2 text-lg">
-                  <FaEnvelope className="inline-block text-2xl" />
+                <p className="text-xs">Email Us</p> {/* Smaller text */}
+                <p className="flex items-center space-x-2 text-base"> {/* Adjusted text size */}
+                  <FaEnvelope className="inline-block text-lg" /> {/* Smaller icon */}
                   <a href="mailto:info@d2global.com" className="">
                     info@d2global.com
                   </a>
                 </p>
               </div>
               <div className="flex flex-col items-center">
-                <p className="text-sm">Call Us</p>
-                <p className="flex items-center space-x-2 text-lg">
-                  <FaPhone className="inline-block text-2xl rotate-90" />
+                <p className="text-xs">Call Us</p> {/* Smaller text */}
+                <p className="flex items-center space-x-2 text-base"> {/* Adjusted text size */}
+                  <FaPhone className="inline-block text-lg rotate-90" /> {/* Smaller icon */}
                   <a href="tel:+919878990455" className="">
                     +91 98789 90455
                   </a>
@@ -164,9 +164,9 @@ function Header() {
       </header>
 
       {/* Navigation Header */}
-      <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50 ">
+      <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50">
         <Container>
-          <div className="py-1 flex justify-between items-center"> {/* Reduced padding here */}
+          <div className="py-1 flex justify-between items-center"> {/* Reduced padding */}
             {/* Hamburger Menu */}
             <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-customYellow focus:outline-none">
@@ -175,14 +175,14 @@ function Header() {
             </div>
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex ml-auto -mt-3"> {/* Added negative margin to move items up */}
+            <ul className="hidden lg:flex ml-auto">
               {navItems.map((item, index) => (
                 <li key={item.name} className="relative">
                   <button
                     onClick={() =>
                       item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                     }
-                    className={`underline-slide inline-block px-6 py-1 lg:py-2 text-lg lg:text-xl duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
+                    className={`underline-slide inline-block px-4 py-2 text-sm lg:text-base duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
                   >
                     {item.name}
                   </button>
@@ -193,7 +193,7 @@ function Header() {
                         <li key={subItem.name}>
                           <button
                             onClick={() => handleNavigation(subItem.slug)}
-                            className={`block px-4 py-2 hover:underline hover:text-customYellow w-full text-left text-lg lg:text-xl ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
+                            className={`block px-4 py-2 hover:underline hover:text-customYellow w-full text-left text-sm lg:text-base ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
                           >
                             {subItem.name}
                           </button>

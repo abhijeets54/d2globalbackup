@@ -1,70 +1,3 @@
-import React, { useState } from 'react';
-import { Container, Logo } from '../index';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaEnvelope, FaPhone, FaFacebookF, FaYoutube, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-
-const customStyles = `
-  .underline-slide {
-    position: relative;
-    display: inline-block;
-    font-weight: normal;
-  }
-
-  .underline-slide::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: yellow;
-    transition: width 0.3s ease;
-  }
-
-  .underline-slide:hover::after {
-    width: 100%;
-  }
-
-  .underline-slide:hover {
-    font-weight: bold;
-  }
-
-  .active-page {
-    font-weight: bold;
-    border: none;
-  }
-
-  .mobile-menu-enter {
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: all 0.3s ease-out;
-  }
-
-  .mobile-menu-enter-active {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .mobile-menu-exit {
-    transform: translateY(0);
-    opacity: 1;
-    transition: all 0.3s ease-in;
-  }
-
-  .mobile-menu-exit-active {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  .social-icon {
-    transition: transform 0.3s ease;
-  }
-
-  .social-icon:hover {
-    transform: scale(1.1);
-  }
-`;
-
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -126,37 +59,31 @@ function Header() {
       {/* Combined Header Section */}
       <header className="bg-customBlue text-customYellow">
         <Container>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center py-2"> {/* Reduced padding */}
             {/* Logo and Company Name */}
-            <div className="flex items-center flex-shrink-0 ml-8">
+            <div className="flex items-center flex-shrink-0 ml-4"> {/* Reduced left margin */}
               <button onClick={() => navigate('/')} className="focus:outline-none">
-                <Logo className="w-20 h-20 object-contain" /> {/* Increased size */}
+                <Logo className="w-16 h-16 object-contain" /> {/* Reduced logo size */}
               </button>
               <div className="ml-2 text-customYellow text-left">
-                <p className="text-2xl lg:text-4xl font-semibold">D2 Global</p> {/* Increased font size */}
-                <p className="text-lg lg:text-xl">Education and Immigration</p> {/* Increased font size */}
+                <p className="text-xl lg:text-3xl font-semibold">D2 Global</p> {/* Reduced font size */}
+                <p className="text-base lg:text-lg">Education and Immigration</p> {/* Reduced font size */}
               </div>
             </div>
 
-            {/* Contact Info and Social Media */}
-            <div className="flex items-center space-x-6 mr-80">
-              <div className="flex flex-col items-center">
-                <p className="text-sm">Email Us</p>
-                <p className="flex items-center space-x-2 text-lg">
-                  <FaEnvelope className="inline-block text-2xl" />
-                  <a href="mailto:info@d2global.com" className="">
-                    info@d2global.com
-                  </a>
-                </p>
+            {/* Contact Info */}
+            <div className="flex items-center space-x-4 mr-40"> {/* Reduced spacing */}
+              <div className="flex items-center space-x-2">
+                <FaEnvelope className="text-lg" />
+                <a href="mailto:info@d2global.com" className="text-sm">
+                  info@d2global.com
+                </a>
               </div>
-              <div className="flex flex-col items-center">
-                <p className="text-sm">Call Us</p>
-                <p className="flex items-center space-x-2 text-lg">
-                  <FaPhone className="inline-block text-2xl rotate-90" />
-                  <a href="tel:+919878990455" className="">
-                    +91 98789 90455
-                  </a>
-                </p>
+              <div className="flex items-center space-x-2">
+                <FaPhone className="text-lg rotate-90" />
+                <a href="tel:+919878990455" className="text-sm">
+                  +91 98789 90455
+                </a>
               </div>
             </div>
           </div>
@@ -164,9 +91,9 @@ function Header() {
       </header>
 
       {/* Navigation Header */}
-      <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50 ">
+      <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50">
         <Container>
-          <div className="py-1 flex justify-between items-center"> {/* Reduced padding here */}
+          <div className="py-2 flex justify-between items-center"> {/* Reduced padding */}
             {/* Hamburger Menu */}
             <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-customYellow focus:outline-none">
@@ -175,14 +102,14 @@ function Header() {
             </div>
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex ml-auto -mt-3"> {/* Added negative margin to move items up */}
+            <ul className="hidden lg:flex ml-auto space-x-4"> {/* Reduced spacing */}
               {navItems.map((item, index) => (
                 <li key={item.name} className="relative">
                   <button
                     onClick={() =>
                       item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                     }
-                    className={`underline-slide inline-block px-6 py-1 lg:py-2 text-lg lg:text-xl duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
+                    className={`underline-slide inline-block px-4 py-1 lg:py-2 text-sm lg:text-base duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`} {/* Reduced padding and font size */}
                   >
                     {item.name}
                   </button>
@@ -193,7 +120,7 @@ function Header() {
                         <li key={subItem.name}>
                           <button
                             onClick={() => handleNavigation(subItem.slug)}
-                            className={`block px-4 py-2 hover:underline hover:text-customYellow w-full text-left text-lg lg:text-xl ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
+                            className={`block px-4 py-2 text-sm lg:text-base hover:underline hover:text-customYellow w-full text-left ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
                           >
                             {subItem.name}
                           </button>
@@ -208,14 +135,14 @@ function Header() {
             {/* Mobile Menu */}
             {menuOpen && (
               <div className="lg:hidden absolute top-16 left-0 w-full bg-customBlue shadow-md z-40 text-customYellow">
-                <ul className="flex flex-col items-center space-y-4 py-6">
+                <ul className="flex flex-col items-center space-y-4 py-4"> {/* Reduced padding */}
                   {navItems.map((item, index) => (
                     <li key={item.name}>
                       <button
                         onClick={() =>
                           item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                         }
-                        className={`underline-slide inline-block px-6 py-2 duration-200 text-lg ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
+                        className={`underline-slide inline-block px-6 py-2 duration-200 text-sm ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`} {/* Reduced font size */}
                       >
                         {item.name}
                       </button>
@@ -227,7 +154,7 @@ function Header() {
                               <li key={subItem.name}>
                                 <button
                                   onClick={() => handleNavigation(subItem.slug)}
-                                  className={`block px-4 py-2 hover:underline hover:text-customYellow w-full text-left text-lg ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
+                                  className={`block px-4 py-2 hover:underline hover:text-customYellow w-full text-left text-sm ${location.pathname === subItem.slug ? 'font-bold' : ''}`} {/* Reduced font size */}
                                 >
                                   {subItem.name}
                                 </button>

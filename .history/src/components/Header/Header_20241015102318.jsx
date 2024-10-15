@@ -129,19 +129,20 @@ function Header() {
           <div className="flex justify-between items-center">
             {/* Logo and Company Name */}
             <div className="flex items-center flex-shrink-0 ml-8">
-              <button onClick={() => navigate('/')} className="focus:outline-none">
-                <Logo className="w-20 h-20 object-contain" /> {/* Increased size */}
-              </button>
-              <div className="ml-2 text-customYellow text-left">
-                <p className="text-2xl lg:text-4xl font-semibold">D2 Global</p> {/* Increased font size */}
-                <p className="text-lg lg:text-xl">Education and Immigration</p> {/* Increased font size */}
-              </div>
-            </div>
+  <button onClick={() => navigate('/')} className="focus:outline-none">
+    <Logo className="w-20 h-20 object-contain" /> {/* Increased size */}
+  </button>
+  <div className="ml-2 text-customYellow text-left">
+    <p className="text-2xl lg:text-4xl font-semibold">D2 Global</p> {/* Increased font size */}
+    <p className="text-lg lg:text-xl">Education and Immigration</p> {/* Increased font size */}
+  </div>
+</div>
+
 
             {/* Contact Info and Social Media */}
-            <div className="flex items-center space-x-6 mr-80">
+            <div className="flex items-center space-x-6 mr-80 -mx">
               <div className="flex flex-col items-center">
-                <p className="text-sm">Email Us</p>
+                {/* <p className="text-sm">Email Us</p> */}
                 <p className="flex items-center space-x-2 text-lg">
                   <FaEnvelope className="inline-block text-2xl" />
                   <a href="mailto:info@d2global.com" className="">
@@ -150,7 +151,7 @@ function Header() {
                 </p>
               </div>
               <div className="flex flex-col items-center">
-                <p className="text-sm">Call Us</p>
+                {/* <p className="text-sm">Call Us</p> */}
                 <p className="flex items-center space-x-2 text-lg">
                   <FaPhone className="inline-block text-2xl rotate-90" />
                   <a href="tel:+919878990455" className="">
@@ -158,6 +159,20 @@ function Header() {
                   </a>
                 </p>
               </div>
+              {/* <div className="flex space-x-3 ml-6">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaFacebookF size={22} color="#1877F2" />
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaYoutube size={22} color="#FF0000" />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaInstagram size={22} color="#E4405F" />
+                </a>
+                <a href="https://wa.me/919878990455" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaWhatsapp size={22} color="#25D366" />
+                </a>
+              </div> */}
             </div>
           </div>
         </Container>
@@ -166,7 +181,7 @@ function Header() {
       {/* Navigation Header */}
       <nav className="shadow bg-customBlue text-customYellow left-0 w-full z-50 ">
         <Container>
-          <div className="py-1 flex justify-between items-center"> {/* Reduced padding here */}
+          <div className="py-2 flex justify-between items-center">
             {/* Hamburger Menu */}
             <div className="lg:hidden">
               <button onClick={toggleMenu} className="text-customYellow focus:outline-none">
@@ -175,14 +190,14 @@ function Header() {
             </div>
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex ml-auto -mt-3"> {/* Added negative margin to move items up */}
+            <ul className="hidden lg:flex ml-auto">
               {navItems.map((item, index) => (
                 <li key={item.name} className="relative">
                   <button
                     onClick={() =>
                       item.dropdown ? toggleDropdown(index) : handleNavigation(item.slug)
                     }
-                    className={`underline-slide inline-block px-6 py-1 lg:py-2 text-lg lg:text-xl duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
+                    className={`underline-slide inline-block px-6 py-2 lg:py-3 text-lg lg:text-xl duration-200 ${location.pathname === item.slug ? 'active-page' : 'text-customYellow'}`}
                   >
                     {item.name}
                   </button>
@@ -260,3 +275,4 @@ function Header() {
 }
 
 export default Header;
+

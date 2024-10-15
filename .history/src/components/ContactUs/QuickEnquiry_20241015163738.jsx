@@ -47,7 +47,7 @@ const QuickEnquiry = () => {
         className="bg-customBlue hover:bg-customYellow text-white px-1 py-6 rounded-r-lg cursor-pointer flex items-center justify-center h-32 w-8 sm:w-10 md:w-12"
         onClick={toggleForm}
       >
-        <span className="transform -rotate-90 font-bold text-sm whitespace-nowrap">ENQUIRE NOW</span>
+        <span className="transform -rotate-90 font-bold text- whitespace-nowrap">ENQUIRE NOW</span>
       </div>
 
       {/* Contact Form */}

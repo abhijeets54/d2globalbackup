@@ -124,7 +124,7 @@ function Header() {
       <style>{customStyles}</style>
 
       {/* Combined Header Section */}
-      <header className="bg-customBlue text-customYellow">
+      <header className="bg-customBlue  text-customYellow">
         <Container>
           <div className="flex justify-between  items-center">
             {/* Logo and Company Name */}

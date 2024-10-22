@@ -6,20 +6,16 @@ import OurAssociates from '../components/OurAssociates';
 import ResultsSlideshow from '../components/Results';
 import Register from '../components/Register';
 import WorldMapContact from '../components/ContactSystem';
-import SimpleImageSlider from '../components/SimpleImageSlider';
-
-
-
+import 
 function SuccessStories() {
   return (
    <>
-   <SimpleImageSlider/>
    <Choose />
    <QuickNumbers />
    <OurAssociates />
-   <WhatPeopleAreSaying />
+   {/* <WhatPeopleAreSaying />
    <ResultsSlideshow />
-   {/* <Register /> */}
+   <Register /> */}
    <WorldMapContact/>
    </>
   )

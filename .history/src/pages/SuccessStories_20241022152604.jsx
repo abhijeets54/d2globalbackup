@@ -7,7 +7,7 @@ import ResultsSlideshow from '../components/Results';
 import Register from '../components/Register';
 import WorldMapContact from '../components/ContactSystem';
 import SimpleImageSlider from '../components/SimpleImageSlider';
-
+import WhatPeopleAreSaying from '../components/WhatPeopleAreSaying';
 
 
 function SuccessStories() {
@@ -19,7 +19,7 @@ function SuccessStories() {
    <OurAssociates />
    <WhatPeopleAreSaying />
    <ResultsSlideshow />
-   {/* <Register /> */}
+   <Register />
    <WorldMapContact/>
    </>
   )

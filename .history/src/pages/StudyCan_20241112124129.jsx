@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import emailjs from 'emailjs-com';
 import { FaPaperPlane, FaMapMarkerAlt } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
 import OurAssociates from '../components/OurAssociates';
 
 const points = [
@@ -13,6 +13,7 @@ const points = [
   { title: 'Excellent Quality of Life', description: 'Students studying in Canada enjoy a high quality of life with advanced healthcare facilities, multiple job options, safety and security.' },
 ];
 
+// Variants for staggered fade-in effect
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
@@ -57,7 +58,7 @@ const StudyCan = () => {
       .then(
         () => {
           setResponseMessage('Message sent successfully!');
-          setFormData({ name: '', email: '', subject: '', phone: '', country: 'Canada', message: '' });
+          setFormData({ name: '', email: '', subject: '', phone: '', country: 'Australia', message: '' });
         },
         (error) => {
           setResponseMessage('Error submitting form. Please try again.');
@@ -65,105 +66,106 @@ const StudyCan = () => {
         }
       );
   };
-
-  return (
+  return ( 
     <>
-      <div className="study-can-container bg-white pt-16">
-        {/* Top section */}
-        <div className="bg-white p-6 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between">
-          <div className="lg:w-1/2">
-            <h1 className="text-3xl lg:text-4xl font-bold flex items-center mb-4 lg:mb-6">
-              <img src="/cflag.svg" alt="Canada Flag" className="w-6 lg:w-8 h-6 lg:h-8 mr-2" /> 
-              Study in Canada
-            </h1>
-            <p className="mb-4 lg:mb-6 text-left text-base lg:text-lg">
-              Learn everything about universities, costs, scholarships, admission process & more. Canada facilitates academic, professional, and personal development for students with a constantly upgraded education system in a multicultural environment.
-            </p>
-            <div className="flex justify-start space-x-6 lg:space-x-10 text-left">
-              <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-red-600">300 +</h3>
-                <p className="text-sm lg:text-base">Academic Institutions</p>
-              </div>
-              <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-red-600">11000 +</h3>
-                <p className="text-sm lg:text-base">Programs</p>
-              </div>
+    {/* <QuickEnquiry/> */}
+    <div className="study-can-container bg-white pt-16">
+      {/* Top section */}
+      <div className="bg-white p-6 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between">
+        {/* Left text section */}
+        <div className="lg:w-1/2">
+          <h1 className="text-3xl lg:text-4xl font-bold flex items-center mb-4 lg:mb-6">
+            <img src="/cflag.svg" alt="Canada Flag" className="w-6 lg:w-8 h-6 lg:h-8 mr-2" /> 
+            Study in Canada
+          </h1>
+          <p className="mb-4 lg:mb-6 text-left text-base lg:text-lg">
+            Learn everything about universities, costs, scholarships, admission process & more. Canada facilitates academic, professional, and personal development for students with a constantly upgraded education system in a multicultural environment.
+          </p>
+          <div className="flex justify-start space-x-6 lg:space-x-10 text-left">
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-red-600">300 +</h3>
+              <p className="text-sm lg:text-base">Academic Institutions</p>
+            </div>
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-red-600">11000 +</h3>
+              <p className="text-sm lg:text-base">Programs</p>
             </div>
           </div>
-
-          <div className="lg:w-1/2 mt-6 lg:mt-0 flex justify-center">
-            <img src="/can1.webp" alt="Study in Canada" className="w-full max-w-xs lg:max-w-md rounded-lg shadow-lg" />
-          </div>
         </div>
 
-        {/* Why study in Canada */}
-        <div className="bg-blue-950 text-yellow-400 p-6 lg:p-10">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-left">Why Study in Canada?</h2>
-          <h3 className="text-xl lg:text-2xl font-semibold mb-6 lg:mb-10 text-left">A popular study abroad destination nurturing the dreams of millions of students.</h3>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {points.map((point, index) => (
-              <motion.div
-                key={index}
-                className="p-4 bg-gray-800 rounded-md shadow-lg text-left"
-                variants={fadeInVariants}
-                whileHover={{ scale: 1.05 }}
-              >
-                <h4 className="text-lg font-semibold mb-2">{point.title}</h4>
-                <p className="text-white">{point.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+        {/* Right image section */}
+        <div className="lg:w-1/2 mt-6 lg:mt-0 flex justify-center">
+          <img src="/can1.webp" alt="Study in Canada" className="w-full max-w-xs lg:max-w-md rounded-lg shadow-lg" />
         </div>
+      </div>
 
-        {/* Additional Information */}
-        <div className="bg-white text-gray-800 p-6 lg:p-10">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-left">Programs Offered:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>Diploma: 2 years</li>
-            <li>Advanced Diploma: 3 years (Fast Track 2 years)</li>
-            <li>Bachelors: 4 years</li>
-            <li>PG Diploma: 1 year (very few programs are for 2 years)</li>
-            <li>Masters: 2 years</li>
-          </ul>
+      {/* Why study in Canada */}
+      <div className="bg-blue-950 text-yellow-400 p-6 lg:p-10">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-left">Why Study in Canada?</h2>
+        <h3 className="text-xl lg:text-2xl font-semibold mb-6 lg:mb-10 text-left">A popular study abroad destination nurturing the dreams of millions of students.</h3>
 
-          <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Top Universities & Colleges:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>ABM College of Health and Technology</li>
-            <li>Ambrose University College</li>
-            <li>Bow Valley College</li>
-            <li>Canadian University College</li>
-            <li>Evergreen College</li>
-            <li>Grande Prairie Regional College</li>
-            <li>Keyano College</li>
-            <li>The King's University College</li>
-            <li>Lakeland College</li>
-            <li>Lethbridge College</li>
-            <li>Medicine Hat College</li>
-            <li>NorQuest College</li>
-          </ul>
+        {/* Sequential fade-in effect for each point */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {points.map((point, index) => (
+            <motion.div
+              key={index}
+              className="p-4 bg-gray-800 rounded-md shadow-lg text-left"
+              variants={fadeInVariants}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h4 className="text-lg font-semibold mb-2">{point.title}</h4>
+              <p className="text-white">{point.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
 
-          <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Intakes:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>January</li>
-            <li>September</li>
-            <li>May / June – few institutions with limited courses</li>
-          </ul>
+      {/* Additional Information */}
+      <div className="bg-white text-gray-800 p-6 lg:p-10">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-left">Programs Offered:</h2>
+        <ul className="list-disc list-inside text-left">
+          <li>Diploma: 2 years</li>
+          <li>Advanced Diploma: 3 years (Fast Track 2 years)</li>
+          <li>Bachelors: 4 years</li>
+          <li>PG Diploma: 1 year (very few programs are for 2 years)</li>
+          <li>Masters: 2 years</li>
+        </ul>
 
-          <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">English Requirements:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>Pearson Test of English (PTE) Academic</li>
-            <li>IELTS: 6 to 6.5 bands</li>
-          </ul>
-        </div>
+        <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Top Universities & Colleges:</h2>
+        <ul className="list-disc list-inside text-left">
+          <li>ABM College of Health and Technology</li>
+          <li>Ambrose University College</li>
+          <li>Bow Valley College</li>
+          <li>Canadian University College</li>
+          <li>Evergreen College</li>
+          <li>Grande Prairie Regional College</li>
+          <li>Keyano College</li>
+          <li>The King’s University College</li>
+          <li>Lakeland College</li>
+          <li>Lethbridge College</li>
+          <li>Medicine Hat College</li>
+          <li>NorQuest College</li>
+        </ul>
 
-        {/* Choose Your Destination Section */}
-        <div 
+        <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Intakes:</h2>
+        <ul className="list-disc list-inside text-left">
+          <li>January</li>
+          <li>September</li>
+          <li>May / June – few institutions with limited courses</li>
+        </ul>
+
+        <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">English Requirements:</h2>
+        <ul className="list-disc list-inside text-left">
+          <li>Pearson Test of English (PTE) Academic</li>
+          <li>IELTS: 6 to 6.5 bands</li>
+        </ul>
+      </div>
+      <div 
           className="bg-cover bg-center p-8 md:p-12 lg:p-16 text-white relative" 
           style={{
             backgroundImage: "url('/register/form1.webp')",
@@ -176,7 +178,7 @@ const StudyCan = () => {
             <div className="lg:w-1/2 mb-6 lg:mb-0 text-left">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Choose Your Destination</h2>
               <p className="text-sm md:text-lg">
-                Discover the top locations for your educational journey in Canada. Explore diverse cities with thriving student communities and excellent academic institutions.
+                Discover the top locations for your educational journey in Australia. Explore diverse cities with thriving student communities and excellent academic institutions.
               </p>
             </div>
 
@@ -185,14 +187,14 @@ const StudyCan = () => {
               onClick={handleMapClick}
             >
               <img 
-                src="/maps/canmap.png" 
-                alt="Map of Canada" 
+                src="/maps/ausmap.png" 
+                alt="Map of Australia" 
                 className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-lg object-contain hover:opacity-90 transition-opacity duration-300" 
               />
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
       {/* Contact Form Modal */}
       <AnimatePresence>
@@ -212,7 +214,7 @@ const StudyCan = () => {
                 {/* Form Section */}
                 <div className="md:w-3/4 p-6 md:p-8">
                   <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-800">Contact Us - Canada</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-800">Contact Us - Australia</h2>
                     <button
                       onClick={closeContactForm}
                       className="text-gray-500 hover:text-gray-700 text-2xl"
@@ -297,7 +299,7 @@ const StudyCan = () => {
 
                 {/* Address Section */}
                 <div className="md:w-1/4 bg-customBlue p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">Visit Us Today!</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">Visit Us Today!</h3>
                   <div className="space-y-6">
                     <div className="text-white">
                       <div className="flex items-start mb-3">
@@ -314,9 +316,9 @@ const StudyCan = () => {
                     </div>
                     <div className="text-white">
                       <div className="flex items-start mb-3">
-                        <FaMapMarkerAlt className="text-xl mt-1 flex-shrink-0" />
+                        <FaMapMarkerAlt className="text-xl  mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold mb-2">Sub Branch</p>
+                          <p className="font-semibold  mb-2">Sub Branch</p>
                           <p className="text-sm text-left leading-relaxed">
                             Rattan Bazar Adda,
                             Near Hungry Point Restaurant,
@@ -332,8 +334,9 @@ const StudyCan = () => {
           </div>
         )}
       </AnimatePresence>
-
-      <OurAssociates />
+    
+    <OurAssociates/>
+    
     </>
   );
 };

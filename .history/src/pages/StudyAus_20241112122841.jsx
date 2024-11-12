@@ -5,12 +5,12 @@ import emailjs from '@emailjs/browser';
 import OurAssociates from '../components/OurAssociates';
 
 const points = [
-  { title: 'Globally Acclaimed Institutes', description: 'Canadian universities and colleges are renowned for their advanced pedagogical methods & enhanced learning experiences.' },
-  { title: 'Post Study Work Options', description: 'The country offers work opportunities to students for up to 3 years after graduation, helping them gain international work experience.' },
-  { title: 'Affordable Tuition Fee and Living Cost', description: 'The average course fee and expenses one incurs for living in Canada are less compared to other study abroad destinations.' },
-  { title: 'Ample Work Opportunities', description: 'The growth of industries in Canada creates a constant increase in the demand for skilled professionals from across borders.' },
-  { title: 'Enriching Multicultural Environment', description: 'With a diverse population, Canada offers a rich and vibrant cultural environment, promoting inclusivity and respect in the community.' },
-  { title: 'Excellent Quality of Life', description: 'Students studying in Canada enjoy a high quality of life with advanced healthcare facilities, multiple job options, safety and security.' },
+  { title: 'Globally Recognized Universities', description: 'Australia has world-renowned universities and offers internationally accepted qualifications.' },
+  { title: 'Lower Studying Cost', description: 'The country has comparably lower tuition costs than many other destinations.' },
+  { title: 'Advanced Research', description: 'Emphasis on scientific research and technical resources creates a great academic and working ground for international researchers.' },
+  { title: 'Multicultural Environment', description: 'People from different ethnicities join Australian universities and workforce, creating a diverse and robust culture.' },
+  { title: 'Similar Education System', description: 'Both India and Australia broadly follow the British system of education, making it easy to get admission without credential evaluation.' },
+  { title: 'Work Opportunities', description: 'International students in Australia are allowed to work part-time for up to 48 hours a fortnight.' },
 ];
 
 const containerVariants = {
@@ -23,14 +23,14 @@ const fadeInVariants = {
   visible: { opacity: 1, transition: { duration: 0.8 } }
 };
 
-const StudyCan = () => {
+const StudyAus = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     phone: '',
     message: '',
-    country: 'Canada',
+    country: 'Australia',
   });
   const [responseMessage, setResponseMessage] = useState('');
   const [showContactForm, setShowContactForm] = useState(false);
@@ -57,52 +57,52 @@ const StudyCan = () => {
       .then(
         () => {
           setResponseMessage('Message sent successfully!');
-          setFormData({ name: '', email: '', subject: '', phone: '', country: 'Canada', message: '' });
+          setFormData({ name: '', email: '', subject: '', phone: '', country: 'Australia', message: '' });
         },
         (error) => {
           setResponseMessage('Error submitting form. Please try again.');
           console.log('Failed...', error.text);
         }
       );
-  };
+  ;
 
   return (
     <>
-      <div className="study-can-container bg-white pt-16">
+      <div className="study-aus-container bg-white pt-16">
         {/* Top section */}
-        <div className="bg-white p-6 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between">
-          <div className="lg:w-1/2">
-            <h1 className="text-3xl lg:text-4xl font-bold flex items-center mb-4 lg:mb-6">
-              <img src="/cflag.svg" alt="Canada Flag" className="w-6 lg:w-8 h-6 lg:h-8 mr-2" /> 
-              Study in Canada
+        <div className="bg-white p-4 md:p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between">
+          <div className="lg:w-1/2 text-left">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold flex items-center mb-4 lg:mb-6">
+              <img src="/aflag.png" alt="Australia Flag" className="w-6 h-6 md:w-8 md:h-8 mr-2" /> 
+              Study in Australia
             </h1>
-            <p className="mb-4 lg:mb-6 text-left text-base lg:text-lg">
-              Learn everything about universities, costs, scholarships, admission process & more. Canada facilitates academic, professional, and personal development for students with a constantly upgraded education system in a multicultural environment.
+            <p className="mb-4 text-sm md:text-lg">
+              Know everything about universities, costs, scholarships, and the admission process. Australian education focuses on practical aspects and research, making it one of the top five destinations for international students. It also houses the Group of Eight Universities, equivalent to Ivy League institutions.
             </p>
-            <div className="flex justify-start space-x-6 lg:space-x-10 text-left">
+            <div className="flex justify-start space-x-6 md:space-x-10 text-center">
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-red-600">300 +</h3>
-                <p className="text-sm lg:text-base">Academic Institutions</p>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600">180 +</h3>
+                <p className="text-sm md:text-base">Academic Institutions</p>
               </div>
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-red-600">11000 +</h3>
-                <p className="text-sm lg:text-base">Programs</p>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600">13000 +</h3>
+                <p className="text-sm md:text-base">Programs</p>
               </div>
             </div>
           </div>
 
           <div className="lg:w-1/2 mt-6 lg:mt-0 flex justify-center">
-            <img src="/can1.webp" alt="Study in Canada" className="w-full max-w-xs lg:max-w-md rounded-lg shadow-lg" />
+            <img src="/aus1.webp" alt="Study in Australia" className="w-full max-w-xs md:max-w-md rounded-lg shadow-lg object-cover" />
           </div>
         </div>
 
-        {/* Why study in Canada */}
-        <div className="bg-blue-950 text-yellow-400 p-6 lg:p-10">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-left">Why Study in Canada?</h2>
-          <h3 className="text-xl lg:text-2xl font-semibold mb-6 lg:mb-10 text-left">A popular study abroad destination nurturing the dreams of millions of students.</h3>
+        {/* Why study in Australia */}
+        <div className="bg-blue-950 text-yellow-400 p-4 md:p-8 lg:p-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Study in Australia</h2>
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-10">The land of leading academic institutions & pioneering innovations</h3>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -114,52 +114,20 @@ const StudyCan = () => {
                 variants={fadeInVariants}
                 whileHover={{ scale: 1.05 }}
               >
-                <h4 className="text-lg font-semibold mb-2">{point.title}</h4>
-                <p className="text-white">{point.description}</p>
+                <h4 className="text-base md:text-lg font-semibold mb-2">{point.title}</h4>
+                <p className="text-white text-sm md:text-base">{point.description}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
 
-        {/* Additional Information */}
-        <div className="bg-white text-gray-800 p-6 lg:p-10">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-left">Programs Offered:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>Diploma: 2 years</li>
-            <li>Advanced Diploma: 3 years (Fast Track 2 years)</li>
-            <li>Bachelors: 4 years</li>
-            <li>PG Diploma: 1 year (very few programs are for 2 years)</li>
-            <li>Masters: 2 years</li>
-          </ul>
-
-          <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Top Universities & Colleges:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>ABM College of Health and Technology</li>
-            <li>Ambrose University College</li>
-            <li>Bow Valley College</li>
-            <li>Canadian University College</li>
-            <li>Evergreen College</li>
-            <li>Grande Prairie Regional College</li>
-            <li>Keyano College</li>
-            <li>The King's University College</li>
-            <li>Lakeland College</li>
-            <li>Lethbridge College</li>
-            <li>Medicine Hat College</li>
-            <li>NorQuest College</li>
-          </ul>
-
-          <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Intakes:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>January</li>
-            <li>September</li>
-            <li>May / June – few institutions with limited courses</li>
-          </ul>
-
-          <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">English Requirements:</h2>
-          <ul className="list-disc list-inside text-left">
-            <li>Pearson Test of English (PTE) Academic</li>
-            <li>IELTS: 6 to 6.5 bands</li>
-          </ul>
+        {/* Additional info */}
+        <div className="bg-gray-100 p-4 md:p-8 lg:p-10 text-left">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Additional Information</h2>
+          <h3 className="text-xl md:text-2xl font-semibold mb-2">Student Perks</h3>
+          <p className="text-sm md:text-lg mb-4">
+            Under the proposed arrangement, students can work up to 40 hours per fortnight. This benefits international students by offering flexibility in balancing work and studies.
+          </p>
         </div>
 
         {/* Choose Your Destination Section */}
@@ -176,7 +144,7 @@ const StudyCan = () => {
             <div className="lg:w-1/2 mb-6 lg:mb-0 text-left">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Choose Your Destination</h2>
               <p className="text-sm md:text-lg">
-                Discover the top locations for your educational journey in Canada. Explore diverse cities with thriving student communities and excellent academic institutions.
+                Discover the top locations for your educational journey in Australia. Explore diverse cities with thriving student communities and excellent academic institutions.
               </p>
             </div>
 
@@ -185,8 +153,8 @@ const StudyCan = () => {
               onClick={handleMapClick}
             >
               <img 
-                src="/maps/canmap.png" 
-                alt="Map of Canada" 
+                src="/maps/ausmap.png" 
+                alt="Map of Australia" 
                 className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-lg object-contain hover:opacity-90 transition-opacity duration-300" 
               />
             </div>
@@ -212,7 +180,7 @@ const StudyCan = () => {
                 {/* Form Section */}
                 <div className="md:w-3/4 p-6 md:p-8">
                   <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-800">Contact Us - Canada</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-800">Contact Us - Australia</h2>
                     <button
                       onClick={closeContactForm}
                       className="text-gray-500 hover:text-gray-700 text-2xl"
@@ -297,7 +265,7 @@ const StudyCan = () => {
 
                 {/* Address Section */}
                 <div className="md:w-1/4 bg-customBlue p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">Visit Us Today!</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">Visit Us Today!</h3>
                   <div className="space-y-6">
                     <div className="text-white">
                       <div className="flex items-start mb-3">
@@ -314,9 +282,9 @@ const StudyCan = () => {
                     </div>
                     <div className="text-white">
                       <div className="flex items-start mb-3">
-                        <FaMapMarkerAlt className="text-xl mt-1 flex-shrink-0" />
+                        <FaMapMarkerAlt className="text-xl  mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold mb-2">Sub Branch</p>
+                          <p className="font-semibold  mb-2">Sub Branch</p>
                           <p className="text-sm text-left leading-relaxed">
                             Rattan Bazar Adda,
                             Near Hungry Point Restaurant,
@@ -338,4 +306,4 @@ const StudyCan = () => {
   );
 };
 
-export default StudyCan;
+export default StudyAus;

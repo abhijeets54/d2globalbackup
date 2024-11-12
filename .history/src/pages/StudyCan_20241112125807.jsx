@@ -297,7 +297,7 @@ const StudyCan = () => {
 
                 {/* Address Section */}
                 <div className="md:w-1/4 bg-customBlue p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">Visit Us Today!</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-6<h3 className="text-xl md:text-2xl font-bold mb-6 text-white">Visit Us Today!</h3>
                   <div className="space-y-6">
                     <div className="text-white">
                       <div className="flex items-start mb-3">

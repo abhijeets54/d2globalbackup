@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Register from '../components/Register';
+import WhatPeopleAreSaying from '../components/WhatPeopleAreSaying';
+import QuickEnquiry from '../components/ContactUs/QuickEnquiry';
 import OurAssociates from '../components/OurAssociates';
 
 const points = [

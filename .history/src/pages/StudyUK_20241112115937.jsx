@@ -189,7 +189,7 @@ const StudyUK = () => {
               onClick={handleMapClick}
             >
               <img 
-                src="/maps/ukmap.webp" 
+                src="/maps/ukmap.png" 
                 alt="Map of UK" 
                 className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-lg object-contain hover:opacity-90 transition-opacity duration-300" 
               />

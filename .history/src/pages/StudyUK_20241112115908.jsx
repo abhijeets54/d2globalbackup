@@ -189,7 +189,7 @@ const StudyUK = () => {
               onClick={handleMapClick}
             >
               <img 
-                src="/maps/ukmap.webp" 
+                src="/maps/ukmap.png" 
                 alt="Map of UK" 
                 className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-lg object-contain hover:opacity-90 transition-opacity duration-300" 
               />
@@ -301,49 +301,4 @@ const StudyUK = () => {
 
                 {/* Address Section */}
                 <div className="md:w-1/4 bg-customBlue p-6 md:p-8">
-                  <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">Visit Us Today!</h3>
-                  <div className="space-y-6">
-                    <div className="text-white">
-                      <div className="flex items-start mb-3">
-                        <FaMapMarkerAlt className="text-xl mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold mb-2">Main Branch</p>
-                          <p className="text-sm text-left leading-relaxed">
-                            Maks Shopping Plaza,
-                            Dugri Road, Model Town,
-                            Ludhiana
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-white">
-                      <div className="flex items-start mb-3">
-                        <FaMapMarkerAlt className="text-xl mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold mb-2">Sub Branch</p>
-                          <p className="text-sm text-left leading-relaxed">
-                            Rattan Bazar Adda,
-                            Near Hungry Point Restaurant,
-                            Jodhan, Ludhiana
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
-      <OurAssociates />
-    </>
-  );
-};
-
-export default StudyUK;
-
-
-
-
+                  <h3 className="text-xl md:text-2xl font-bold mb-6 text-white

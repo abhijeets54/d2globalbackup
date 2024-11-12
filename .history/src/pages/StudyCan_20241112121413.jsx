@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Register from '../components/Register';
+import WhatPeopleAreSaying from '../components/WhatPeopleAreSaying';
+import QuickEnquiry from '../components/ContactUs/QuickEnquiry';
 import OurAssociates from '../components/OurAssociates';
+import WorldMapContact from '../components/ContactSystem';
 
 const points = [
   { title: 'Globally Acclaimed Institutes', description: 'Canadian universities and colleges are renowned for their advanced pedagogical methods & enhanced learning experiences.' },
@@ -124,7 +128,9 @@ const StudyCan = () => {
       </div>
     </div>
     <OurAssociates/>
-    
+    {/* <Register/>
+    <WhatPeopleAreSaying/> */}
+    <WorldMapContact/>
     </>
   );
 };

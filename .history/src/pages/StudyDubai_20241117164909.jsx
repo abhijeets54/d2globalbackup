@@ -177,7 +177,7 @@ const StudyDubai = () => {
               onClick={handleMapClick}
             >
               <img 
-                src="/maps/uaemap.webp" 
+                src="/maps/uaemap.png" 
                 alt="Map of UAE" 
                 className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-lg object-contain hover:opacity-90 transition-opacity duration-300" 
               />

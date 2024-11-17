@@ -56,7 +56,7 @@ function Header() {
     { name: 'Success Stories', slug: '/SuccessStories' },
     {
       name: 'Visa',
-      slug: '/',
+      slug: '/StudyAus',
       dropdown: [
         { name: 'Study Visa', slug: '/StudyAbroad', subDropdown: [
             { name: 'Study in UK', slug: '/StudyUK' },

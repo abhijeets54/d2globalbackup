@@ -5,12 +5,12 @@ import emailjs from '@emailjs/browser';
 import OurAssociates from '../components/OurAssociates';
 
 const points = [
-  { title: 'Well-established Education System', description: 'Dubai offers a modern education system with excellent infrastructure in its universities.' },
-  { title: 'Safe Living Environment', description: 'Dubai is one of the safest places to live, providing peace of mind for students and their families.' },
-  { title: 'Affordable Tuition & Living Costs', description: 'Tuition fees and living costs in Dubai are lower than in the US, UK, and Australia.' },
-  { title: 'Fast-Growing Economy', description: 'With a fast-growing economy, Dubai offers ample career opportunities for students after graduation.' },
-  { title: 'Cultural Diversity', description: 'Over 200 nationalities live in Dubai, offering students a rich multicultural experience that prepares them for a global career.' },
-  { title: 'High Return on Investment', description: 'Students in Dubai experience a high return on investment with many job opportunities and work permits after study.' },
+  { title: 'Flexibility in Choosing a Major', description: 'Colleges and universities in USA allow students to easily choose and switch majors after admission.' },
+  { title: 'General Education', description: 'Students graduate with a range of general education classes apart from majors and gain a well-rounded education.' },
+  { title: 'Diverse Student Communities', description: 'The United States hosts a huge number of cultural communities of residents and international students from across the world.' },
+  { title: 'Post Study Work Options', description: 'Students on an F-1 visa get permission for practical training and staying in the USA for a period of up to 29 months.' },
+  { title: 'Abundant Career Opportunities', description: 'The USA is a land of abundance for jobs and career options, and students easily secure high jobs in their field of study.' },
+  { title: 'Immigration Opportunities', description: 'USA’s Post-Graduation Work Permit Program (PWPP) allows students to stay and work in the USA.' },
 ];
 
 const containerVariants = {
@@ -23,14 +23,14 @@ const fadeInVariants = {
   visible: { opacity: 1, transition: { duration: 0.8 } }
 };
 
-const StudyDubai = () => {
+const StudyUSA = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     phone: '',
     message: '',
-    country: 'Dubai',
+    country: 'USA',
   });
   const [responseMessage, setResponseMessage] = useState('');
   const [showContactForm, setShowContactForm] = useState(false);
@@ -57,7 +57,7 @@ const StudyDubai = () => {
       .then(
         () => {
           setResponseMessage('Message sent successfully!');
-          setFormData({ name: '', email: '', subject: '', phone: '', country: 'Dubai', message: '' });
+          setFormData({ name: '', email: '', subject: '', phone: '', country: 'USA', message: '' });
         },
         (error) => {
           setResponseMessage('Error submitting form. Please try again.');
@@ -68,38 +68,38 @@ const StudyDubai = () => {
 
   return (
     <>
-      <div className="study-dubai-container bg-white pt-16">
+      <div className="study-usa-container bg-white pt-16">
         {/* Top section */}
         <div className="bg-white p-4 md:p-8 lg:p-10 flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 text-left">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold flex items-center mb-4 lg:mb-6">
-              <img src="/dflag.svg" alt="Dubai Flag" className="w-6 h-6 md:w-8 md:h-8 mr-2" /> 
-              Study in Dubai
+              <img src="/usaflag.webp" alt="USA Flag" className="w-6 h-6 md:w-8 md:h-8 mr-2" /> 
+              Study in USA
             </h1>
             <p className="mb-4 text-sm md:text-lg">
-              Dubai is a top international study destination, known for its high-ranking universities, modern facilities, and a fast-growing economy. Learn everything about universities, living costs, and visa requirements for a successful educational journey.
+              Explore educational institutions, studying and living costs, and financial aid. USA is home to the highest top-ranked universities in the world, offering endless academic and professional growth opportunities.
             </p>
             <div className="flex justify-start space-x-6 md:space-x-10 text-center">
               <div>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600">6</h3>
-                <p className="text-sm md:text-base">QS World Ranking Universities</p>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600">280 +</h3>
+                <p className="text-sm md:text-base">Academic Institutions</p>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600">2 years</h3>
-                <p className="text-sm md:text-base">Work Permit After Study</p>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600">24000 +</h3>
+                <p className="text-sm md:text-base">Programs</p>
               </div>
             </div>
           </div>
 
           <div className="lg:w-1/2 mt-6 lg:mt-0 flex justify-center">
-            <img src="/dub1.webp" alt="Study in Dubai" className="w-full max-w-xs md:max-w-md rounded-lg shadow-lg object-cover" />
+            <img src="/usa1.webp" alt="Study in USA" className="w-full max-w-xs md:max-w-md rounded-lg shadow-lg object-cover" />
           </div>
         </div>
 
-        {/* Why study in Dubai */}
+        {/* Why study in USA */}
         <div className="bg-blue-950 text-yellow-400 p-4 md:p-8 lg:p-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Study in Dubai</h2>
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-10">Discover why Dubai is an ideal study destination.</h3>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Study in USA</h2>
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-10">The ultimate destination for all academic, technical, and professional developments.</h3>
 
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
@@ -121,42 +121,29 @@ const StudyDubai = () => {
           </motion.div>
         </div>
 
-        {/* Intakes Section */}
+        {/* Additional Information */}
         <div className="bg-gray-100 p-4 md:p-8 lg:p-10 text-left">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Intakes</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full table-auto text-left">
-              <thead className="bg-gray-800 text-white">
-                <tr>
-                  <th className="px-4 py-2">Intake</th>
-                  <th className="px-4 py-2">Study Program</th>
-                  <th className="px-4 py-2">Admission Deadlines</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white">
-                  <td className="border px-4 py-2">Fall</td>
-                  <td className="border px-4 py-2">Undergraduate and Postgraduate</td>
-                  <td className="border px-4 py-2">September - October</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border px-4 py-2">Spring</td>
-                  <td className="border px-4 py-2">Undergraduate and Postgraduate</td>
-                  <td className="border px-4 py-2">January - February</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="border px-4 py-2">Summer</td>
-                  <td className="border px-4 py-2">Undergraduate and Postgraduate</td>
-                  <td className="border px-4 py-2">June - July</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities of USA</h2>
+          <ul className="list-disc list-inside mb-6 text-sm md:text-lg space-y-2">
+            <li>Amherst College</li>
+            <li>Baylor University</li>
+            <li>Boston University</li>
+            <li>Brown University</li>
+            <li>California Institute of Technology</li>
+            <li>Carnegie Mellon University</li>
+            <li>Columbia University</li>
+          </ul>
+
+          <h3 className="text-xl md:text-2xl font-semibold mb-4">Intakes</h3>
+          <p className="text-sm md:text-lg mb-6">Main Intakes – Fall (August / September), Other Intakes – Spring (January) and Summer (Mid April)</p>
+
+          <h3 className="text-xl md:text-2xl font-semibold mb-4">English Requirements</h3>
+          <p className="text-sm md:text-lg">TOEFL (Internet-based test), IELTS, or Pearson Test of English (PTE) Academic is required for admission and visa processing.</p>
         </div>
 
         {/* Choose Your Destination Section */}
         <div 
-          className="bg-cover bg-center p-8 md:p-12 lg:p-16 text-white relative" 
+          className="bg-cover bg-center p-12 md:p-12 lg:p-16 text-white relative" 
           style={{
             backgroundImage: "url('/register/form1.webp')",
             backgroundSize: "cover",
@@ -168,7 +155,7 @@ const StudyDubai = () => {
             <div className="lg:w-1/2 mb-6 lg:mb-0 text-left">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Choose Your Destination</h2>
               <p className="text-sm md:text-lg">
-                Discover the top locations for your educational journey in Dubai. Explore diverse emirates with thriving student communities and excellent academic institutions.
+                Discover the top locations for your educational journey in USA. Explore diverse cities with thriving student communities and excellent academic institutions.
               </p>
             </div>
 
@@ -177,29 +164,12 @@ const StudyDubai = () => {
               onClick={handleMapClick}
             >
               <img 
-                src="/maps/uaemap.webp" 
-                alt="Map of UAE" 
+                src="/maps/usamap.webp" 
+                alt="Map of USA" 
                 className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-lg object-contain hover:opacity-90 transition-opacity duration-300" 
               />
             </div>
           </div>
-        </div>
-
-        {/* Universities Section */}
-        <div className="bg-blue-950 text-white p-4 md:p-8 lg:p-10 text-left">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities in Dubai</h2>
-          <ul className="list-disc ml-4 md:ml-6 grid grid-cols-1 md:grid-cols-2 gap-2">
-            <li className="mb-2">University of Birmingham Dubai</li>
-            <li className="mb-2">Abu Dhabi University - QS Rank 580</li>
-            <li className="mb-2">Khalifa University - QS Rank 230</li>
-            <li className="mb-2">United Arab Emirates University - QS Rank 290</li>
-            <li className="mb-2">Heriot-Watt University Dubai</li>
-            <li className="mb-2">University of Sharjah - QS Rank 465</li>
-            <li className="mb-2">Zayed University - QS Rank 701</li>
-            <li className="mb-2">American University of Sharjah - QS Rank 364</li>
-            <li className="mb-2">RIT Dubai</li>
-            <li className="mb-2">Ajman University - QS Rank 551</li>
-          </ul>
         </div>
       </div>
 
@@ -221,7 +191,7 @@ const StudyDubai = () => {
                 {/* Form Section */}
                 <div className="md:w-3/4 p-6 md:p-8">
                   <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-800">Contact Us - Dubai</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-800">Contact Us - USA</h2>
                     <button
                       onClick={closeContactForm}
                       className="text-gray-500 hover:text-gray-700 text-2xl"
@@ -326,8 +296,7 @@ const StudyDubai = () => {
                         <FaMapMarkerAlt className="text-xl mt-1 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-2">Sub Branch</p>
-                          <p className="text-sm text-left leading-relaxed">
-                            Rattan Bazar Adda,
+                          <p className="text-sm text-left leading-relaxed">Rattan Bazar Adda,
                             Near Hungry Point Restaurant,
                             Jodhan, Ludhiana
                           </p>
@@ -347,4 +316,4 @@ const StudyDubai = () => {
   );
 };
 
-export default StudyDubai;
+export default StudyUSA;

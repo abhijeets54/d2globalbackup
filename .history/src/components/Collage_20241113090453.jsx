@@ -187,7 +187,7 @@ const StyledWrapper = styled.div`
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #051b38;
+    background: 2829#36;
     border-radius: 1.625rem;
   }
 
@@ -238,7 +238,7 @@ const StyledWrapper = styled.div`
 
   button:hover .circle {
     width: 100%;
-    box-shadow: 0 0 10px 2px #ddb21d;
+    box-shadow: 0 0 10px 2px white;
   }
 
   button:hover .button-text {

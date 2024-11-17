@@ -238,7 +238,7 @@ const StyledWrapper = styled.div`
 
   button:hover .circle {
     width: 100%;
-    box-shadow: 0 0 10px 2px #ddb21d;
+    box-shadow: 0 0 10px 2px white;
   }
 
   button:hover .button-text {

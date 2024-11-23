@@ -28,7 +28,7 @@ function AboutUs() {
           {/* Text Content */}
           <div className="mt-8 md:mt-0 md:mr-10  max-w-lg text-left md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Welcome to D2 Global</h2>
-            <p className="text-base md:text-lg text-justify text-black">
+            <p className="text-base md:text-lg text-justify text-gray-700">
             With extensive experience in the immigration industry since 2015, Mr. Amardeep Singh founded D2 Global with a clear vision to provide students with comprehensive guidance for pursuing higher education abroad. Having studied Business Management at SAIT, Alberta, Canada and having worked with Scotiabank and Shaw Cables in sales and management, Mr. Singh brings valuable expertise to the company. Deeply rooted in Punjab, his strong connection to the community inspires his commitment to help individuals achieve their academic and professional aspirations across the globe.
             </p>
          

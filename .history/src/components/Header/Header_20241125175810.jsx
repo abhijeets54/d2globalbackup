@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container } from '../index';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaEnvelope, FaPhone, FaChevronDown } from 'react-icons/fa';
+import { FaBars, FaTimes, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const customStyles = `
   .hexagon-logo {
@@ -43,24 +43,10 @@ const customStyles = `
     visibility: visible;
     transform: translateX(0);
   }
-
-  .mobile-dropdown-enter {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-  }
-
-  .mobile-dropdown-enter-active {
-    max-height: 1000px;
-  }
 `;
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdowns, setOpenDropdowns] = useState({
-    main: null,
-    sub: null
-  });
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -97,23 +83,12 @@ function Header() {
     { name: 'Contact Us', slug: '/Contactpage' },
   ];
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    setOpenDropdowns({ main: null, sub: null }); // Reset dropdowns when closing menu
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleNavigation = (e, slug) => {
     e.preventDefault();
     navigate(slug);
     setMenuOpen(false);
-    setOpenDropdowns({ main: null, sub: null });
-  };
-
-  const toggleDropdown = (index, type = 'main') => {
-    setOpenDropdowns(prev => ({
-      main: type === 'main' ? (prev.main === index ? null : index) : prev.main,
-      sub: type === 'sub' ? (prev.sub === index ? null : index) : (type === 'main' ? null : prev.sub)
-    }));
   };
 
   return (
@@ -134,21 +109,24 @@ function Header() {
               </button>
               
               <div className="ml-16 md:ml-24 lg:ml-40 xl:ml-48 text-left px-4 pt-1 -mb-12">
-                <div className="text-3xl font-bold font-poppins text-customYellow">D2 Global</div>
-              </div>
+  <div className="text-3xl font-bold font-poppins text-customYellow">D2 Global</div>
+</div>
+
             </div>
 
             <div className="flex flex-col items-center lg:items-end space-y-2">
-              <div className="flex space-x-4 mr-10 md:mr-28 lg:mr-56 xl:mr-80 2xl:mr-96 text-sm font-openSans">
-                <a href="mailto:info@d2global.in" className="flex items-center">
-                  <FaEnvelope className="mr-1" />
-                  info@d2global.in 
-                </a>
-                <a href="tel:+919878990455" className="flex items-center">
-                  <FaPhone className="mr-1 rotate-90" />
-                  +91 98789 90455
-                </a>
-              </div>
+            <div className="flex space-x-4 mr-10 md:mr-28 lg:mr-56 xl:mr-80 2xl:mr-96 text-sm font-openSans">
+  <a href="mailto:info@d2global.in" className="flex items-center">
+    <FaEnvelope className="mr-1" />
+    info@d2global.in 
+  </a>
+  <a href="tel:+919878990455" className="flex items-center">
+    <FaPhone className="mr-1 rotate-90" />
+    +91 98789 90455
+  </a>
+</div>
+
+
 
               {/* Desktop Menu */}
               <nav className="hidden lg:block">
@@ -165,7 +143,7 @@ function Header() {
                         {item.name}
                       </a>
 
-                      {/* Desktop Dropdown */}
+                      {/* Main Dropdown */}
                       {item.dropdown && (
                         <ul className="absolute right-0 mt-1 w-40 bg-customBlue shadow-lg z-50 text-customYellow font-mukta">
                           {item.dropdown.map((subItem) => (
@@ -173,14 +151,14 @@ function Header() {
                               <a
                                 href={subItem.slug}
                                 onClick={(e) => handleNavigation(e, subItem.slug)}
-                                className={`block px-3 py-2 w-full text-left text-sm hover:bg-customBlue transition-colors duration-150 ${
+                                className={`block px-3 py-2 w-full text-left text-sm hover:bg-customBluetransition-colors duration-150 ${
                                   location.pathname === subItem.slug ? 'font-bold' : ''
                                 }`}
                               >
                                 {subItem.name}
                               </a>
 
-                              {/* Desktop Sub Dropdown */}
+                              {/* Sub Dropdown */}
                               {subItem.subDropdown && (
                                 <ul className="absolute left-full top-0 w-40 bg-customBlue shadow-lg z-50 font-mukta">
                                   {subItem.subDropdown.map((subSubItem) => (
@@ -222,66 +200,40 @@ function Header() {
       {menuOpen && (
         <div className="lg:hidden absolute top-20 left-0 w-full bg-customBlue shadow-md z-40 text-customYellow slide-down">
           <ul className="flex flex-col items-center space-y-2 py-3 font-poppins">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <li key={item.name} className="w-full">
-                <div className="flex items-center justify-between px-4 py-2">
-                  <a
-                    href={item.slug}
-                    onClick={(e) => handleNavigation(e, item.slug)}
-                    className={`text-sm ${location.pathname === item.slug ? 'font-bold' : ''}`}
-                  >
-                    {item.name}
-                  </a>
-                  {item.dropdown && (
-                    <button
-                      onClick={() => toggleDropdown(index)}
-                      className="p-1 focus:outline-none"
-                    >
-                      <FaChevronDown
-                        className={`transform transition-transform duration-200 ${
-                          openDropdowns.main === index ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                  )}
-                </div>
+                <a
+                  href={item.slug}
+                  onClick={(e) => handleNavigation(e, item.slug)}
+                  className={`block w-full text-left px-4 py-2 text-sm ${
+                    location.pathname === item.slug ? 'font-bold' : ''
+                  }`}
+                >
+                  {item.name}
+                </a>
 
-                {/* Mobile Main Dropdown */}
-                {item.dropdown && openDropdowns.main === index && (
-                  <ul className="bg-customBlue w-full">
-                    {item.dropdown.map((subItem, subIndex) => (
+                {item.dropdown && (
+                  <ul className="bg-blue-900 w-full">
+                    {item.dropdown.map((subItem) => (
                       <li key={subItem.name}>
-                        <div className="flex items-center justify-between px-6 py-2">
-                          <a
-                            href={subItem.slug}
-                            onClick={(e) => handleNavigation(e, subItem.slug)}
-                            className={`text-sm ${location.pathname === subItem.slug ? 'font-bold' : ''}`}
-                          >
-                            {subItem.name}
-                          </a>
-                          {subItem.subDropdown && (
-                            <button
-                              onClick={() => toggleDropdown(subIndex, 'sub')}
-                              className="p-1 focus:outline-none"
-                            >
-                              <FaChevronDown
-                                className={`transform transition-transform duration-200 ${
-                                  openDropdowns.sub === subIndex ? 'rotate-180' : ''
-                                }`}
-                              />
-                            </button>
-                          )}
-                        </div>
+                        <a
+                          href={subItem.slug}
+                          onClick={(e) => handleNavigation(e, subItem.slug)}
+                          className={`block px-6 py-2 w-full text-left text-sm hover:bg-customBlue ${
+                            location.pathname === subItem.slug ? 'font-bold' : ''
+                          }`}
+                        >
+                          {subItem.name}
+                        </a>
 
-                        {/* Mobile Sub Dropdown */}
-                        {subItem.subDropdown && openDropdowns.sub === subIndex && (
+                        {subItem.subDropdown && (
                           <ul className="bg-customBlue w-full">
                             {subItem.subDropdown.map((subSubItem) => (
                               <li key={subSubItem.name}>
                                 <a
                                   href={subSubItem.slug}
                                   onClick={(e) => handleNavigation(e, subSubItem.slug)}
-                                  className={`block px-8 py-2 text-sm ${
+                                  className={`block px-8 py-2 w-full text-left text-sm hover:bg-blue-700 ${
                                     location.pathname === subSubItem.slug ? 'font-bold' : ''
                                   }`}
                                 >

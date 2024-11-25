@@ -14,7 +14,6 @@ const PTECoaching = () => {
 
   return (
     <>
-    <div className='bg-white'>
       {/* Hero Section with Image */}
       <motion.div
         className="text-left bg-white px-4 sm:px-8 py-8"
@@ -75,22 +74,16 @@ const PTECoaching = () => {
         transition={{ duration: 1 }}
       >
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Exam Structure</h2>
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
-          <div className="flex-1">
-            <p className="text-base sm:text-lg mb-4">
-              The PTE exam is divided into three sections:
-            </p>
-            <ul className="list-disc list-inside text-base sm:text-lg">
-              <li><strong>Speaking & Writing (54-67 mins):</strong> Includes personal introduction, read aloud, repeat sentence, describe image, retell lecture, and essay writing.</li>
-              <li><strong>Reading (29-30 mins):</strong> Tests comprehension through multiple choice, reordering paragraphs, and fill-in-the-blanks.</li>
-              <li><strong>Listening (30-43 mins):</strong> Involves summarizing spoken text, highlighting incorrect words, and more.</li>
-            </ul>
-          </div>
-          <img
-            src="/pte/pte.png"
-            alt="PTE Exam Structure Diagram"
-            className="w-full md:w-1/3 h-auto mt-6 md:mt-0 md:ml-8"
-          />
+        <p className="text-base sm:text-lg mb-4">
+          The PTE exam is divided into three sections:
+        </p>
+        <ul className="list-disc list-inside text-base sm:text-lg">
+          <li><strong>Speaking & Writing (54-67 mins):</strong> Includes personal introduction, read aloud, repeat sentence, describe image, retell lecture, and essay writing.</li>
+          <li><strong>Reading (29-30 mins):</strong> Tests comprehension through multiple choice, reordering paragraphs, and fill-in-the-blanks.</li>
+          <li><strong>Listening (30-43 mins):</strong> Involves summarizing spoken text, highlighting incorrect words, and more.</li>
+        </ul>
+        <div className="mt-6">
+          <img src="/pte/pte.png" alt="PTE Exam Structure Diagram" className="w-full h-auto rounded-lg shadow-md" />
         </div>
       </motion.div>
 
@@ -107,7 +100,6 @@ const PTECoaching = () => {
         </p>
         <WorldMapContact />
       </motion.div>
-      </div>
     </>
   );
 };

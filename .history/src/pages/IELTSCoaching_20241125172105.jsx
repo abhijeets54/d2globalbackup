@@ -13,7 +13,7 @@ const IELTSCoaching = () => {
 
   return (
     <>
-    <div className='bg-white pt-16'>
+    <div className='bg-white pt'>
       {/* Hero Section with Image */}
       <motion.div
         className="text-left bg-white px-4 sm:px-8 py-8"
@@ -28,7 +28,7 @@ const IELTSCoaching = () => {
               Achieve your dreams with our comprehensive IELTS coaching for both Academic and General Training modules.
             </p>
           </div>
-          <img src="/ieltsc.webp" alt="IELTS Coaching" className="w-full md:w-1/3 h-auto" />
+          <img src="/ielts-hero.jpg" alt="IELTS Coaching" className="w-full md:w-1/3 h-auto" />
         </div>
       </motion.div>
 

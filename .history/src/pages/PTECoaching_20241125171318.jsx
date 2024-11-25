@@ -14,7 +14,6 @@ const PTECoaching = () => {
 
   return (
     <>
-    <div className='bg-white'>
       {/* Hero Section with Image */}
       <motion.div
         className="text-left bg-white px-4 sm:px-8 py-8"
@@ -107,7 +106,6 @@ const PTECoaching = () => {
         </p>
         <WorldMapContact />
       </motion.div>
-      </div>
     </>
   );
 };

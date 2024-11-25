@@ -107,7 +107,6 @@ const PTECoaching = () => {
         </p>
         <WorldMapContact />
       </motion.div>
-      </div>
     </>
   );
 };

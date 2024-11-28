@@ -46,13 +46,13 @@ const Partners = () => {
           </p>
           <div className="mt-6">
             <h3 className="text-xl font-bold font-poppins mb-2">Visit Us Today!</h3>
-            <p className="text-black font-openSans">
+            <p className="text-gray-700 font-openSans">
               <strong>Main Branch</strong><br />
               Maks Shopping Plaza,<br />
               Dugri Road, Model Town,<br />
               Ludhiana
             </p>
-            <p className="text-black font-openSans mt-4">
+            <p className="text-gray-700 font-openSans mt-4">
               <strong>Sub Branch</strong><br />
               Rattan Bazar Adda,<br />
               Near Hungry Point Restaurant,<br />

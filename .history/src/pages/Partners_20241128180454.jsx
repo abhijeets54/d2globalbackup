@@ -17,7 +17,7 @@ const Partners = () => {
         {/* Why Partner Section */}
         <div className="bg-white shadow-md rounded-lg p-6 mb-12">
           <h2 className="text-2xl font-semibold text-customYellow font-lora mb-4">Why Partner with Us?</h2>
-          <ul className="list-disc list-inside text-black space-y-2">
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Expand your reach by collaborating with an industry-leading immigration company.</li>
             <li>Leverage our expertise in visa processing and global education consultancy.</li>
             <li>Access a wide network of international clients and business opportunities.</li>
@@ -28,7 +28,7 @@ const Partners = () => {
         {/* How to Get Started Section */}
         <div className="bg-white shadow-md rounded-lg p-6 mb-12">
           <h2 className="text-2xl font-semibold text-customYellow font-lora mb-4">How to Get Started?</h2>
-          <p className="text-black font-openSans">
+          <p className="text-gray-700 font-openSans">
             Contact us today to discuss how we can collaborate and create value for each other. We're excited to hear from you!
           </p>
         </div>
@@ -36,23 +36,23 @@ const Partners = () => {
         {/* Contact Details Section */}
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-customYellow font-lora mb-4">Contact Details</h2>
-          <p className="text-black font-openSans">
+          <p className="text-gray-700 font-openSans">
             <i className="fas fa-envelope mr-2"></i>
             <a href="mailto:info@d2global.in" className="text-customBlue hover:underline">info@d2global.in</a>
           </p>
-          <p className="text-black font-openSans">
+          <p className="text-gray-700 font-openSans">
             <i className="fas fa-phone mr-2"></i>
             +91 98789 90455
           </p>
           <div className="mt-6">
             <h3 className="text-xl font-bold font-poppins mb-2">Visit Us Today!</h3>
-            <p className="text-black font-openSans">
+            <p className="text-gray-700 font-openSans">
               <strong>Main Branch</strong><br />
               Maks Shopping Plaza,<br />
               Dugri Road, Model Town,<br />
               Ludhiana
             </p>
-            <p className="text-black font-openSans mt-4">
+            <p className="text-gray-700 font-openSans mt-4">
               <strong>Sub Branch</strong><br />
               Rattan Bazar Adda,<br />
               Near Hungry Point Restaurant,<br />

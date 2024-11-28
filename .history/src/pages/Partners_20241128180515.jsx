@@ -40,19 +40,19 @@ const Partners = () => {
             <i className="fas fa-envelope mr-2"></i>
             <a href="mailto:info@d2global.in" className="text-customBlue hover:underline">info@d2global.in</a>
           </p>
-          <p className="text-black font-openSans">
+          <p className="text-gray-700 font-openSans">
             <i className="fas fa-phone mr-2"></i>
             +91 98789 90455
           </p>
           <div className="mt-6">
             <h3 className="text-xl font-bold font-poppins mb-2">Visit Us Today!</h3>
-            <p className="text-black font-openSans">
+            <p className="text-gray-700 font-openSans">
               <strong>Main Branch</strong><br />
               Maks Shopping Plaza,<br />
               Dugri Road, Model Town,<br />
               Ludhiana
             </p>
-            <p className="text-black font-openSans mt-4">
+            <p className="text-gray-700 font-openSans mt-4">
               <strong>Sub Branch</strong><br />
               Rattan Bazar Adda,<br />
               Near Hungry Point Restaurant,<br />

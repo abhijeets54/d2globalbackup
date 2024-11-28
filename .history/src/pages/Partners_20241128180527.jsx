@@ -52,7 +52,7 @@ const Partners = () => {
               Dugri Road, Model Town,<br />
               Ludhiana
             </p>
-            <p className="text-black font-openSans mt-4">
+            <p className="text-gray-700 font-openSans mt-4">
               <strong>Sub Branch</strong><br />
               Rattan Bazar Adda,<br />
               Near Hungry Point Restaurant,<br />

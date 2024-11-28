@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 
 function Offer() {
   const studyAbroadImageUrl = '/student.webp'; // Update with actual image URL
-  const ieltsPteImageUrl = '/ielts3.webp'; // Update with actual image URL
+  const ieltsPteImageUrl = '/ielts3.jp'; // Update with actual image URL
   const touristVisaImageUrl = '/tourist.webp'; // Update with actual image URL
 
   return (
@@ -34,7 +34,7 @@ function Offer() {
 
         {/* Second card: IELTS/PTE */}
         <div className="col cursor-pointer transform transition-transform hover:scale-105">
-          <Link to="/IEL">
+          <Link to="/IELTSCoaching">
             <div className="card h-full bg-white rounded-lg shadow overflow-hidden">
               <img 
                 src={ieltsPteImageUrl} 

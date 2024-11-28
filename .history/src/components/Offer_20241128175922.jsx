@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 
 function Offer() {
-  const studyAbroadImageUrl = '/student.webp'; // Update with actual image URL
+  const studyAbroadImageUrl = '/student.jpg'; // Update with actual image URL
   const ieltsPteImageUrl = '/ielts3.webp'; // Update with actual image URL
   const touristVisaImageUrl = '/tourist.webp'; // Update with actual image URL
 
   return (
-    <div className="mx-auto bg-customBlue
-    0 p-6 md:p-10 shadow">
-      <h4 className="text-center text-customBlue mt-3 text-xl"></h4>
-      <h2 className="text-center text-3xl font-serif  text-customYellow sm:text-4xl mt-3  font-extrabold mb-10 md:mb-16">What We Offer</h2>
-      
+    <div className="mx-auto bg-customBlue p-6 md:p-10 shadow">
+      <h2 className="text-center text-3xl font-serif text-customYellow sm:text-4xl mt-3 font-extrabold mb-10 md:mb-16">
+        What We Offer
+      </h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {/* First card: Study Abroad */}
         <div className="col cursor-pointer transform transition-transform hover:scale-105">
@@ -24,7 +24,9 @@ function Offer() {
                 alt="Study Abroad" 
               />
               <div className="p-4">
-                <h5 className="text-center text-lg sm:text-xl font-bold">Study Abroad</h5>
+                <h5 className="text-center text-lg sm:text-xl font-bold font-poppins"> {/* Use Poppins font */}
+                  Study Abroad
+                </h5>
               </div>
             </div>
           </Link>
@@ -32,7 +34,7 @@ function Offer() {
 
         {/* Second card: IELTS/PTE */}
         <div className="col cursor-pointer transform transition-transform hover:scale-105">
-          <Link to="/Training">
+          <Link to="/IELTSCoaching">
             <div className="card h-full bg-white rounded-lg shadow overflow-hidden">
               <img 
                 src={ieltsPteImageUrl} 
@@ -40,7 +42,9 @@ function Offer() {
                 alt="IELTS/PTE" 
               />
               <div className="p-4">
-                <h5 className="text-center text-lg sm:text-xl font-bold">Language Coaching</h5>
+                <h5 className="text-center text-lg sm:text-xl font-bold font-poppins"> {/* Use Poppins font */}
+                  Language Coaching
+                </h5>
               </div>
             </div>
           </Link>
@@ -56,7 +60,9 @@ function Offer() {
                 alt="Tourist Visa" 
               />
               <div className="p-4">
-                <h5 className="text-center text-lg sm:text-xl font-bold">Tourist Visa</h5>
+                <h5 className="text-center text-lg sm:text-xl font-bold font-poppins"> {/* Use Poppins font */}
+                  Tourist Visa
+                </h5>
               </div>
             </div>
           </Link>

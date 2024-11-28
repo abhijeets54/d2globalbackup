@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 
 function Offer() {
   const studyAbroadImageUrl = '/student.webp'; // Update with actual image URL
-  const ieltsPteImageUrl = '/ielts3.webp'; // Update with actual image URL
+  const ieltsPteImageUrl = '/ielts3.jpg'; // Update with actual image URL
   const touristVisaImageUrl = '/tourist.webp'; // Update with actual image URL
 
   return (

@@ -11,6 +11,7 @@ import WorldMapContact from '../components/ContactSystem';
 const StudyAbroad = () => {
   return (
     <>
+    <div className='bg-white pt-28'>
       {/* <QuickEnquiry /> */}
       <div className="p-6 bg-white md:p-12 text-left">
         {/* Main Section */}
@@ -43,7 +44,8 @@ const StudyAbroad = () => {
         <p className="text-lg md:text-xl mb-4">
           Let D2 Global Immigration guide you through every step of the process. From selecting a program to getting your visa, we are here to make your dreams of studying abroad a reality.
         </p>
-        <Register />
+        {/* <Register /> */}
+        <WorldMapContact/>
       </section>
     </>
   );

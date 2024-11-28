@@ -11,6 +11,7 @@ import WorldMapContact from '../components/ContactSystem';
 const StudyAbroad = () => {
   return (
     <>
+    
       {/* <QuickEnquiry /> */}
       <div className="p-6 bg-white md:p-12 text-left">
         {/* Main Section */}

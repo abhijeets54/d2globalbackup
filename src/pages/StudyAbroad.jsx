@@ -11,6 +11,7 @@ import WorldMapContact from '../components/ContactSystem';
 const StudyAbroad = () => {
   return (
     <>
+    <div className='bg-white pt-28'>
       {/* <QuickEnquiry /> */}
       <div className="p-6 bg-white md:p-12 text-left">
         {/* Main Section */}
@@ -46,6 +47,7 @@ const StudyAbroad = () => {
         {/* <Register /> */}
         <WorldMapContact/>
       </section>
+      </div>
     </>
   );
 };

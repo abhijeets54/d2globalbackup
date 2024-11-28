@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Partners = () => {
   return (
-    <div className="bg-white min-h-screen py-8 pt-20">
+    <div className="bg-white min-h-screen py-8">
       <div className="container mx-auto px-4 lg:px-16">
         {/* Header Section */}
         <div className="text-center mb-12">

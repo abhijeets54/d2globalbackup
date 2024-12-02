@@ -88,7 +88,7 @@ function Header() {
     },
     {
       name: 'Language Coaching',
-      slug: '/Training',
+      slug: '/IELTSCoaching',
       dropdown: [
         { name: 'IELTS', slug: '/IELTSCoaching' },
         { name: 'PTE', slug: '/PTECoaching' },

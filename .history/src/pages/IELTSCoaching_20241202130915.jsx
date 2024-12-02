@@ -23,37 +23,49 @@ const IELTSCoaching = () => {
   const benefitsList = [
     {
       icon: <BookOpen className="w-10 h-10 text-blue-600" />,
-      title: "Experienced and Certified Trainers",
+      title: "Vocabulary Sessions",
       details: [
-        "We have experienced and certified trainers who are well-versed in the exam format, scoring system, and strategies to improve your score."
-      ]
-    },
-    {
-      icon: <BookOpen className="w-10 h-10 text-blue-600" />,
-      title: "Comprehensive Study Material",
-      details: [
-        "We provide you with comprehensive study material, including practice tests, mock exams, and other resources to help you prepare for the exam."
+        "Thematic Vocabulary to enhance linguistic range",
+        "Fun and engaging vocabulary activities",
+        "Specific vocabulary for 7+ band in writing and speaking",
+        "Daily vocabulary revision"
       ]
     },
     {
       icon: <Award className="w-10 h-10 text-green-600" />,
-      title: "Personalized Coaching",
+      title: "Free IELTS Workshops",
       details: [
-        "We provide personalized coaching to each student based on their strengths and weaknesses, and tailor the coaching program accordingly."
+        "Expert trainers every week",
+        "Comprehensive module coverage",
+        "Techniques to score 9 band",
+        "Detailed module insights"
       ]
     },
     {
       icon: <Calendar className="w-10 h-10 text-purple-600" />,
-      title: "Small Batch Size",
+      title: "Mock Test & Analysis",
       details: [
-        "We have a small batch size to ensure that each student receives individual attention and personalized coaching."
+        "Mock test every Saturday",
+        "Detailed results and mistake analysis",
+        "Performance tracking",
+        "Exam simulation experience"
+      ]
+    },
+    {
+      icon: <Lightbulb className="w-10 h-10 text-orange-600" />,
+      title: "Additional Support",
+      details: [
+        "Free IELTS Simulation Test",
+        "Free Visa Counseling",
+        "Monthly Personality Development Sessions",
+        "Weekly Performance Report Card"
       ]
     }
   ];
 
   return (
     <>
-      <div className='bg-white pt-16'>
+      <div className='bg-gray-50 pt-16'>
         {/* Hero Section with Image */}
         <motion.div
           className="container mx-auto text-left px-4 sm:px-8 py-8"
@@ -70,6 +82,9 @@ const IELTSCoaching = () => {
                 Comprehensive training to unlock international education and career opportunities through proven IELTS preparation strategies.
               </p>
               <div className="flex space-x-4">
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                  Start Your Journey
+                </button>
               </div>
             </div>
             <img 
@@ -146,7 +161,7 @@ const IELTSCoaching = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="container mx-auto bg-white ">
+        <div className="container mx-auto mb-12">
           <motion.div
             className="bg-blue-50 rounded-xl p-8 text-center"
             initial={{ scale: 0.9, opacity: 0 }}

@@ -23,30 +23,42 @@ const IELTSCoaching = () => {
   const benefitsList = [
     {
       icon: <BookOpen className="w-10 h-10 text-blue-600" />,
-      title: "Experienced and Certified Trainers",
+      title: "Vocabulary Sessions",
       details: [
-        "We have experienced and certified trainers who are well-versed in the exam format, scoring system, and strategies to improve your score."
-      ]
-    },
-    {
-      icon: <BookOpen className="w-10 h-10 text-blue-600" />,
-      title: "Comprehensive Study Material",
-      details: [
-        "We provide you with comprehensive study material, including practice tests, mock exams, and other resources to help you prepare for the exam."
+        "Thematic Vocabulary to enhance linguistic range",
+        "Fun and engaging vocabulary activities",
+        "Specific vocabulary for 7+ band in writing and speaking",
+        "Daily vocabulary revision"
       ]
     },
     {
       icon: <Award className="w-10 h-10 text-green-600" />,
-      title: "Personalized Coaching",
+      title: "Free IELTS Workshops",
       details: [
-        "We provide personalized coaching to each student based on their strengths and weaknesses, and tailor the coaching program accordingly."
+        "Expert trainers every week",
+        "Comprehensive module coverage",
+        "Techniques to score 9 band",
+        "Detailed module insights"
       ]
     },
     {
       icon: <Calendar className="w-10 h-10 text-purple-600" />,
-      title: "Small Batch Size",
+      title: "Mock Test & Analysis",
       details: [
-        "We have a small batch size to ensure that each student receives individual attention and personalized coaching."
+        "Mock test every Saturday",
+        "Detailed results and mistake analysis",
+        "Performance tracking",
+        "Exam simulation experience"
+      ]
+    },
+    {
+      icon: <Lightbulb className="w-10 h-10 text-orange-600" />,
+      title: "Additional Support",
+      details: [
+        "Free IELTS Simulation Test",
+        "Free Visa Counseling",
+        "Monthly Personality Development Sessions",
+        "Weekly Performance Report Card"
       ]
     }
   ];
@@ -115,6 +127,53 @@ const IELTSCoaching = () => {
             />
           </div>
         </motion.div>
+        <div class="bg-customBlue pt-16">
+  <div class="container mx-auto text-left px-4 sm:px-8 py-8">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-customYellow mb-6">Our Key Features</h2>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-chalkboard-teacher text-customBlue text-3xl mr-4"></i>
+          <h3 class="text-lg font-semibold">Experienced and Certified Trainers</h3>
+        </div>
+        <p class="text-gray-700">
+          We have experienced and certified trainers who are well-versed in the exam format, scoring system, and strategies to improve your score.
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-book-reader text-customBlue text-3xl mr-4"></i>
+          <h3 class="text-lg font-semibold">Comprehensive Study Material</h3>
+        </div>
+        <p class="text-gray-700">
+          We provide you with comprehensive study material, including practice tests, mock exams, and other resources to help you prepare for the exam.
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-user-tie text-blue-600 text-3xl mr-4"></i>
+          <h3 class="text-lg font-semibold">Personalized Coaching</h3>
+        </div>
+        <p class="text-gray-700">
+          We provide personalized coaching to each student based on their strengths and weaknesses, and tailor the coaching program accordingly.
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-users text-blue-600 text-3xl mr-4"></i>
+          <h3 class="text-lg font-semibold">Small Batch Size</h3>
+        </div>
+        <p class="text-gray-700">
+          We have a small batch size to ensure that each student receives individual attention and personalized coaching.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Benefits Grid */}
         <div className="container mx-auto mb-12">

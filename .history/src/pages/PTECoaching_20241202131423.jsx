@@ -82,7 +82,9 @@ const PTECoaching = () => {
                 Expert coaching for the Pearson Test of English (PTE), designed to help you achieve your academic and migration goals.
               </p>
               <div className="flex space-x-4">
-                
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                  Start Your PTE Journey
+                </button>
               </div>
             </div>
             <img 
@@ -192,7 +194,7 @@ const PTECoaching = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="container mx-auto ">
+        <div className="container mx-auto mb-12">
           <motion.div
             className="bg-blue-50 rounded-xl p-8 text-center"
             initial={{ scale: 0.9, opacity: 0 }}

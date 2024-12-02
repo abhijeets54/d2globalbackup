@@ -19,7 +19,7 @@ function AboutUs() {
     '/approved/icef.png',
     '/approved/idp.png',
     '/approved/govt.svg',
-    '/approved/bc.png'
+    'approved/icef.png'
   ];
 
   return (
@@ -51,15 +51,14 @@ function AboutUs() {
         </div>
 
         {/* Other Components */}
-         {/* New Approved By Section */}
-         <ApprovedBy logos={approvedLogos} />
         <Timeline/>
         <VisionMissionValues/>
         <Choose />
         <QuickNumbers />
         <OurAssociates/>
         
-       
+        {/* New Approved By Section */}
+        <ApprovedBy logos={approvedLogos} />
         
         <WorldMapContact/>
       </div>

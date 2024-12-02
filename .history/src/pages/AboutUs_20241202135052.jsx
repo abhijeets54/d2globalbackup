@@ -17,9 +17,9 @@ function AboutUs() {
   // Array of logo paths - replace with your actual logo paths
   const approvedLogos = [
     '/approved/icef.png',
-    '/approved/idp.png',
-    '/approved/govt.svg',
-    '/approved/bc.png'
+    '/approved/i.png',
+    '/path/to/logo3.png',
+    '/path/to/logo4.png'
   ];
 
   return (
@@ -51,15 +51,14 @@ function AboutUs() {
         </div>
 
         {/* Other Components */}
-         {/* New Approved By Section */}
-         <ApprovedBy logos={approvedLogos} />
         <Timeline/>
         <VisionMissionValues/>
         <Choose />
         <QuickNumbers />
         <OurAssociates/>
         
-       
+        {/* New Approved By Section */}
+        <ApprovedBy logos={approvedLogos} />
         
         <WorldMapContact/>
       </div>

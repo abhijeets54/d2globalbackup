@@ -51,8 +51,7 @@ function AboutUs() {
         </div>
 
         {/* Other Components */}
-         {/* New Approved By Section */}
-         <ApprovedBy logos={approvedLogos} />
+        
         <Timeline/>
         <VisionMissionValues/>
         <Choose />

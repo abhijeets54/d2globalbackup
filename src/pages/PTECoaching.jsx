@@ -122,7 +122,7 @@ const PTECoaching = () => {
               </div>
             </div>
             <img 
-              src="/pte/pte.png" 
+              src="/pte/pte.webp" 
               alt="PTE Exam Structure" 
               className="w-full rounded-xl shadow-md"
             />

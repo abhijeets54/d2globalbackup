@@ -33,7 +33,7 @@ function Home() {
 
    {/* <CollageWithAnimations/> */}
    {/* <PassportServiceSlider/> */}
-      {/* <PopupForm /> */}
+      <PopupForm />
       <QuickEnquiry />
       <Collage />
       

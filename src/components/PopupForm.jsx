@@ -60,7 +60,7 @@ const PopupForm = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-2">
-      <div className="relative bg-white p-3 rounded-lg shadow-lg w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] transition-transform transform">
+      <div className="relative bg-white p-3 rounded-lg shadow-lg w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px] transition-transform transform">
         {/* Close button */}
         <button
           className="absolute top-1 right-2 text-lg text-gray-500 hover:text-gray-700"
@@ -69,18 +69,18 @@ const PopupForm = () => {
           &times;
         </button>
 
-        <h2 className="text-base mb-4 text-center font-semibold text-gray-700">Contact Us</h2>
+        <h2 className="text-base mb-3 text-center font-semibold text-gray-700">Contact Us</h2>
         {/* Display response message at the top */}
-        {responseMessage && <p className="text-center text-green-500 mb-3">{responseMessage}</p>}
+        {responseMessage && <p className="text-center text-green-500 mb-2">{responseMessage}</p>}
         <form ref={form} onSubmit={handleSubmit}>
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <input
               type="text"
               name="name"
               placeholder="Name"
               value={formData.name}
               onChange={handleInputChange}
-              className="block w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
               required
             />
             <input
@@ -89,7 +89,7 @@ const PopupForm = () => {
               placeholder="Phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="block w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
               required
             />
             <input
@@ -98,7 +98,7 @@ const PopupForm = () => {
               placeholder="Email"
               value={formData.email}
               onChange={handleInputChange}
-              className="block w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
               required
             />
             <input
@@ -107,7 +107,7 @@ const PopupForm = () => {
               placeholder="Subject"
               value={formData.subject}
               onChange={handleInputChange}
-              className="block w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
+              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
               required
             />
             <textarea
@@ -115,20 +115,20 @@ const PopupForm = () => {
               placeholder="Message"
               value={formData.message}
               onChange={handleInputChange}
-              className="block w-full p-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300 h-20"
+              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300 h-16"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="mt-3 bg-blue-950 text-yellow-400 py-2 px-4 text-sm rounded w-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-2 bg-blue-950 text-yellow-400 py-1.5 px-3 text-xs rounded w-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Submit
           </button>
         </form>
         {/* Display response message at the bottom */}
         {responseMessage && (
-          <p className="mt-3 text-center text-green-500">
+          <p className="mt-2 text-center text-green-500 text-xs">
             {responseMessage}
           </p>
         )}

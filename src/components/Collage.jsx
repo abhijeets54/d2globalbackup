@@ -11,7 +11,7 @@ const Collage = () => {
       image: '/dashboard/svisa2.webp',
       title: 'Best Study Visa services in Ludhiana',
       description: 'Explore opportunities of studying abroad with our comprehensive visa services.',
-      link: '/StudyAbroad'
+      link: '/StudyCan'
     },
     {
       image: '/dashboard/tvisa3.webp',
@@ -23,7 +23,7 @@ const Collage = () => {
       image: '/dashboard/idash.webp',
       title: 'Language Coaching',
       description: 'Enhance your language skills with our expert coaching programs.',
-      link: '/Training'
+      link: '/IELTSCoaching'
     },
   ];
 

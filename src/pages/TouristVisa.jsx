@@ -48,7 +48,7 @@ const TouristVisa = () => {
 
         {/* Visa Info Section */}
         <motion.div 
-          className="bg-blue-950 text-yellow-400 p-8 mt-6 text-left" 
+          className="bg-white text-black p-8 mt-6 text-left" 
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           transition={{ duration: 1 }}

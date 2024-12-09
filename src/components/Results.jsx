@@ -86,7 +86,7 @@ const ResultsSlideshow = () => {
   };
 
   return (     
-    <div className="bg-customBlue py-16 px-2 w-full relative">       
+    <div className="bg-customBlue py-16 px-2 w-full -mb-16 relative">       
       <div className="container mx-auto max-w-[95vw]">         
         <h2 className="text-3xl md:text-4xl font-bold text-center text-customYellow mb-12">           
           Our Success Stories         

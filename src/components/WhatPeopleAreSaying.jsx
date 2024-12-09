@@ -43,7 +43,7 @@ const TestimonialCircle = ({ testimonial, index, currentIndex, totalItems }) => 
       }}
       transition={{ duration: 0.5 }}
     >
-      <div className={`bg-white text-customBlue p-4 md:p-8 rounded-full w-48 h-48 md:w-64 md:h-64 border-3 mt-3 border-customYellow flex flex-col justify-center items-center text-center shadow-xl ${isCenter ? 'z-10' : 'z-0'}`}>
+      <div className={`bg-white text-customBlue p-4 md:p-8 rounded-full w-48 h-48 md:w-64 md:h-64 border-3 mt-3 -mb-16 border-customYellow flex flex-col justify-center items-center text-center shadow-xl ${isCenter ? 'z-10' : 'z-0'}`}>
         <div className="flex space-x-1">
           {[...Array(5)].map((_, i) => (
             <Star key={i} size={16} className="text-customYellow fill-customYellow" />

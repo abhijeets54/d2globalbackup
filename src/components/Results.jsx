@@ -70,7 +70,7 @@ const ResultsSlideshow = () => {
     dots: true,     
     dotsClass: "slick-dots custom-dots",     
     infinite: true,     
-    speed: 500,     
+    speed: 400,     
     slidesToShow: 6,     
     slidesToScroll: 1,     
     autoplay: true,     

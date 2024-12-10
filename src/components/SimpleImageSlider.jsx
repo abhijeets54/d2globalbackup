@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    bgImage: "/dash1.webp",
+    bgImage: "/visa1.jpeg",
   },
   {
     bgImage: "/dash2.webp",

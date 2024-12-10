@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaInstagram } from 'react-icons/fa';
 
 const ContactUs = () => {
   return (
@@ -18,14 +19,18 @@ const ContactUs = () => {
           <Link to="mailto:info@d2global.in" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">info@d2global.in</Link>
           <Link to="tel:+918427670455" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">+91 84276 70455</Link>
           <Link to="tel:+917696900455" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">+91 76969 00455</Link>
+          <a href="https://www.instagram.com/d2globalinfo?igsh=M244eHMycGdvZDhm" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-yellow-500 font-openSans text-base mt-2">
+            <FaInstagram className="mr-2" /> Follow us
+          </a>
         </div>
         <div className="mb-6 md:mb-0">
           <h3 className="text-xl font-poppins font-bold">Quick Links</h3>
           <ul>
             <li><Link to="/StudyAbroad" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">Study Abroad</Link></li>
             <li><Link to="/TouristVisa" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">Tourist Visa</Link></li>
-            <li><Link to="/Contactpage" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">Contact Us</Link></li>
             <li><Link to="/PR" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">Permanent Residency</Link></li>
+            <li><Link to="/Contactpage" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">Contact Us</Link></li>
+
           </ul>
         </div>
         <div>
@@ -41,7 +46,6 @@ const ContactUs = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          
         </div>
       </div>
       <div className="text-center font-inconsolata font-semibold text-customYellow mt-8 text-base">

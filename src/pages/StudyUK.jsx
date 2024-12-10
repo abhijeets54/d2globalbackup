@@ -167,7 +167,7 @@ const StudyUK = () => {
                   <li className="flex items-start">
                     <span className="text-customBlue font-semibold mr-2">•</span>
                     <div>
-                      <strong>English Proficiency:</strong> IELTS with an overall band score of 6.0 to 7.0 (minimum 5.5 in each band) or Pearson Test of English (PTE).
+                      <strong>English Proficiency:</strong> IELTS with an overall band score of 6.0 not less than 5.5 or Pearson Test of English (PTE).
                     </div>
                   </li>
                   <li className="flex items-start">

@@ -5,17 +5,61 @@ import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";  
 
 const images = [   
-  "/results/result1.webp",   
-  "/results/result2.webp",   
-  "/results/result3.webp",   
-  "/results/result4.webp",   
-  "/results/result5.webp",   
-  "/results/result6.webp",   
-  "/results/result7.webp",   
-  "/results/result8.webp",   
-  "/results/result9.webp",   
-  "/results/result10.webp",   
-  "/results/result11.webp" 
+  { 
+    src: "/results/result1.webp", 
+    country: "canada", 
+    flag: "/cflag.svg",  
+  },   
+  { 
+    src: "/results/result2.webp", 
+    country: "canada", 
+    flag: "/cflag.svg",  
+  },   
+  { 
+    src: "/results/result3.webp", 
+    country: "canada", 
+    flag: "/cflag.svg",  
+  },   
+  { 
+    src: "/results/result4.webp", 
+    country: "canada", 
+    flag: "/cflag.svg",  
+  },   
+  { 
+    src: "/results/result5.webp", 
+    country: "canada", 
+    flag: "/cflag.svg", 
+  },   
+  { 
+    src: "/results/result6.webp", 
+    country: "canada", 
+    flag: "/cflag.svg", 
+  },   
+  { 
+    src: "/results/result7.webp", 
+    country: "uk", 
+    flag: "/ukflag.svg" 
+  },   
+  { 
+    src: "/results/result8.webp", 
+    country: "uk", 
+    flag: "/ukflag.svg" 
+  },   
+  { 
+    src: "/results/result9.webp", 
+    country: "uk", 
+    flag: "/ukflag.svg" 
+  },   
+  { 
+    src: "/results/result10.webp", 
+    country: "uk", 
+    flag: "/ukflag.svg"  
+  },   
+  { 
+    src: "/results/result11.webp", 
+    country: "uk", 
+    flag: "/ukflag.svg"  
+  } 
 ];  
 
 const ResultsSlideshow = () => {   
@@ -85,6 +129,28 @@ const ResultsSlideshow = () => {
     setEnlargedImage(null);
   };
 
+  const CountryFlag = ({ flag }) => {
+    const flagStyles = {
+      position: 'absolute',
+      top: '10px',
+      right: '10px',
+      width: '40px',
+      height: '24px',
+      zIndex: 10,
+      borderRadius: '4px',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+      objectFit: 'cover'
+    };
+
+    return (
+      <img 
+        src={flag} 
+        alt="Country Flag" 
+        style={flagStyles} 
+      />
+    );
+  };
+
   return (     
     <div className="bg-customBlue py-16 px-2 w-full -mb-16 relative">       
       <div className="container mx-auto max-w-[95vw]">         
@@ -96,15 +162,16 @@ const ResultsSlideshow = () => {
             {images.map((image, index) => (               
               <div                 
                 key={index}                 
-                className="p-1 focus:outline-none"               
+                className="p-1 focus:outline-none relative"               
               >                 
                 <div className="h-[500px] w-full shadow-lg rounded-xl overflow-hidden border-2 border-white/30 transition-all duration-300 hover:shadow-2xl hover:border-white/50 group">                   
                   <img                     
-                    src={image}                     
+                    src={image.src}                     
                     alt={`Success Story ${index + 1}`}                     
                     className="w-full h-full object-contain cursor-pointer transition-transform duration-300 group-hover:scale-105"
-                    onClick={() => handleImageClick(image)}
-                  />                 
+                    onClick={() => handleImageClick(image.src)}
+                  />
+                  <CountryFlag flag={image.flag} />
                 </div>               
               </div>             
             ))}           

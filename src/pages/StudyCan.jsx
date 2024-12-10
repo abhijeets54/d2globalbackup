@@ -149,8 +149,8 @@ const StudyCan = () => {
     <li>
       <span className="font-semibold">English Proficiency:</span> 
       <ul className="list-disc list-inside ml-6">
-        <li>Pearson Test of English (PTE) Academic</li>
-        <li>IELTS: Overall 6.0 to 6.5 bands</li>
+        {/* <li>Pearson Test of English (PTE) Academic</li> */}
+        <li>IELTS: Overall 6.0 not less than 5.5</li>
       </ul>
     </li>
     <li>

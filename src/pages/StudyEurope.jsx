@@ -134,7 +134,7 @@ const StudyEurope = () => {
         </div>
 
         {/* Top Universities in Europe */}
-        <div className="bg-white p-6 lg:p-10 text-left">
+        {/* <div className="bg-white p-6 lg:p-10 text-left">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">Top Universities in Europe</h2>
           <ul className="list-disc list-inside space-y-2 text-base lg:text-lg">
             <li>Karolinska Institute</li>
@@ -148,7 +148,7 @@ const StudyEurope = () => {
             <li>University of Manchester</li>
             <li>University of Edinburgh</li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Choose Your Destination Section */}
         <div 

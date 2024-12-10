@@ -167,7 +167,7 @@ const StudyDubai = () => {
   </div>
 </div>
 
-        <div className="bg-white text-black p-4 md:p-8 lg:p-10 text-left">
+        {/* <div className="bg-white text-black p-4 md:p-8 lg:p-10 text-left">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities in Dubai</h2>
           <ul className="list-disc ml-4 md:ml-6 grid grid-cols-1 md:grid-cols-2 gap-2">
             <li className="mb-2">University of Birmingham Dubai</li>
@@ -181,7 +181,7 @@ const StudyDubai = () => {
             <li className="mb-2">RIT Dubai</li>
             <li className="mb-2">Ajman University - QS Rank 551</li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Choose Your Destination Section */}
         <div 

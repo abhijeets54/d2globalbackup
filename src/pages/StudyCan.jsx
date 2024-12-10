@@ -123,16 +123,9 @@ const StudyCan = () => {
 
         {/* Additional Information */}
         <div className="bg-white text-gray-800 p-6 lg:p-10">
-  <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-left">Programs Offered:</h2>
-  <ul className="list-disc list-inside text-left">
-    <li>Diploma: 2 years</li>
-    <li>Advanced Diploma: 3 years (Fast Track 2 years)</li>
-    <li>Bachelors: 4 years</li>
-    <li>PG Diploma: 1 year (very few programs are for 2 years)</li>
-    <li>Masters: 2 years</li>
-  </ul>
+  
 
-  <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Top Universities & Colleges:</h2>
+  {/* <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Top Universities & Colleges:</h2>
   <ul className="list-disc list-inside text-left">
     <li>ABM College of Health and Technology</li>
     <li>Ambrose University College</li>
@@ -146,7 +139,7 @@ const StudyCan = () => {
     <li>Lethbridge College</li>
     <li>Medicine Hat College</li>
     <li>NorQuest College</li>
-  </ul>
+  </ul> */}
 
   <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Requirements:</h2>
   <ul className="list-disc list-inside text-left">

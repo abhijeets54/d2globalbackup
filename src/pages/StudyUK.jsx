@@ -121,69 +121,66 @@ const StudyUK = () => {
           </motion.div>
         </div>
 
-        {/* Universities Section */}
-        <div className="bg-gray-100 p-4 md:p-8 lg:p-10 text-left">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities of UK</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <ul className="list-disc list-inside text-lg">
-              <li>University of Aberdeen</li>
-              <li>Abertay University</li>
-              <li>Aberystwyth University</li>
-              <li>Anglia Ruskin University</li>
-            </ul>
-            <ul className="list-disc list-inside text-lg">
-              <li>University of Bath</li>
-              <li>Bath Spa University</li>
-              <li>University of Birmingham</li>
-              <li>Bangor University</li>
-            </ul>
-            <ul className="list-disc list-inside text-lg">
-              <li>University of the Arts London</li>
-              <li>Camberwell College of Arts</li>
-              <li>The Arts University Bournemouth</li>
-              <li>University of Bedfordshire</li>
-            </ul>
+        {/* Intakes and Requirements */}
+        <div className="bg-white p-4 md:p-8 lg:p-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Intakes Section */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Intakes</h2>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <p className="text-lg mb-2">
+                    <span className="font-semibold text-customBlue">Major intake:</span> September
+                  </p>
+                  <p className="text-lg">
+                    <span className="font-semibold text-customBlue">Other Intakes:</span> January and May
+                  </p>
+                </div>
+              </div>
+
+              {/* Tuition Fees Section */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">Tuition Fees</h2>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <p className="text-lg">
+                    Fees vary depending on the program and university:
+                  </p>
+                  <ul className="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                    <li>Undergraduate: £10,000 to £20,000 per year</li>
+                    <li>Postgraduate: £11,000 to £25,000 per year</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Requirements Section */}
+            <div className="mt-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Requirements</h2>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <ul className="text-gray-700 space-y-4">
+                  <li className="flex items-start">
+                    <span className="text-customBlue font-semibold mr-2">•</span>
+                    <div>
+                      <strong>Intakes:</strong> Major intake in September, with additional intakes in January and May.
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-customBlue font-semibold mr-2">•</span>
+                    <div>
+                      <strong>English Proficiency:</strong> IELTS with an overall band score of 6.0 to 7.0 (minimum 5.5 in each band) or Pearson Test of English (PTE).
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-customBlue font-semibold mr-2">•</span>
+                    <div>
+                      <strong>Academic Qualifications:</strong> High school diploma or equivalent.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Intakes and Requirements */}
-        <div className="bg-white p-4 md:p-8 lg:p-10 text-left">
-  <div className="mb-8">
-    <h2 className="text-2xl md:text-3xl font-bold mb-4">Intakes</h2>
-    <p className="text-lg mb-2">
-      <span className="font-semibold">Major intake:</span> September
-    </p>
-    <p className="text-lg">
-      <span className="font-semibold">Other Intakes:</span> January and May
-    </p>
-  </div>
-
-  <div className="mb-8">
-    <h2 className="text-2xl md:text-3xl font-bold mb-4">Tuition Fees</h2>
-    <p className="text-lg">
-      Tuition fees vary depending on the program and university. On average:
-      <ul className="list-disc list-inside mt-2">
-        <li>Undergraduate: £10,000 to £20,000 per year</li>
-        <li>Postgraduate: £11,000 to £25,000 per year</li>
-      </ul>
-    </p>
-  </div>
-
-  <div className="mb-8">
-    <h2 className="text-2xl md:text-3xl font-bold mb-4">English Language Requirements</h2>
-    <p className="text-lg">
-      English proficiency test scores (IELTS, TOEFL, etc.) are required for admission and visa purposes. Some universities may accept high school English grades as proof of proficiency.
-    </p>
-    <p className="text-lg mt-2">
-      Common score requirements:
-      <ul className="list-disc list-inside mt-2">
-        <li>Undergraduate: IELTS 6.0–6.5 (minimum 5.5 in each band)</li>
-        <li>Postgraduate: IELTS 6.5–7.0 (minimum 6.0 in each band)</li>
-      </ul>
-    </p>
-  </div>
-</div>
-
 
         {/* Choose Your Destination Section */}
         <div 
@@ -362,7 +359,3 @@ const StudyUK = () => {
 };
 
 export default StudyUK;
-
-
-
-

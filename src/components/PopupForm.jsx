@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
 
 const PopupForm = () => {
   const [showPopup, setShowPopup] = useState(true);
@@ -17,7 +19,7 @@ const PopupForm = () => {
   useEffect(() => {
     const popupInterval = setInterval(() => {
       setShowPopup(true);
-    }, 5 * 60 * 1000); // Show popup every 5 minutes
+    }, 5 * 60 * 1000);
 
     return () => clearInterval(popupInterval);
   }, []);
@@ -31,16 +33,14 @@ const PopupForm = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Using EmailJS to send form data
     emailjs
       .sendForm('service_3x7bjfj', 'template_530xg64', form.current, {
         publicKey: 'I7UB0PZBIaKgzxane',
       })
       .then(
         () => {
-          setResponseMessage('Your message was sent successfully, We will get back to you very soon!');
+          setResponseMessage('Message sent successfully! We will get back to you soon.');
           setShowPopup(false);
-          // Reset form fields after submission
           setFormData({
             name: '',
             email: '',
@@ -59,81 +59,122 @@ const PopupForm = () => {
   if (!showPopup) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-2">
-      <div className="relative bg-white p-3 rounded-lg shadow-lg w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px] transition-transform transform">
-        {/* Close button */}
-        <button
-          className="absolute top-1 right-2 text-lg text-gray-500 hover:text-gray-700"
-          onClick={() => setShowPopup(false)}
+    <AnimatePresence>
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-2"
+      >
+        <motion.div 
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="relative bg-white rounded-xl shadow-xl w-full max-w-xs p-4 border border-gray-100"
         >
-          &times;
-        </button>
-
-        <h2 className="text-base mb-3 text-center font-semibold text-gray-700">Contact Us</h2>
-        {/* Display response message at the top */}
-        {responseMessage && <p className="text-center text-green-500 mb-2">{responseMessage}</p>}
-        <form ref={form} onSubmit={handleSubmit}>
-          <div className="space-y-1.5">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
-              required
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleInputChange}
-              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleInputChange}
-              className="block w-full p-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300 h-16"
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="mt-2 bg-blue-950 text-yellow-400 py-1.5 px-3 text-xs rounded w-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          {/* Close button with hover effect */}
+          <motion.button
+            whileHover={{ rotate: 90, scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
+            onClick={() => setShowPopup(false)}
           >
-            Submit
-          </button>
-        </form>
-        {/* Display response message at the bottom */}
-        {responseMessage && (
-          <p className="mt-2 text-center text-green-500 text-xs">
-            {responseMessage}
-          </p>
-        )}
-      </div>
-    </div>
+            <X size={20} />
+          </motion.button>
+
+          <div className="text-center mb-4">
+            <h2 className="text-xl font-bold text-gray-800 mb-1">Contact Us</h2>
+            <p className="text-xs text-gray-500">We'd love to hear from you!</p>
+          </div>
+
+          {/* Response Message */}
+          {responseMessage && (
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-green-50 border border-green-200 text-green-700 p-2 rounded-lg text-center text-xs mb-3"
+            >
+              {responseMessage}
+            </motion.div>
+          )}
+
+          <form ref={form} onSubmit={handleSubmit} className="space-y-3">
+            {/* Input Fields with Icons */}
+            <div className="relative">
+        
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="pl-7 w-full p-2 text-xs border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                required
+              />
+            </div>
+
+            <div className="relative">
+         
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="pl-7 w-full p-2 text-xs border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                required
+              />
+            </div>
+
+            <div className="relative">
+   
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="pl-7 w-full p-2 text-xs border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                required
+              />
+            </div>
+
+            <div className="relative">
+           
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                className="pl-7 w-full p-2 text-xs border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                required
+              />
+            </div>
+
+            <div className="relative">
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleInputChange}
+                className="w-full p-2 text-xs border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 h-20 resize-none"
+                required
+              ></textarea>
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              type="submit"
+              className="w-full bg-customBlue text-white p-2 rounded-lg text-xs font-semibold hover:bg-customYellow transition-colors"
+            >
+              Send Message
+            </motion.button>
+          </form>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

@@ -123,9 +123,9 @@ const StudyAus = () => {
 
       {/* Top Universities & Requirements */}
 <div className="bg-gray-100 p-4 md:p-8 lg:p-10 text-left">
-  <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities & Requirements</h2>
+  {/* <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities & Requirements</h2> */}
 
-  <h3 className="text-xl md:text-2xl font-semibold mb-2">Top Universities</h3>
+  {/* <h3 className="text-xl md:text-2xl font-semibold mb-2">Top Universities</h3>
   <ul className="list-disc list-inside text-left">
     <li>University of Melbourne</li>
     <li>Australian National University</li>
@@ -137,9 +137,9 @@ const StudyAus = () => {
     <li>University of Technology Sydney</li>
     <li>Griffith University</li>
     <li>Deakin University</li>
-  </ul>
+  </ul> */}
 
-  <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Requirements</h3>
+  <h3 className="text-xl md:text-2xl font-bold mt-6 mb-2">Requirements</h3>
   <ul className="list-disc list-inside text-left">
     <li>
       <span className="font-semibold">Intakes:</span> February, July, November (depending on the course and institution).

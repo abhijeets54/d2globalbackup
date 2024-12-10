@@ -122,7 +122,7 @@ const StudyUSA = () => {
         </div>
 {/* Top Universities & Requirements */}
 <div className="bg-gray-100 p-4 md:p-8 lg:p-10 text-left">
-  <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities of USA</h2>
+  {/* <h2 className="text-2xl md:text-3xl font-bold mb-4">Top Universities of USA</h2>
   <ul className="list-disc list-inside mb-6 text-sm md:text-lg space-y-2">
     <li>Amherst College</li>
     <li>Baylor University</li>
@@ -131,9 +131,9 @@ const StudyUSA = () => {
     <li>California Institute of Technology</li>
     <li>Carnegie Mellon University</li>
     <li>Columbia University</li>
-  </ul>
+  </ul> */}
 
-  <h3 className="text-xl md:text-2xl font-semibold mb-4">Requirements</h3>
+  <h3 className="text-xl md:text-2xl font-bold mb-4">Requirements</h3>
   <ul className="list-disc list-inside text-left">
     <li>
       <span className="font-semibold">Intakes:</span> Fall (August / September), Spring (January), and Summer (Mid-April).

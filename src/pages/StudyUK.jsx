@@ -155,30 +155,32 @@ const StudyUK = () => {
 
             {/* Requirements Section */}
             <div className="mt-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Requirements</h2>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <ul className="text-gray-700 space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-customBlue font-semibold mr-2">•</span>
-                    <div>
-                      <strong>Intakes:</strong> Major intake in September, with additional intakes in January and May.
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-customBlue font-semibold mr-2">•</span>
-                    <div>
-                      <strong>English Proficiency:</strong> IELTS with an overall band score of 6.0 not less than 5.5 or Pearson Test of English (PTE).
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-customBlue font-semibold mr-2">•</span>
-                    <div>
-                      <strong>Academic Qualifications:</strong> High school diploma or equivalent.
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+  <h2 className="text-2xl md:text-3xl font-bold mb-4">Requirements</h2>
+  <div className="bg-gray-50 p-4 rounded-lg">
+    <ul className="text-gray-700 space-y-4">
+      <li className="flex items-start">
+        <span className="text-customBlue font-semibold mr-2">•</span>
+        <div>
+          <strong>Intakes:</strong> Major intake in September, with additional intakes in January and May.
+        </div>
+      </li>
+      <li className="flex items-start">
+        <span className="text-customBlue font-semibold mr-2">•</span>
+        <div className="-mr-6">
+          <strong>English Proficiency: </strong>
+          <span>IELTS with an overall band score of 6.0 not less than 5.5 or Pearson Test of English (PTE).</span>
+        </div>
+      </li>
+      <li className="flex items-start">
+        <span className="text-customBlue font-semibold mr-2">•</span>
+        <div>
+          <strong>Academic Qualifications:</strong> High school diploma or equivalent.
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
           </div>
         </div>
 

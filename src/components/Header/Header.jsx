@@ -70,7 +70,7 @@ function Header() {
     { name: 'Success Stories', slug: '/SuccessStories' },
     {
       name: 'Visa',
-      slug: '/StudyCan',
+      slug: '/StudyAbroad',
       dropdown: [
         { name: 'Study Visa', slug: '/StudyAbroad', subDropdown: [
             { name: 'Study in UK', slug: '/StudyUK' },

@@ -16,7 +16,8 @@ const ContactUs = () => {
         <div className="mb-6 md:mb-0">
           <h3 className="text-xl font-poppins font-bold">Enquiries</h3>
           <Link to="mailto:info@d2global.in" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">info@d2global.in</Link>
-          <Link to="tel:+919878990455" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">+91 98789 90455</Link>
+          <Link to="tel:+918427670455" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">+91 84276 70455</Link>
+          <Link to="tel:+917696900455" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">+91 76969 00455</Link>
         </div>
         <div className="mb-6 md:mb-0">
           <h3 className="text-xl font-poppins font-bold">Quick Links</h3>

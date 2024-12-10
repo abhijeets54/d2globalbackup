@@ -145,10 +145,10 @@ function Header() {
                   <FaEnvelope className="mr-1" />
                   info@d2global.in 
                 </a>
-                <a href="tel:+919878990455" className="flex items-center">
+                <p className="flex items-center">
                   <FaPhone className="mr-1 rotate-90" />
-                  +91 98789 90455
-                </a>
+                  +91 84276 70455, +91 76969 00455
+                </p>
               </div>
 
               {/* Desktop Menu */}

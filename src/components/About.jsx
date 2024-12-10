@@ -49,7 +49,7 @@ const About = () => {
           <p className="text-base font-merriweather font-bold md:text-lg text-gray-700 text-justify">
             With years of experience in the immigration sector, I founded D2 Global to simplify the immigration journey for individuals aspiring to study and live abroad. My leadership has guided thousands of clients through complex visa processes, ensuring clear and reliable support at every step in the course.
             <br />
-            — Amardeep Singh, Managing Director
+            — Amar Dev, Managing Director
           </p>
           
           {/* Read More Button */}

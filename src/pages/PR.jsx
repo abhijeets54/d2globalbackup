@@ -17,7 +17,7 @@ const PR = () => {
 
         {/* Initial Text */}
         <p className="text-lg text-left text-black mb-6">
-          We at D2 Global Immigration provide consultancy for the Permanent Residency program under Express Entry for Canada. We offer a free assessment to our clients, followed by a detailed counseling session, explaining the entire process. Our services include explaining the point-based system for Canada PR, the requirements, the filing process, and the fee structure—all with complete transparency. Visit our nearest branch to get your profile assessed.
+          We at D2 Global Immigration provide consultancy for the Permanent Residency program under Express Entry for Canada. We offer a free assessment to our clients, followed by a detailed counseling session, explaining the entire process. Our services include explaining the point-based system for Canada PR, the requirements, the filing process and the fee structure—all with complete transparency. Visit our nearest branch to get your profile assessed.
         </p>
 
         {/* Image */}
@@ -31,7 +31,7 @@ const PR = () => {
         {/* Further Details */}
         <div className="text-lg text-left text-black space-y-4">
           <p>
-            Migration overseas is an exciting opportunity for various reasons, such as acquiring a higher professional degree, settling down permanently, or working abroad. Citizens worldwide are moving to other countries for better financial prospects and professional challenges. Immigration to countries such as Canada, Australia, and the UK is highly sought after, but gaining permanent residency can be complex.
+            Migration overseas is an exciting opportunity for various reasons, such as acquiring a higher professional degree, settling down permanently or working abroad. Citizens worldwide are moving to other countries for better financial prospects and professional challenges. Immigration to countries such as Canada, Australia, and the UK is highly sought after, but gaining permanent residency can be complex.
           </p>
 
           <p>
@@ -59,7 +59,7 @@ const PR = () => {
           <div className="bg-white p-5 shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
             <h3 className="text-xl font-semibold text-black mb-2 text-left">Gather Required Documentation</h3>
             <p className="text-black text-left">
-              Ensure you have all the necessary documents, including identification, proof of work experience, and language test results.
+              Ensure you have all the necessary documents, including identification, proof of work experience and language test results.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ const PR = () => {
         {/* Closing Section */}
         <div className="mt-10 text-lg text-left text-black space-y-4">
           <p>
-            D2 Global Immigration consultants provide personalized support to help you achieve permanent residency in countries like Canada, the UK, Australia, and more. Our experienced consultants will guide you through every step, from document preparation to interview preparation, ensuring a smooth and successful process.
+            D2 Global Immigration consultants provide personalized support to help you achieve permanent residency in countries like Canada, the UK, Australia and more. Our experienced consultants will guide you through every step, from document preparation to interview preparation, ensuring a smooth and successful process.
           </p>
           <p>
             Contact us today to start your journey towards permanent residency and secure your future abroad!

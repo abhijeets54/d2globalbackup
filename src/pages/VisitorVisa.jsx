@@ -19,7 +19,7 @@ const VisitorVisa = () => {
             Explore the World with the Best Visitor Visa Consultants
           </h1>
           <p className="text-lg md:text-xl">
-            Whether you are traveling for leisure, business, or to visit family and friends, our experienced team at D2 Global Immigration will ensure you get the best guidance to secure your visitor visa. Let us assist you in planning your journey with ease.
+            Whether you are traveling for leisure, business or to visit family and friends, our experienced team at D2 Global Immigration will ensure you get the best guidance to secure your visitor visa. Let us assist you in planning your journey with ease.
           </p>
           <img
             src="/visit.webp"
@@ -41,7 +41,7 @@ const VisitorVisa = () => {
               <ul className="list-disc pl-5 space-y-2 text-lg text-gray-700">
                 <li>Personalized Visa Solutions</li>
                 <li>Expert Knowledge in Immigration Laws</li>
-                <li>Fast, Reliable, and Transparent Process</li>
+                <li>Fast, Reliable and Transparent Process</li>
                 <li>Affordable Pricing for All Visa Services</li>
               </ul>
             </div>

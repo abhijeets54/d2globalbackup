@@ -33,7 +33,7 @@ const TouristVisa = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-4xl font-bold mb-4">Explore the World with D2 Global Immigration</h1>
-          <p className="text-xl mb-6">Your trusted tourist visa consultant for smooth, reliable, and swift visa processing services.</p>
+          <p className="text-xl mb-6">Your trusted tourist visa consultant for smooth, reliable and swift visa processing services.</p>
           <motion.img 
             src="/touristmain.webp" 
             alt="World Map" 

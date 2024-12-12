@@ -77,7 +77,7 @@ const StudyAus = () => {
               Study in Australia
             </h1>
             <p className="mb-4 text-sm md:text-lg">
-              Know everything about universities, costs, scholarships, and the admission process. Australian education focuses on practical aspects and research, making it one of the top five destinations for international students. It also houses the Group of Eight Universities, equivalent to Ivy League institutions.
+              Know everything about universities, costs, scholarships and the admission process. Australian education focuses on practical aspects and research, making it one of the top five destinations for international students. It also houses the Group of Eight Universities, equivalent to Ivy League institutions.
             </p>
             <div className="flex justify-start space-x-6 md:space-x-10 text-center">
               <div>

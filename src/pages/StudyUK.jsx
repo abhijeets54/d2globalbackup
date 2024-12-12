@@ -77,7 +77,7 @@ const StudyUK = () => {
               Study in UK
             </h1>
             <p className="mb-4 text-sm md:text-lg">
-              Plan a successful future. Explore educational institutions and related costs. The UK is a leading study abroad destination known for its esteemed universities, multicultural environment, and globally recognized pedagogy.
+              Plan a successful future. Explore educational institutions and related costs. The UK is a leading study abroad destination known for its esteemed universities, multicultural environment and globally recognized pedagogy.
             </p>
             <div className="flex justify-start space-x-6 md:space-x-10 text-center">
               <div>

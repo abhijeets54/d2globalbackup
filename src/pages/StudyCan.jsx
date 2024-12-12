@@ -144,7 +144,7 @@ const StudyCan = () => {
   <h2 className="text-2xl lg:text-3xl font-bold mt-6 lg:mt-8 mb-4 lg:mb-6 text-left">Requirements:</h2>
   <ul className="list-disc list-inside text-left">
     <li>
-      <span className="font-semibold">Intakes:</span> January, September, and May/June (limited courses).
+      <span className="font-semibold">Intakes:</span> January, September and May/June (limited courses).
     </li>
     <li>
       <span className="font-semibold">English Proficiency:</span> 

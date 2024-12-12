@@ -77,7 +77,7 @@ const StudyUSA = () => {
               Study in USA
             </h1>
             <p className="mb-4 text-sm md:text-lg">
-              Explore educational institutions, studying and living costs, and financial aid. USA is home to the highest top-ranked universities in the world, offering endless academic and professional growth opportunities.
+              Explore educational institutions, studying and living costs and financial aid. USA is home to the highest top-ranked universities in the world, offering endless academic and professional growth opportunities.
             </p>
             <div className="flex justify-start space-x-6 md:space-x-10 text-center">
               <div>

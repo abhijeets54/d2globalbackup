@@ -77,7 +77,7 @@ const StudyDubai = () => {
               Study in Dubai
             </h1>
             <p className="mb-4 text-sm md:text-lg">
-              Dubai is a top international study destination, known for its high-ranking universities, modern facilities, and a fast-growing economy. Learn everything about universities, living costs, and visa requirements for a successful educational journey.
+              Dubai is a top international study destination, known for its high-ranking universities, modern facilities and a fast-growing economy. Learn everything about universities, living costs and visa requirements for a successful educational journey.
             </p>
             <div className="flex justify-start space-x-6 md:space-x-10 text-center">
               <div>
@@ -141,7 +141,7 @@ const StudyDubai = () => {
         <tr className="bg-gray-50">
           <td className="border px-4 py-2">English Proficiency</td>
           <td className="border px-4 py-2">
-            IELTS: 6.0 to 6.5 bands, TOEFL: 80-90, or equivalent test scores
+            IELTS: 6.0 to 6.5 bands, TOEFL: 80-90 or equivalent test scores
           </td>
         </tr>
         <tr className="bg-white">

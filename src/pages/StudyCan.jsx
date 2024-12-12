@@ -77,7 +77,7 @@ const StudyCan = () => {
               Study in Canada
             </h1>
             <p className="mb-4 lg:mb-6 text-left text-base lg:text-lg">
-              Learn everything about universities, costs, scholarships, admission process & more. Canada facilitates academic, professional, and personal development for students with a constantly upgraded education system in a multicultural environment.
+              Learn everything about universities, costs, scholarships, admission process & more. Canada facilitates academic, professional and personal development for students with a constantly upgraded education system in a multicultural environment.
             </p>
             <div className="flex justify-start space-x-6 lg:space-x-10 text-left">
               <div>

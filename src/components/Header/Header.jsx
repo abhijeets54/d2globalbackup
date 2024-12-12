@@ -299,7 +299,25 @@ function Header() {
               </li>
             ))}
           </ul>
-          <div className="w-full text-center mt-4 font-poppins text-3xl font-bold">D2 Global</div>
+          
+          {/* Mobile D2 Global Text and Contact Info */}
+         
+          
+          <div className="w-full text-center mt-2 pb-4 text-sm font-openSans">
+            <a 
+              href="mailto:info@d2global.in" 
+              className="flex items-center justify-center mb-2"
+            >
+              <FaEnvelope className="mr-2 text-xs" />
+              info@d2global.in 
+            </a>
+            <div 
+              className="flex items-center justify-center"
+            >
+              <FaPhone className="mr-2 text-xs rotate-90" />
+              +91 84276 70455, +91 76969 00455
+            </div>
+          </div>
         </div>
       )}
     </>

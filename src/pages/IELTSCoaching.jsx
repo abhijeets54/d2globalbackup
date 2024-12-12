@@ -25,21 +25,21 @@ const IELTSCoaching = () => {
       icon: <BookOpen className="w-10 h-10 text-blue-600" />,
       title: "Experienced and Certified Trainers",
       details: [
-        "We have experienced and certified trainers who are well-versed in the exam format, scoring system, and strategies to improve your score."
+        "We have experienced and certified trainers who are well-versed in the exam format, scoring system and strategies to improve your score."
       ]
     },
     {
       icon: <BookOpen className="w-10 h-10 text-blue-600" />,
       title: "Comprehensive Study Material",
       details: [
-        "We provide you with comprehensive study material, including practice tests, mock exams, and other resources to help you prepare for the exam."
+        "We provide you with comprehensive study material, including practice tests, mock exams and other resources to help you prepare for the exam."
       ]
     },
     {
       icon: <Award className="w-10 h-10 text-green-600" />,
       title: "Personalized Coaching",
       details: [
-        "We provide personalized coaching to each student based on their strengths and weaknesses, and tailor the coaching program accordingly."
+        "We provide personalized coaching to each student based on their strengths and weaknesses and tailor the coaching program accordingly."
       ]
     },
     {
@@ -97,13 +97,13 @@ const IELTSCoaching = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-blue-600 mb-2">IELTS Academic</h3>
                   <p className="text-gray-700">
-                    Designed to help you secure university acceptance, student visas, and prove your English proficiency to professional organizations. Ideal for measuring workplace English skills when applying to international companies.
+                    Designed to help you secure university acceptance, student visas and prove your English proficiency to professional organizations. Ideal for measuring workplace English skills when applying to international companies.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-green-600 mb-2">IELTS General Training</h3>
                   <p className="text-gray-700">
-                    Focuses on practical, everyday English skills. Perfect for individuals planning to work, live, or study in English-speaking countries. Tasks and tests reflect real-world workplace and social situations.
+                    Focuses on practical, everyday English skills. Perfect for individuals planning to work, live or study in English-speaking countries. Tasks and tests reflect real-world workplace and social situations.
                   </p>
                 </div>
               </div>

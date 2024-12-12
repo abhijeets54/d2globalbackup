@@ -126,7 +126,7 @@ function Header() {
           <div className="flex flex-col lg:flex-row justify-between items-center relative min-h-[80px]">
             
             {/* Logo and Company Name */} 
-            <div className="flex items-center relative flex-shrink-0 w-full lg:w-auto mb-4 lg:mb-0">
+            <div className="flex items-center relative flex-shrink-0 w-full lg:w-auto mb-4 lg:mb-0 justify-center lg:justify-start">
               <button
                 onClick={(e) => handleNavigation(e, '/')}
                 className="hexagon-logo absolute w-[80px] h-[92px] bg-customBlue top-2 left-4 md:w-[100px] md:h-[115px] md:top-4 md:left-10 lg:w-[120px] lg:h-[138px] lg:top-0 lg:left-20 flex justify-center items-center shadow-xl z-20"
@@ -134,13 +134,13 @@ function Header() {
                 <img src="/logo.png" alt="D2 Global Logo" className="w-[85%] h-auto object-contain" />
               </button>
               
-              <div className="ml-16 md:ml-24 lg:ml-40 xl:ml-48 text-left px-4 pt-1 -mb-12">
+              <div className="ml-16 md:ml-24 lg:ml-40 xl:ml-48 text-center lg:text-left px-4 pt-1 -mb-12 w-full">
                 <div className="text-3xl font-bold font-poppins text-customYellow">D2 Global</div>
               </div>
             </div>
 
             <div className="flex flex-col items-center lg:items-end space-y-2">
-              <div className="flex space-x-4 mr-10 md:mr-28 lg:mr-56 xl:mr-80 2xl:mr-96 text-sm font-openSans">
+              <div className="hidden lg:flex space-x-4 mr-10 md:mr-28 lg:mr-56 xl:mr-80 2xl:mr-96 text-sm font-openSans">
                 <a href="mailto:info@d2global.in" className="flex items-center">
                   <FaEnvelope className="mr-1" />
                   info@d2global.in 
@@ -221,8 +221,8 @@ function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden absolute top-20 left-0 w-full bg-customBlue shadow-md z-40 text-customYellow slide-down">
-          <ul className="flex flex-col items-center space-y-2 py-3 font-poppins">
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-customBlue shadow-md z-40 text-customYellow slide-down flex flex-col items-center">
+          <ul className="flex flex-col items-center space-y-2 py-3 font-poppins w-full">
             {navItems.map((item, index) => (
               <li key={item.name} className="w-full">
                 <div className="flex items-center justify-between px-4 py-2">
@@ -299,6 +299,7 @@ function Header() {
               </li>
             ))}
           </ul>
+          <div className="w-full text-center mt-4 font-poppins text-3xl font-bold">D2 Global</div>
         </div>
       )}
     </>

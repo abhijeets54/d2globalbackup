@@ -36,7 +36,7 @@ const ContactUs = () => {
 
         {/* Quick Links - Third Column */}
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">           
-          <h3 className="text-xl font-poppins font-bold mb-4">Quick Links</h3>           
+          <h3 className="text-xl font-poppins ml-6 font-bold mb-4">Quick Links</h3>           
           <ul className="space-y-2">             
             <li><Link to="/StudyAbroad" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">Study Abroad</Link></li>             
             <li><Link to="/TouristVisa" className="text-gray-400 hover:text-yellow-500 font-openSans block text-base">Tourist Visa</Link></li>             

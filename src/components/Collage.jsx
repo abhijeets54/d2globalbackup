@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
 
 const Collage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showImageBox, setShowImageBox] = useState(true);
+  const [imageBoxImage, setImageBoxImage] = useState('/offers/offer.webp'); // Default image path
 
   const slides = [
     {
@@ -49,6 +51,12 @@ const Collage = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+  };
+
+  // Function to set the image for the image box
+  const setImageBox = (imagePath) => {
+    setImageBoxImage(imagePath);
+    setShowImageBox(true);
   };
 
   return (
@@ -154,6 +162,59 @@ const Collage = () => {
           <FaWhatsapp className="text-lg md:text-2xl" />
         </motion.button>
       </div>
+
+      {/* 3D Image Box */}
+      {showImageBox && (
+        <motion.div
+          initial={{ 
+            opacity: 0, 
+            x: -50, 
+            rotateY: -30,
+            scale: 0.9
+          }}
+          animate={{ 
+            opacity: 1, 
+            x: 0, 
+            rotateY: 0,
+            scale: 1,
+            transition: {
+              type: "spring",
+              stiffness: 70,
+              damping: 15
+            }
+          }}
+          exit={{ 
+            opacity: 0, 
+            x: -50, 
+            rotateY: -30,
+            scale: 0.9
+          }}
+          className="fixed bottom-4 left-5 z-50 w-48 md:w-64 lg:w-72 perspective-500"
+        >
+          <div className="transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+              <div className="relative">
+                <button 
+                  onClick={() => setShowImageBox(false)}
+                  className="absolute top-2 right-2 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-1.5 transition-colors"
+                >
+                  <FaTimes className="text-gray-600 text-sm" />
+                </button>
+                <div className="relative overflow-hidden group">
+                  <img 
+                    src={imageBoxImage} 
+                    alt="Additional Information" 
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                    <p className="text-white text-xs font-semibold">Hover for details</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 };

@@ -56,9 +56,9 @@ const images = [
     flag: "/ukflag.svg"  
   },   
   { 
-    src: "/results/result11.webp", 
+    src: "/results/result11.jpeg", 
     country: "uk", 
-    flag: "/ukflag.svg"  
+    flag: "/aflag.png"  
   } 
 ];  
 

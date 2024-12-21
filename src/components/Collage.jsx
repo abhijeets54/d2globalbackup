@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Collage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showImageBox, setShowImageBox] = useState(true);
-  const [imageBoxImage, setImageBoxImage] = useState('/offers/offer.webp'); // Default image path
+  const [imageBoxImage, setImageBoxImage] = useState('/offers/offer.webp');
 
   const slides = [
     {
@@ -53,7 +53,6 @@ const Collage = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   };
 
-  // Function to set the image for the image box
   const setImageBox = (imagePath) => {
     setImageBoxImage(imagePath);
     setShowImageBox(true);
@@ -82,7 +81,6 @@ const Collage = () => {
               <div className="max-w-lg">
                 <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">{slides[currentSlide].title}</h2>
                 <p className="text-lg md:text-xl mb-6 text-white">{slides[currentSlide].description}</p>
-                {/* Updated Learn More Button */}
                 <StyledWrapper>
                   <button className="learn-more" onClick={() => window.location.href = slides[currentSlide].link}>
                     <span aria-hidden="true" className="circle">
@@ -163,7 +161,7 @@ const Collage = () => {
         </motion.button>
       </div>
 
-      {/* 3D Image Box */}
+      {/* 3D Image Box with Yellow Glow */}
       {showImageBox && (
         <motion.div
           initial={{ 
@@ -191,8 +189,11 @@ const Collage = () => {
           }}
           className="fixed bottom-4 left-5 z-50 w-48 md:w-64 lg:w-72 perspective-500"
         >
-          <div className="transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+          <div className="transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative">
+            {/* Yellow glow effect container */}
+            <div className="absolute inset-0 bg-customYellow rounded-lg blur-xl animate-pulse"></div>
+            
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-gray-100 transform transition-transform duration-300 hover:-translate-y-1 relative">
               <div className="relative">
                 <button 
                   onClick={() => setShowImageBox(false)}

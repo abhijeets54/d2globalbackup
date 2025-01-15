@@ -162,7 +162,7 @@ const Collage = () => {
       </div>
 
       {/* 3D Image Box with Yellow Glow */}
-      {showImageBox && (
+      {/* {showImageBox && (
         <motion.div
           initial={{ 
             opacity: 0, 
@@ -190,7 +190,6 @@ const Collage = () => {
           className="fixed bottom-4 left-5 z-50 w-48 md:w-64 lg:w-72 perspective-500"
         >
           <div className="transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl relative">
-            {/* Yellow glow effect container */}
             <div className="absolute inset-0 bg-customYellow rounded-lg blur-xl animate-pulse"></div>
             
             <div className="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-gray-100 transform transition-transform duration-300 hover:-translate-y-1 relative">
@@ -215,7 +214,7 @@ const Collage = () => {
             </div>
           </div>
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 };

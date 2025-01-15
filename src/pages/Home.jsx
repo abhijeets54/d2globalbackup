@@ -41,7 +41,7 @@ function Home() {
         {/* <People/> */}
         <QuickNumbers />
         <Choose/>
-        <Offer />
+        {/* <Offer /> */}
 
         {/* <Timeline /> */}
 
